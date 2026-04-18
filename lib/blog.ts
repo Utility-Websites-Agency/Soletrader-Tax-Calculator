@@ -698,6 +698,87 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "quarterly-bas-lodgement-guide-for-sole-traders",
+  title: "Quarterly BAS Lodgement Guide for Sole Traders in 2025-26",
+  excerpt: "A complete guide to understanding and lodging your Business Activity Statement (BAS) as a sole trader. Learn about deadlines, what to include, and how to stay on top of your tax obligations.",
+  date: "April 18, 2026",
+  readTime: "8 min read",
+  category: "Tax",
+  tags: ["BAS", "sole traders", "quarterly lodgement", "GST", "tax obligations", "ATO"],
+  content: [
+    {
+      heading: "What is a BAS and Why Do Sole Traders Need One?",
+      body: "A Business Activity Statement (BAS) is a quarterly tax form you lodge with the Australian Taxation Office (ATO) to report your income, expenses, and tax obligations. If you're registered for GST or have PAYG withholding obligations, you're required to lodge a BAS every three months. Think of it as a health check for your business finances that keeps the ATO informed about your tax position throughout the year."
+    },
+    {
+      heading: "BAS Lodgement Deadlines for 2025-26",
+      table: {
+        headers: ["Quarter", "Period Covered", "Due Date"],
+        rows: [
+          ["Quarter 1", "1 July – 30 September 2025", "28 October 2025"],
+          ["Quarter 2", "1 October – 31 December 2025", "28 February 2026"],
+          ["Quarter 3", "1 January – 31 March 2026", "28 April 2026"],
+          ["Quarter 4", "1 April – 30 June 2026", "28 August 2026"]
+        ]
+      }
+    },
+    {
+      heading: "Key Information You'll Need to Provide",
+      body: "Before you lodge your BAS, gather your financial records for the quarter. You'll need to report details about your income, GST collected, GST paid, PAYG withholding, and any other tax-related activities. Having accurate records from day one makes this process much simpler. Most accounting software can automatically calculate these figures for you, which reduces errors and saves time.",
+      list: [
+        "Total GST collected from sales and services",
+        "Total GST paid on business purchases and expenses",
+        "Net GST amount (GST collected minus GST paid)",
+        "PAYG withholding amounts (if applicable)",
+        "PAYG instalment deductions (if you've made any)",
+        "Total income for the quarter",
+        "Business expenses and deductions claimed"
+      ]
+    },
+    {
+      heading: "How to Lodge Your BAS",
+      body: "You have several convenient options for lodging your BAS. The most popular methods are online through ATO Online Services, using accounting software that integrates with the ATO, or engaging an accountant or tax agent to handle it for you. Whichever method you choose, ensure you lodge by the due date to avoid penalties."
+    },
+    {
+      heading: "Understanding Your GST Position",
+      body: "One of the most important parts of your BAS is understanding whether you'll receive a GST refund or owe GST to the ATO. If you've collected less GST than you've paid on business expenses, you'll typically receive a refund. Conversely, if you've collected more GST than you've paid out, you'll owe money to the ATO. This is why accurate record-keeping throughout the quarter is essential.",
+      callout: {
+        type: "tip",
+        text: "Set aside a dedicated business bank account for GST purposes. This makes tracking GST in and out much easier and helps you prepare for BAS lodgement in minutes rather than hours."
+      }
+    },
+    {
+      heading: "Avoiding Common BAS Mistakes",
+      body: "Many sole traders make errors on their BAS that can attract ATO attention or penalties. Being aware of common pitfalls helps protect your business and ensure smooth tax compliance.",
+      list: [
+        "Confusing personal and business expenses – only claim legitimate business costs",
+        "Forgetting to include all income sources – report every dollar earned",
+        "Calculating GST incorrectly – double-check your maths or use software",
+        "Missing the lodgement deadline – submit by 28 days after quarter end",
+        "Not keeping supporting receipts and invoices – the ATO may request these",
+        "Claiming GST on non-taxable supplies – understand what's GST-free",
+        "Forgetting about PAYG withholding – include contractor or employee payments"
+      ]
+    },
+    {
+      heading: "Managing Cash Flow Between Lodgements",
+      body: "A major benefit of quarterly BAS lodgement is that you can manage your cash flow more effectively. If you know you're going to owe GST, you can set money aside each month. Similarly, if you're expecting a refund, you can plan for that cash injection. Many sole traders budget their BAS liability as a percentage of their quarterly income to avoid surprises.",
+      callout: {
+        type: "warning",
+        text: "Don't spend your GST refund as soon as you receive it if you're expecting to owe GST next quarter. Building a GST buffer helps you meet your obligations without financial stress."
+      }
+    },
+    {
+      heading: "Getting Help with Your BAS",
+      body: "If you're new to lodging a BAS or find the process overwhelming, you don't have to go it alone. The ATO offers free resources and guides on their website. You can also engage a tax agent or accountant to lodge on your behalf—typically a cost-effective investment that ensures accuracy and frees up your time for running your business. At RateIQ, we help contractors and sole traders understand their financial position, making tax time less stressful.",
+      callout: {
+        type: "info",
+        text: "Keep all your receipts, invoices, and financial records for at least five years. The ATO may conduct audits or request supporting documents to verify your BAS submissions."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
