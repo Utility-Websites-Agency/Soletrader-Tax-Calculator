@@ -20,6 +20,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function BlogPage() {
+  console.log("BLOG_POSTS count:", BLOG_POSTS.length, BLOG_POSTS.map(p => p.slug));
   const [activeCategory, setActiveCategory] = useState("All");
   const [search, setSearch] = useState("");
 
