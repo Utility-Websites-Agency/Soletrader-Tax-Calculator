@@ -617,6 +617,87 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "how-to-calculate-your-contractor-rate-when-moving-from-emplo",
+  title: "How to Calculate Your Contractor Rate When Moving From Employment",
+  excerpt: "Making the leap from employment to contracting? Learn how to set your hourly or daily rate to match your former salary while accounting for tax, super, and business expenses.",
+  date: "April 18, 2026",
+  readTime: "6 min read",
+  category: "Contractor Pay",
+  tags: ["contractor rates", "self-employment", "tax planning", "income calculation", "sole trader"],
+  content: [
+    {
+      heading: "The Challenge of Moving to Contracting",
+      body: "Transitioning from a permanent job to contracting is exciting, but it comes with a critical question: what rate should you charge? Many new contractors simply take their annual salary and divide it by 52 weeks, which is a common mistake. When you're self-employed, you need to account for taxes, superannuation contributions, business expenses, and unpaid leave that your former employer covered. Let's break down how to calculate a fair contractor rate that actually replaces your employment income."
+    },
+    {
+      heading: "Step 1: Start With Your Annual Salary",
+      body: "Begin with your last annual salary from employment. This is your baseline. For example, let's say you earned $80,000 per year. However, this gross figure doesn't tell the whole story about what you actually need to earn as a contractor to maintain the same take-home income."
+    },
+    {
+      heading: "Step 2: Account for Taxes and the Medicare Levy",
+      body: "As a contractor or sole trader, you'll pay income tax on your business income. In the 2025-26 tax year, the top marginal tax rate remains at 45% (plus 2% Medicare levy). However, you'll also benefit from the Low and Middle Income Tax Offset (LMITO) depending on your income level. Rather than calculating complex tax scenarios, a practical approach is to assume you'll pay approximately 35-40% of your income in tax and Medicare levy combined. This gives you a buffer and accounts for your actual tax position. Using our $80,000 example: $80,000 × 40% = $32,000 in tax, leaving $48,000 take-home."
+    },
+    {
+      heading: "Step 3: Replace Superannuation Contributions",
+      body: "Your former employer contributed superannuation on your behalf—currently 11.5% of your ordinary time earnings for the 2025-26 financial year. You now need to set aside this money yourself or make personal super contributions. On an $80,000 salary, that's $9,200 annually. This is money you need to earn but won't take home as personal income. Add this to your required earnings: $48,000 + $9,200 = $57,200."
+    },
+    {
+      heading: "Step 4: Factor in Unpaid Leave and Non-Billable Time",
+      body: "As an employee, you received paid annual leave, sick leave, and public holidays—typically worth 8-10 weeks of paid time off per year. As a contractor, you don't get paid when you're not working. You also need to account for time spent on business administration, marketing, invoicing, and professional development that you won't bill clients for. Most contractors estimate they're billable for 80-90% of their working time. If you calculate based on 48 working weeks per year (52 weeks minus 4 weeks leave), and you're billable 85% of the time, your effective billable weeks are: 48 × 85% = 40.8 weeks."
+    },
+    {
+      heading: "Step 5: Calculate Your Hourly or Daily Rate",
+      body: "Now you can work out your rate. Let's continue with our example: You need to earn $57,200 over 40.8 billable weeks. If you work 38 hours per week (the standard full-time week), that's 1,550 billable hours per year. $57,200 ÷ 1,550 hours = $36.90 per hour. For a daily rate (8 hours), that's approximately $295 per day. However, this is your baseline rate. You may charge higher rates if you have specialised skills, experience, or work in high-demand sectors.",
+      list: [
+        "Required annual take-home: $48,000",
+        "Superannuation to set aside: $9,200",
+        "Total income needed: $57,200",
+        "Billable weeks per year: 40.8",
+        "Billable hours per year: 1,550",
+        "Hourly rate: $57,200 ÷ 1,550 = $36.90/hour"
+      ]
+    },
+    {
+      heading: "The Quick Reference Formula",
+      body: "Here's a shorthand formula you can use:",
+      table: {
+        headers: ["Step", "Calculation", "Example"],
+        rows: [
+          ["1. Start with annual salary", "Your previous gross salary", "$80,000"],
+          ["2. Multiply by 1.5 to 1.6", "Accounts for tax, super, unpaid leave", "$80,000 × 1.5 = $120,000"],
+          ["3. Divide by 1,600", "Standard billable hours (40 weeks × 40 hours)", "$120,000 ÷ 1,600 = $75/hour"],
+          ["4. Adjust for your circumstances", "Higher for specialised work, lower for niche markets", "$75 × 1.2 = $90/hour"]
+        ]
+      }
+    },
+    {
+      heading: "Important Considerations",
+      callout: {
+        type: "tip",
+        text: "Use RateIQ's contractor rate calculator to model different scenarios based on the 2025-26 tax year rates. You can adjust for your specific tax position, anticipated expenses, and desired take-home income. This removes guesswork and helps you stay competitive while ensuring you're adequately compensated."
+      },
+      list: [
+        "Business expenses: Track deductible costs like software subscriptions, home office, professional development, and vehicle use. These reduce your taxable income and effectively lower the rate you need to charge.",
+        "Industry standards: Research what others in your field charge. Your rate should be competitive but reflect your experience and expertise.",
+        "Client type: Large corporations often pay higher rates than small businesses. Adjust accordingly.",
+        "Contract stability: Long-term contracts may justify slightly lower rates; short-term or project-based work should command a premium.",
+        "Superannuation strategy: You can make personal super contributions up to the concessional cap ($27,500 for 2025-26) to minimise tax."
+      ]
+    },
+    {
+      heading: "Don't Undercut Yourself",
+      callout: {
+        type: "warning",
+        text: "Many contractors starting out underestimate their costs and charge too little. This creates cash flow problems, prevents you from saving adequately for tax, and undercuts the entire industry. If your calculation shows you need $75/hour, don't charge $50 hoping to get clients. Instead, find clients willing to pay fair rates, or consider whether contracting is the right move for your situation right now."
+      }
+    },
+    {
+      heading: "Final Thoughts",
+      body: "Calculating your contractor rate isn't just about replacing your salary—it's about ensuring you can sustainably run a business, meet your tax obligations, contribute to superannuation, and have unpaid time off. Use the formula above as a starting point, then refine based on your industry, experience, and the value you bring to clients. Remember to review your rate annually as tax rates and superannuation contributions change, especially as we move through the 2025-26 financial year. A well-calculated rate ensures you're not just surviving as a contractor—you're thriving."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
