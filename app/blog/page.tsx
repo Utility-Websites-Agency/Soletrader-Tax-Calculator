@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BLOG_POSTS } from "@/lib/blog";
 import { ChevronRight, Clock, Tag, Calendar } from "lucide-react";
@@ -20,9 +20,12 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function BlogPage() {
-  console.log("BLOG_POSTS count:", BLOG_POSTS.length, BLOG_POSTS.map(p => p.slug));
   const [activeCategory, setActiveCategory] = useState("All");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    console.log("BLOG_POSTS count:", BLOG_POSTS.length, BLOG_POSTS.map(p => p.slug));
+  }, []);
 
   const filtered = useMemo(() => {
     return [...BLOG_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter((p) => {
