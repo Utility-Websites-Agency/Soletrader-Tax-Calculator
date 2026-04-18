@@ -1,0 +1,154 @@
+name: Auto-generate blog post
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # Every Monday at 9am UTC
+  workflow_dispatch:        # Also allows manual trigger from GitHub UI
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate blog post via Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 << 'EOF'
+          import urllib.request
+          import json
+          import os
+          import re
+          import random
+          from datetime import datetime
+
+          TOPICS = [
+            "GST registration for Australian sole traders and ABN holders",
+            "PAYG instalment obligations for contractors in 2025-26",
+            "Super guarantee obligations when hiring contractors vs employees",
+            "Work-from-home tax deductions for sole traders 2025-26",
+            "How to set up a tax set-aside system as a contractor",
+            "Comparing contractor daily rate to equivalent employee salary",
+            "Vehicle and travel deductions for Australian contractors",
+            "Personal Services Income (PSI) rules explained simply",
+            "How to invoice as an ABN contractor including GST",
+            "Quarterly BAS lodgement guide for sole traders",
+            "Concessional super contributions as a self-employed contractor",
+            "Tools and equipment deductions for tradies 2025-26",
+            "How to calculate your contractor rate when moving from employment",
+            "Income protection insurance tax deductibility for contractors",
+            "Record keeping requirements for Australian sole traders",
+            "How the low income tax offset (LITO) applies to contractors",
+            "Managing cash flow gaps between invoices as a sole trader",
+            "Professional indemnity insurance costs and tax treatment",
+            "How to compare two contractor offers with different rate structures",
+            "End of financial year checklist for Australian contractors",
+          ]
+
+          # Read current blog file to avoid duplicate topics
+          with open("lib/blog.ts", "r") as f:
+            existing = f.read()
+
+          available = [t for t in TOPICS if t[:30].lower() not in existing.lower()]
+          topic = random.choice(available) if available else random.choice(TOPICS)
+
+          today = datetime.now().strftime("%B %d, %Y").replace(" 0", " ")
+          slug = re.sub(r"[^a-z0-9]+", "-", topic.lower())[:60].strip("-")
+
+          PROMPT = f"""You are writing a blog post for RateIQ, an Australian contractor rate and tax calculator website.
+
+          Topic: {topic}
+          Date: {today}
+          Tax year: 2025-26 ATO rates
+
+          Write a helpful, plain-English blog post for Australian contractors and sole traders.
+
+          Output ONLY a valid TypeScript object literal (no imports, no exports, no surrounding code) that matches this exact interface:
+          {{
+            slug: string,
+            title: string,        // SEO-optimised, include "2025-26" and "Australia"
+            excerpt: string,      // 1-2 sentences, under 160 chars
+            date: string,         // use "{today}"
+            readTime: string,     // e.g. "4 min read"
+            category: string,     // one of: Tax, Contractor Pay, Personal Finance, Tax Refund, Tax Savings, Superannuation, Mortgage, Work Planning
+            tags: string[],       // 3-5 relevant tags
+            content: Array<{{
+              heading?: string,
+              subheading?: string,
+              body?: string,
+              list?: string[],
+              table?: {{ headers: string[], rows: string[][] }},
+              callout?: {{ type: "info" | "tip" | "warning", text: string }},
+            }}>,
+          }}
+
+          Requirements:
+          - 5-8 content sections
+          - At least one list
+          - At least one callout (info, tip, or warning)
+          - No markdown, no backticks, no code fences in your response
+          - Output only the raw object literal starting with {{ and ending with }}
+          - slug must be: "{slug}"
+          - date must be: "{today}"
+          """
+
+          payload = json.dumps({{
+            "model": "claude-haiku-4-5-20251001",
+            "max_tokens": 2000,
+            "messages": [{{"role": "user", "content": PROMPT}}]
+          }}).encode()
+
+          req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages",
+            data=payload,
+            headers={{
+              "x-api-key": os.environ["ANTHROPIC_API_KEY"],
+              "anthropic-version": "2023-06-01",
+              "content-type": "application/json",
+            }}
+          )
+
+          with urllib.request.urlopen(req) as res:
+            body = json.loads(res.read())
+
+          raw = body["content"][0]["text"].strip()
+
+          # Strip any accidental markdown fences
+          raw = re.sub(r"^```[a-z]*\n?", "", raw)
+          raw = re.sub(r"\n?```$", "", raw)
+          raw = raw.strip()
+
+          # Validate it starts/ends like an object
+          if not (raw.startswith("{{") and raw.endswith("}}")):
+            raise ValueError(f"Unexpected output format: {{raw[:200]}}")
+
+          # Append to lib/blog.ts before the closing of BLOG_POSTS array
+          with open("lib/blog.ts", "r") as f:
+            content = f.read()
+
+          # Insert before the closing ]; of BLOG_POSTS
+          insert_before = "];\n\nexport function getPostBySlug"
+          new_entry = f"  {raw},\n"
+          updated = content.replace(insert_before, new_entry + insert_before)
+
+          if updated == content:
+            raise ValueError("Could not find insertion point in lib/blog.ts")
+
+          with open("lib/blog.ts", "w") as f:
+            f.write(updated)
+
+          print(f"✅ Blog post generated: {{slug}}")
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "RateIQ Bot"
+          git config user.email "bot@rateiq.com.au"
+          git add lib/blog.ts
+          git diff --staged --quiet || git commit -m "blog: auto-generate weekly post [skip ci]"
+          git push
