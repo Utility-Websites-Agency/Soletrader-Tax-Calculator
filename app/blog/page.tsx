@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { BLOG_POSTS } from "@/lib/blog";
-import { ChevronRight, Clock, Tag } from "lucide-react";
+import { ChevronRight, Clock, Tag, Calendar } from "lucide-react";
 
 const ALL_CATEGORIES = ["All", ...Array.from(new Set(BLOG_POSTS.map((p) => p.category)))];
 
@@ -24,7 +24,7 @@ export default function BlogPage() {
   const [search, setSearch] = useState("");
 
   const filtered = useMemo(() => {
-    return BLOG_POSTS.filter((p) => {
+    return [...BLOG_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter((p) => {
       const matchCat = activeCategory === "All" || p.category === activeCategory;
       const q = search.toLowerCase();
       const matchSearch =
@@ -156,9 +156,15 @@ export default function BlogPage() {
 
                       {/* Footer */}
                       <div className="flex items-center justify-between pt-3 border-t border-[#e7e7e7] mt-auto">
-                        <div className="flex items-center gap-1.5 text-[12px] text-[#8b949e]">
-                          <Clock className="w-3.5 h-3.5" />
-                          {post.readTime}
+                        <div className="flex items-center gap-3 text-[12px] text-[#8b949e]">
+                          <span className="flex items-center gap-1.5">
+                            <Clock className="w-3.5 h-3.5" />
+                            {post.readTime}
+                          </span>
+                          <span className="flex items-center gap-1.5">
+                            <Calendar className="w-3.5 h-3.5" />
+                            {post.date}
+                          </span>
                         </div>
                         <span className="flex items-center gap-1 text-[12px] font-semibold text-[#2b7fff] group-hover:gap-2 transition-all">
                           Read <ChevronRight className="w-3.5 h-3.5" />
