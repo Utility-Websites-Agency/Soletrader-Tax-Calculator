@@ -779,6 +779,78 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "payg-instalment-obligations-for-contractors-in-2025-26",
+  title: "PAYG Instalment Obligations for Contractors in 2025-26",
+  excerpt: "Understanding your PAYG instalment requirements as a contractor can save you money and stress. Here's what you need to know for the 2025-26 tax year.",
+  date: "April 18, 2026",
+  readTime: "6 min read",
+  category: "Tax",
+  tags: ["PAYG", "tax instalments", "contractors", "sole traders", "ATO", "2025-26"],
+  content: [
+    {
+      heading: "What Are PAYG Instalments?",
+      body: "PAYG instalments are quarterly tax payments you make to the Australian Taxation Office (ATO) based on your estimated annual tax liability. Unlike employees who have tax withheld from their pay, contractors and sole traders must manage their own tax obligations throughout the year. These instalments help you spread your tax bill across four quarters, rather than facing a large bill at the end of the financial year."
+    },
+    {
+      heading: "Who Needs to Pay PAYG Instalments?",
+      body: "The ATO expects you to pay instalments if you're likely to have a tax liability of $1,000 or more for the 2025-26 financial year. If you're a contractor, sole trader, or have investment income, you'll almost certainly fall into this category. The ATO will notify you if you're required to pay, but it's worth checking your ATO account online or calling 13 28 61 if you're unsure about your obligations."
+    },
+    {
+      heading: "2025-26 PAYG Instalment Dates",
+      list: [
+        "First instalment: 28 October 2025",
+        "Second instalment: 28 February 2026",
+        "Third instalment: 28 April 2026",
+        "Fourth instalment: 28 June 2026"
+      ],
+      callout: {
+        type: "warning",
+        text: "Missing a PAYG instalment deadline can result in penalties and interest charges. Mark these dates in your calendar and set reminders at least one week before each due date."
+      }
+    },
+    {
+      heading: "How Is Your Instalment Amount Calculated?",
+      body: "The ATO calculates your instalment based on your previous year's tax return. They'll send you a tax instalment notice (TPYN) showing the total annual amount divided into four equal quarterly payments. If your income has changed significantly since last year, you can request a variation to reduce or increase your instalments. This is especially important if you've had a quieter year or expect lower income—paying less now could free up cash flow for your business."
+    },
+    {
+      heading: "Varying Your PAYG Instalments",
+      body: "If the ATO's calculation doesn't match your expected 2025-26 income, you can apply for a variation. You might request a reduction if you expect lower turnover, or an increase if you're having a better year (to avoid a large bill later). You can vary your instalments online through the ATO's myTax or by contacting the ATO directly. The sooner you do this, the sooner your new payment amounts take effect.",
+      list: [
+        "Request a reduction if you expect lower income than last year",
+        "Request an increase if you expect higher income to avoid a surprise debt",
+        "Update your variation if circumstances change mid-year",
+        "Keep records of your income projections to justify your request"
+      ]
+    },
+    {
+      heading: "Practical Tips for Managing PAYG Instalments",
+      list: [
+        "Set aside money in a separate savings account each month—divide your quarterly instalment by three to build up the amount before it's due",
+        "Use accounting software to track your income and profit in real-time, making it easier to forecast your tax liability",
+        "Review your instalment amount after each quarter to see if you're on track",
+        "Keep good records of all invoices and expenses to substantiate your income at tax time",
+        "Consider working with a tax accountant to optimize your structure and minimize tax"
+      ],
+      callout: {
+        type: "tip",
+        text: "Using a contractor rate calculator like RateIQ can help you understand your take-home pay after tax and PAYG instalments, making budgeting easier."
+      }
+    },
+    {
+      heading: "What Happens at Tax Time?",
+      body: "When you lodge your 2025-26 tax return (due by 31 October 2026), the ATO will reconcile your PAYG instalments against your actual tax liability. If you've paid too much, you'll receive a refund. If you've paid too little, you'll owe the difference. This is why getting your instalment amount right—or at least close—is important. Contractors often receive refunds because they've overestimated their tax liability or because they have deductions they haven't accounted for in their instalment calculations."
+    },
+    {
+      heading: "Key Takeaways for 2025-26",
+      callout: {
+        type: "info",
+        text: "Stay on top of your PAYG obligations, keep detailed records, and don't hesitate to contact the ATO if you need to vary your instalments. Planning ahead means no nasty surprises when tax time rolls around."
+      },
+      body: "PAYG instalments are a non-negotiable part of being a contractor in Australia, but they're manageable with a bit of planning. Know your dates, set aside funds regularly, and review your position quarterly. If circumstances change, don't wait—contact the ATO to vary your instalments. And remember, tools like RateIQ can help you forecast your income and understand your real take-home pay, making the whole process less stressful."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
