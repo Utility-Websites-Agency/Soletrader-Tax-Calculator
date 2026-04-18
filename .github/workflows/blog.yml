@@ -146,5 +146,5 @@ jobs:
           git config user.name "RateIQ Bot"
           git config user.email "bot@rateiq.com.au"
           git add lib/blog.ts
-          git diff --staged --quiet || git commit -m "blog: auto-generate weekly post [skip ci]"
+          git diff --staged --quiet || git commit -m "blog: auto-generate weekly post"
           git push
