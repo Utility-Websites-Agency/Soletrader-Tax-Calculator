@@ -493,7 +493,7 @@ export default function Home() {
             <a href="#faq" onClick={scrollTo("faq")} className="hover:text-[#1f2328] transition-colors">FAQ</a>
             <a href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</a>
           </nav>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {/* Blog link always visible outside burger on mobile */}
             <a href="/blog" className="md:hidden text-[14px] font-semibold text-[#1f2328]">Blog</a>
             <a
