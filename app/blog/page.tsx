@@ -63,7 +63,7 @@ const filtered = useMemo(() => {
           <Link href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {/* Blog link always visible */}
             <Link href="/blog" className="text-[14px] font-semibold text-[#1f2328]">Blog</Link>
             {/* Desktop nav */}
