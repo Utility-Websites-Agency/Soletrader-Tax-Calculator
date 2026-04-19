@@ -18,9 +18,11 @@ export function SiteNav({ activePage }: SiteNavProps) {
           <Link href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
-          {/* Desktop center nav */}
+          {/* Desktop center nav — same 4 links as homepage */}
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
             <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
+            <Link href="/#how-it-works" className="hover:text-[#1f2328] transition-colors">How it works</Link>
+            <Link href="/#faq" className="hover:text-[#1f2328] transition-colors">FAQ</Link>
             <Link href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</Link>
           </nav>
 
@@ -97,6 +99,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
                   { label: "Calculator", href: "/" },
                   { label: "How it works", href: "/#how-it-works" },
                   { label: "FAQ", href: "/#faq" },
+                  { label: "Blog", href: "/blog" },
                 ].map((item, i) => (
                   <motion.a
                     key={item.label}

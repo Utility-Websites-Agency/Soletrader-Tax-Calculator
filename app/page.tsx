@@ -583,6 +583,7 @@ export default function Home() {
                   { label: "Calculator", id: "calculator", href: "#calculator" },
                   { label: "How it works", id: "how-it-works", href: "#how-it-works" },
                   { label: "FAQ", id: "faq", href: "#faq" },
+                  { label: "Blog", id: "blog", href: "/blog" },
                 ].map((item, i) => (
                   <motion.a
                     key={item.id}
