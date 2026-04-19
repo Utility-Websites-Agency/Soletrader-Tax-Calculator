@@ -486,7 +486,7 @@ export default function Home() {
 
       {/* ── NAV ── */}
       <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md">
-        <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between">
+        <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between pt-[5px]">
           <a href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </a>
