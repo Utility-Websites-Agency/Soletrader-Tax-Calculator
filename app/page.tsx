@@ -555,10 +555,22 @@ export default function Home() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 32 }}
-              className="fixed top-0 right-0 z-50 h-full w-[280px] bg-white shadow-2xl flex flex-col md:hidden"
+              className="fixed top-0 right-0 z-50 h-full w-[300px] bg-white shadow-2xl flex flex-col md:hidden"
             >
+              {/* Close button row */}
+              <div className="flex justify-end p-3">
+                <button
+                  onClick={() => setDrawerOpen(false)}
+                  className="w-10 h-10 rounded-lg flex items-center justify-center text-[#57606a] hover:bg-[#f6f8fa] transition-colors"
+                  aria-label="Close menu"
+                >
+                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
+                    <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                  </svg>
+                </button>
+              </div>
               {/* Drawer links */}
-              <nav className="flex flex-col gap-1 p-4 flex-1">
+              <nav className="flex flex-col gap-1 px-4 flex-1">
                 {[
                   { label: "Calculator", id: "calculator", href: "#calculator" },
                   { label: "How it works", id: "how-it-works", href: "#how-it-works" },
@@ -572,7 +584,7 @@ export default function Home() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 + i * 0.05, duration: 0.2 }}
-                    className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[15px] font-medium text-[#1f2328] hover:bg-[#f6f8fa] transition-colors"
+                    className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[20px] font-medium text-[#1f2328] hover:bg-[#f6f8fa] transition-colors"
                   >
                     {item.label}
                   </motion.a>
