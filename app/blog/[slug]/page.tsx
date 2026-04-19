@@ -18,6 +18,7 @@ import {
 import AdSlot from "@/components/AdSlot";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SiteNav } from "@/components/SiteNav";
 
 // ─── Small components ──────────────────────────────────────────────────────────
 
@@ -143,18 +144,7 @@ export default function BlogPostPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
-      {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-[#e7e7e7] bg-white/80 backdrop-blur-md">
-        <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center">
-            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
-          </Link>
-          <nav className="flex items-center gap-4 text-[14px] font-medium text-[#57606a]">
-            <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
-            <Link href="/blog" className="text-[#1f2328] font-semibold">Blog</Link>
-          </nav>
-        </div>
-      </header>
+      <SiteNav activePage="blog-post" />
 
       {/* Breadcrumb */}
       <div className="border-b border-[#e7e7e7] px-4 md:px-6 py-3">
