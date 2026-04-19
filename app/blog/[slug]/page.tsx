@@ -251,14 +251,14 @@ export default function BlogPostPage() {
           <div className="rounded-xl border border-[#e7e7e7] overflow-hidden sticky top-20">
             <div className="bg-[#1b1f24] px-5 py-4">
               <p className="text-[13px] font-bold uppercase tracking-widest text-[#c9d1d9] mb-1">Try the Calculator</p>
-              <p className="text-[13px] text-[#8b949e] leading-relaxed">Find your exact charge-out rate in 60 seconds.</p>
+              <p className="text-[13px] text-[#c9d1d9] leading-relaxed">Find your exact charge-out rate in 60 seconds.</p>
             </div>
             <div className="p-4 bg-white">
               <Link
                 href="/#calculator"
                 className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
               >
-                Calculate my rate →
+                Calculate my rate
               </Link>
             </div>
           </div>
@@ -291,7 +291,7 @@ export default function BlogPostPage() {
           {/* All articles link */}
           <Link
             href="/blog"
-            className="flex items-center justify-center gap-2 rounded-xl border border-[#e7e7e7] bg-white px-4 py-3 text-[13px] font-semibold text-[#57606a] hover:text-[#2b7fff] hover:border-[#2b7fff]/40 transition-all"
+            className="flex items-center justify-center gap-2 rounded-xl border border-[#e7e7e7] bg-white px-4 py-3 text-[14px] leading-[22px] font-semibold text-[#57606a] hover:text-[#2b7fff] hover:border-[#2b7fff]/40 transition-all"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> Browse all articles
           </Link>
