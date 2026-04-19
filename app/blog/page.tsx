@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BLOG_POSTS } from "@/lib/blog";
 import { ChevronRight, Clock, Tag, Calendar } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 const ALL_CATEGORIES = ["All", ...Array.from(new Set(BLOG_POSTS.map((p) => p.category)))];
 
@@ -44,6 +45,7 @@ const filtered = useMemo(() => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-[#1f2328] flex flex-col">
+      <ScrollProgress />
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-[#e7e7e7] bg-white/80 backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between">

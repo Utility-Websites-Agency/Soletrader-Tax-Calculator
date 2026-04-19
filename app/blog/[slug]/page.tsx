@@ -16,6 +16,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 // ─── Small components ──────────────────────────────────────────────────────────
 
@@ -135,6 +136,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-[#1f2328] flex flex-col">
+      <ScrollProgress />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

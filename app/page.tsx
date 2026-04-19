@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence, useMotionValue, useMotionTemplate, useAnimationFrame } from "framer-motion";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import {
   ChevronDown,
   Check,
@@ -338,20 +339,6 @@ export default function Home() {
   const [taxBreakdownOpen, setTaxBreakdownOpen]   = useState(false);
   const [openFaq, setOpenFaq]           = useState<number | null>(null);
   const [drawerOpen, setDrawerOpen]     = useState(false);
-  const [showFab, setShowFab]           = useState(false);
-  const fabTriggerRef = React.useRef<HTMLDivElement>(null);
-  const rateRef       = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    const trigger = fabTriggerRef.current;
-    if (!trigger) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => setShowFab(!entry.isIntersecting),
-      { threshold: 0 }
-    );
-    obs.observe(trigger);
-    return () => obs.disconnect();
-  }, []);
 
   // AU only — ATO 2025-26
   const sym = "$";
@@ -473,6 +460,7 @@ export default function Home() {
       className="min-h-screen bg-transparent font-sans text-[#1f2328] selection:bg-[#2b7fff]/15 relative"
       onMouseMove={(e) => { mouseX.set(e.clientX); mouseY.set(e.clientY); }}
     >
+      <ScrollProgress />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -498,9 +486,9 @@ export default function Home() {
       {/* ── NAV ── */}
       <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between">
-          <div className="flex items-center">
+          <a href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
-          </div>
+          </a>
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
             <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Calculator</a>
             <a href="#how-it-works" onClick={scrollTo("how-it-works")} className="hover:text-[#1f2328] transition-colors">How it works</a>
@@ -912,15 +900,12 @@ export default function Home() {
 
           </div>
 
-          {/* FAB trigger sentinel — FAB appears once this scrolls out of view */}
-          <div ref={fabTriggerRef} />
-
           {/* RIGHT: Results */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-[56px] flex flex-col gap-4">
 
               {/* Rate Output */}
-              <div ref={rateRef} className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
+              <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
                 <div className="border-b border-[#e7e7e7] bg-[#1b1f24] px-5 py-4 text-center flex flex-col gap-3">
                   <p className="text-[12px] font-semibold uppercase tracking-wider text-[#c9d1d9]">
                     Your Required Charge-Out Rate
@@ -1177,25 +1162,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* FAB — slide up once user scrolls past the inputs */}
-      <AnimatePresence>
-        {showFab && (
-          <motion.button
-            initial={{ y: 80, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 80, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            onClick={() => rateRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 rounded-full bg-[#1b1f24] px-5 py-3 text-[15px] font-semibold text-white shadow-xl lg:hidden"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-            See my charge-out rate
-          </motion.button>
-        )}
-      </AnimatePresence>
 
     </div>
   );
