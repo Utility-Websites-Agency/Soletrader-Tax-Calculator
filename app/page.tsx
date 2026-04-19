@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence, useMotionValue, useMotionTemplate, useAnimationFrame } from "framer-motion";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { SiteFooter } from "@/components/SiteFooter";
 import {
   ChevronDown,
   Check,
@@ -1141,27 +1142,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="relative z-10 bg-[#1b1f24] px-6 py-12">
-        <div className="mx-auto max-w-[1280px] flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b7fff]">
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                <path d="M3 4h10M3 8h7M3 12h5" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span className="text-[14px] font-semibold text-white">SoleTraderTax</span>
-            <span className="text-[14px] text-[#8b949e]">— Australian Sole Trader Tax Calculator</span>
-          </div>
-          <div className="flex flex-col items-center md:items-end gap-1">
-            <p className="text-[12px] text-[#8b949e]">
-              ATO 2025-26 tax brackets. For general guidance only — not financial or tax advice.
-            </p>
-            <p className="text-[12px] text-[#8b949e]">
-              © {new Date().getFullYear()} SoleTraderTax.com.au · Free Australian sole trader tax calculator.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
 
     </div>
   );
