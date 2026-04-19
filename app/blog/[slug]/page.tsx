@@ -56,7 +56,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
         </h3>
       )}
       {section.body && (
-        <p className="text-[15px] text-[#57606a] leading-relaxed mb-3">
+        <p className="text-[16px] text-[#57606a] leading-[24px] mb-3">
           {section.body}
         </p>
       )}
@@ -276,7 +276,7 @@ export default function BlogPostPage() {
                     href={`/blog/${p.slug}`}
                     className="group flex flex-col gap-1 px-4 py-3.5 hover:bg-[#f6f8fa] transition-colors"
                   >
-                    <span className="text-[13px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors line-clamp-2 leading-snug">
+                    <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors line-clamp-2 leading-[22px]">
                       {p.title}
                     </span>
                     <span className="flex items-center gap-1 text-[12px] text-[#8b949e]">

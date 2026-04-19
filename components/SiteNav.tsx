@@ -82,18 +82,6 @@ export function SiteNav({ activePage }: SiteNavProps) {
               transition={{ type: "spring", stiffness: 300, damping: 32 }}
               className="fixed top-0 right-0 z-50 h-full w-[280px] bg-white shadow-2xl flex flex-col md:hidden"
             >
-              <div className="flex items-center justify-between px-5 h-14 border-b border-[#e7e7e7]">
-                <span className="text-[14px] font-semibold text-[#1f2328]">SoleTraderTax</span>
-                <button
-                  onClick={() => setDrawerOpen(false)}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-[#57606a] hover:bg-[#f6f8fa] transition-colors"
-                  aria-label="Close menu"
-                >
-                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                    <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-                  </svg>
-                </button>
-              </div>
               <nav className="flex flex-col gap-1 p-4 flex-1">
                 {[
                   { label: "Calculator", href: "/" },
@@ -119,7 +107,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
                   href="/"
                   className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-3 text-[15px] font-semibold text-white transition hover:bg-[#1a6fe8]"
                 >
-                  Try the calculator
+                  Calculate rate
                 </Link>
               </div>
             </motion.div>
