@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useState, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { BLOG_POSTS } from "@/lib/blog";
 import { ChevronRight, Clock, Tag, Calendar } from "lucide-react";
+import AdSlot from "@/components/AdSlot";
 
 const ALL_CATEGORIES = ["All", ...Array.from(new Set(BLOG_POSTS.map((p) => p.category)))];
 
@@ -22,9 +23,14 @@ const CATEGORY_COLORS: Record<string, string> = {
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [search, setSearch] = useState("");
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
 const filtered = useMemo(() => {
-    return [...BLOG_POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter((p) => {
+    return [...BLOG_POSTS].sort((a, b) => {
+      const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+      if (dateDiff !== 0) return dateDiff;
+      return BLOG_POSTS.indexOf(b) - BLOG_POSTS.indexOf(a);
+    }).filter((p) => {
       const matchCat = activeCategory === "All" || p.category === activeCategory;
       const q = search.toLowerCase();
       const matchSearch =
@@ -41,23 +47,96 @@ const filtered = useMemo(() => {
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-[#e7e7e7] bg-white/80 backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b7fff] text-white">
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                <path d="M3 4h10M3 8h7M3 12h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">RateIQ</span>
-            <span className="hidden sm:inline ml-1 rounded-full border border-[#2b7fff]/30 bg-[#2b7fff]/8 px-2 py-0.5 text-[12px] font-semibold uppercase tracking-wider text-[#2b7fff]">
-              AU
-            </span>
+          <Link href="/" className="flex items-center">
+            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
-          <nav className="flex items-center gap-4 text-[14px] font-medium text-[#57606a]">
-            <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
-            <Link href="/blog" className="text-[#1f2328] font-semibold">Blog</Link>
-          </nav>
+          <div className="flex items-center gap-3">
+            {/* Blog link always visible */}
+            <Link href="/blog" className="text-[14px] font-semibold text-[#1f2328]">Blog</Link>
+            {/* Desktop nav */}
+            <nav className="hidden md:flex items-center gap-4 text-[14px] font-medium text-[#57606a]">
+              <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
+            </nav>
+            {/* Mobile burger */}
+            <button
+              onClick={() => setDrawerOpen((v) => !v)}
+              className="md:hidden flex flex-col items-center justify-center w-9 h-9 rounded-lg border border-[#e7e7e7] bg-white/80 gap-1.5 focus:outline-none"
+              aria-label="Open menu"
+            >
+              <motion.span animate={drawerOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }} transition={{ duration: 0.25 }} className="block h-[1.5px] w-4 bg-[#1f2328] rounded-full origin-center" />
+              <motion.span animate={drawerOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }} transition={{ duration: 0.2 }} className="block h-[1.5px] w-4 bg-[#1f2328] rounded-full" />
+              <motion.span animate={drawerOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }} transition={{ duration: 0.25 }} className="block h-[1.5px] w-4 bg-[#1f2328] rounded-full origin-center" />
+            </button>
+          </div>
         </div>
       </header>
+
+      {/* ── MOBILE DRAWER ── */}
+      <AnimatePresence>
+        {drawerOpen && (
+          <>
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm md:hidden"
+              onClick={() => setDrawerOpen(false)}
+            />
+            <motion.div
+              key="drawer"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 32 }}
+              className="fixed top-0 right-0 z-50 h-full w-[280px] bg-white shadow-2xl flex flex-col md:hidden"
+            >
+              <div className="flex items-center justify-between px-5 h-14 border-b border-[#e7e7e7]">
+                <div className="flex items-center">
+                  <span className="text-[14px] font-semibold text-[#1f2328]">SoleTraderTax</span>
+                </div>
+                <button
+                  onClick={() => setDrawerOpen(false)}
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-[#57606a] hover:bg-[#f6f8fa] transition-colors"
+                  aria-label="Close menu"
+                >
+                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
+                    <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                  </svg>
+                </button>
+              </div>
+              <nav className="flex flex-col gap-1 p-4 flex-1">
+                {[
+                  { label: "Calculator", href: "/" },
+                  { label: "How it works", href: "/#how-it-works" },
+                  { label: "FAQ", href: "/#faq" },
+                ].map((item, i) => (
+                  <motion.a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setDrawerOpen(false)}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 + i * 0.05, duration: 0.2 }}
+                    className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[15px] font-medium text-[#1f2328] hover:bg-[#f6f8fa] transition-colors"
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
+              </nav>
+              <div className="p-4 border-t border-[#e7e7e7]">
+                <Link
+                  href="/"
+                  className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-3 text-[15px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                >
+                  Try the calculator →
+                </Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Hero */}
       <section className="px-4 md:px-6 py-16 md:py-20">
@@ -67,10 +146,6 @@ const filtered = useMemo(() => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#e7e7e7] bg-white px-3 py-1.5 text-[13px] font-medium text-[#57606a]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#2b7fff]" />
-              ATO 2025-26 · Australian Tax Guides
-            </div>
             <h1 className="text-[32px] md:text-[48px] font-extrabold tracking-tight text-[#1f2328] leading-[1.1] mb-4">
               Contractor &amp; Tax Guides
             </h1>
@@ -86,13 +161,13 @@ const filtered = useMemo(() => {
         <div className="mx-auto max-w-[1280px]">
 
           {/* Search + filter bar */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+          <div className="flex flex-col gap-3 mb-8">
             <input
               type="text"
               placeholder="Search articles…"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="flex-1 rounded-lg border border-[#e7e7e7] bg-white px-4 py-2.5 text-[14px] text-[#1f2328] outline-none focus:border-[#2b7fff] focus:ring-2 focus:ring-[#2b7fff]/20 placeholder:text-[#8b949e]"
+              className="w-full max-w-[600px] rounded-lg border border-[#e7e7e7] bg-white px-4 py-2.5 text-[14px] text-[#1f2328] outline-none focus:border-[#2b7fff] focus:ring-2 focus:ring-[#2b7fff]/20 placeholder:text-[#8b949e]"
             />
             <div className="flex flex-wrap gap-2">
               {ALL_CATEGORIES.map((cat) => (
@@ -179,19 +254,28 @@ const filtered = useMemo(() => {
         </div>
       </section>
 
+      {/* AD SLOT 1 — after article grid */}
+      <div className="px-4 md:px-6 py-2">
+        <div className="mx-auto max-w-[1280px]">
+          <AdSlot label="Ad Slot 1 — Google AdSense" />
+        </div>
+      </div>
+
+      {/* AD SLOT 2 — above footer */}
+      <div className="px-4 md:px-6 py-2">
+        <div className="mx-auto max-w-[1280px]">
+          <AdSlot label="Ad Slot 2 — Google AdSense" />
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="bg-[#1b1f24] px-6 py-12">
         <div className="mx-auto max-w-[1280px]">
           <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
             {/* Brand */}
             <div className="flex flex-col gap-3 max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b7fff]">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                    <path d="M3 4h10M3 8h7M3 12h5" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
-                  </svg>
-                </div>
-                <span className="text-[15px] font-semibold text-white">RateIQ</span>
+              <div className="flex items-center">
+                <span className="text-[15px] font-semibold text-white">SoleTraderTax</span>
               </div>
               <p className="text-[13px] text-[#8b949e] leading-relaxed">
                 Free tools for Australian contractors and sole traders. Calculate your charge-out rate, tax and take-home pay.
@@ -228,7 +312,7 @@ const filtered = useMemo(() => {
             </div>
           </div>
           <div className="border-t border-[#30363d] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[12px] text-[#8b949e]">© {new Date().getFullYear()} RateIQ. Australian Contractor Rate Calculator.</p>
+            <p className="text-[12px] text-[#8b949e]">© {new Date().getFullYear()} SoleTraderTax.com.au · Free Australian sole trader tax calculator.</p>
             <p className="text-[12px] text-[#8b949e]">General guidance only — not financial or tax advice.</p>
           </div>
         </div>

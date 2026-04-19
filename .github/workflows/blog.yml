@@ -63,7 +63,7 @@ jobs:
           slug = re.sub(r"[^a-z0-9]+", "-", topic.lower())[:60].strip("-")
 
           prompt = (
-            "You are writing a blog post for RateIQ, an Australian contractor rate and tax calculator website.\n\n"
+            "You are writing a blog post for SoleTraderTax.com.au, an Australian sole trader tax and charge-out rate calculator.\n\n"
             f"Topic: {topic}\n"
             f"Date: {today}\n"
             "Tax year: 2025-26 ATO rates\n\n"
@@ -143,7 +143,7 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "RateIQ Bot"
+          git config user.name "SoleTraderTax Bot"
           git config user.email "bot@rateiq.com.au"
           git add lib/blog.ts
           git diff --staged --quiet || git commit -m "blog: auto-generate weekly post"

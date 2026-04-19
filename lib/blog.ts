@@ -593,7 +593,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       heading: "When to Consider a Business Loan or Line of Credit",
-      body: "If cash flow gaps are persistent and severe, a short-term business loan or line of credit from your bank might be worth considering. This is particularly useful if you have a predictable payment cycle—for example, you know you'll receive payment in 45 days and need funds now. Some banks offer small business loans or overdrafts designed for this purpose. However, be cautious about the interest costs. Use RateIQ to calculate what these costs might be and whether it makes sense for your situation. Generally, it's better to invest in building your buffer than relying on borrowed money long-term."
+      body: "If cash flow gaps are persistent and severe, a short-term business loan or line of credit from your bank might be worth considering. This is particularly useful if you have a predictable payment cycle—for example, you know you'll receive payment in 45 days and need funds now. Some banks offer small business loans or overdrafts designed for this purpose. However, be cautious about the interest costs. Use SoleTraderTax to calculate what these costs might be and whether it makes sense for your situation. Generally, it's better to invest in building your buffer than relying on borrowed money long-term."
     },
     {
       heading: "Planning Ahead for Smoother Cash Flow",
@@ -612,7 +612,7 @@ export const BLOG_POSTS: BlogPost[] = [
       body: "Managing cash flow as a sole trader comes down to three things: understanding your payment patterns, building a financial buffer, and planning ahead. While you're working toward a comfortable reserve, use strategies like early payment discounts, progress payments, and clear invoicing to speed up your cash inflow. Don't forget to account for taxes separately—they're a non-negotiable obligation. By being proactive about your cash flow, you'll reduce stress and create a more stable, professional business.",
       callout: {
         type: "tip",
-        text: "Use RateIQ to track your invoicing patterns and calculate your likely tax obligations for the 2025-26 tax year. Knowing what you'll owe helps you set aside the right amount and avoid cash flow surprises."
+        text: "Use SoleTraderTax to track your invoicing patterns and calculate your likely tax obligations for the 2025-26 tax year. Knowing what you'll owe helps you set aside the right amount and avoid cash flow surprises."
       }
     }
   ]
@@ -675,7 +675,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "Important Considerations",
       callout: {
         type: "tip",
-        text: "Use RateIQ's contractor rate calculator to model different scenarios based on the 2025-26 tax year rates. You can adjust for your specific tax position, anticipated expenses, and desired take-home income. This removes guesswork and helps you stay competitive while ensuring you're adequately compensated."
+        text: "Use SoleTraderTax's contractor rate calculator to model different scenarios based on the 2025-26 tax year rates. You can adjust for your specific tax position, anticipated expenses, and desired take-home income. This removes guesswork and helps you stay competitive while ensuring you're adequately compensated."
       },
       list: [
         "Business expenses: Track deductible costs like software subscriptions, home office, professional development, and vehicle use. These reduce your taxable income and effectively lower the rate you need to charge.",
@@ -771,7 +771,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       heading: "Getting Help with Your BAS",
-      body: "If you're new to lodging a BAS or find the process overwhelming, you don't have to go it alone. The ATO offers free resources and guides on their website. You can also engage a tax agent or accountant to lodge on your behalf—typically a cost-effective investment that ensures accuracy and frees up your time for running your business. At RateIQ, we help contractors and sole traders understand their financial position, making tax time less stressful.",
+      body: "If you're new to lodging a BAS or find the process overwhelming, you don't have to go it alone. The ATO offers free resources and guides on their website. You can also engage a tax agent or accountant to lodge on your behalf—typically a cost-effective investment that ensures accuracy and frees up your time for running your business. At SoleTraderTax, we help contractors and sole traders understand their financial position, making tax time less stressful.",
       callout: {
         type: "info",
         text: "Keep all your receipts, invoices, and financial records for at least five years. The ATO may conduct audits or request supporting documents to verify your BAS submissions."

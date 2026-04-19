@@ -15,6 +15,7 @@ import {
   Check,
   ArrowLeft,
 } from "lucide-react";
+import AdSlot from "@/components/AdSlot";
 
 // ─── Small components ──────────────────────────────────────────────────────────
 
@@ -117,22 +118,33 @@ export default function BlogPostPage() {
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 2);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": new Date(post.date).toISOString(),
+    "publisher": {
+      "@type": "Organization",
+      "name": "SoleTraderTax",
+      "url": "https://soletradertax.com.au",
+    },
+    "url": `https://soletradertax.com.au/blog/${post.slug}`,
+    "keywords": post.tags.join(", "),
+  };
+
   return (
     <div className="min-h-screen bg-white font-sans text-[#1f2328] flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
 
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-[#e7e7e7] bg-white/80 backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b7fff] text-white">
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                <path d="M3 4h10M3 8h7M3 12h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">RateIQ</span>
-            <span className="hidden sm:inline ml-1 rounded-full border border-[#2b7fff]/30 bg-[#2b7fff]/8 px-2 py-0.5 text-[12px] font-semibold uppercase tracking-wider text-[#2b7fff]">
-              AU
-            </span>
+          <Link href="/" className="flex items-center">
+            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
           <nav className="flex items-center gap-4 text-[14px] font-medium text-[#57606a]">
             <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
@@ -200,6 +212,9 @@ export default function BlogPostPage() {
               </span>
             ))}
           </div>
+
+          {/* AD SLOT 1 — after article body */}
+          <AdSlot label="Ad Slot 1 — Google AdSense" className="mt-10" />
 
           {/* Prev / Next navigation */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -291,19 +306,21 @@ export default function BlogPostPage() {
         </aside>
       </div>
 
+      {/* AD SLOT 2 — above footer */}
+      <div className="px-4 md:px-6 py-2">
+        <div className="mx-auto max-w-[1280px]">
+          <AdSlot label="Ad Slot 2 — Google AdSense" />
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="bg-[#1b1f24] px-6 py-12">
         <div className="mx-auto max-w-[1280px]">
           <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
             {/* Brand */}
             <div className="flex flex-col gap-3 max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b7fff]">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                    <path d="M3 4h10M3 8h7M3 12h5" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
-                  </svg>
-                </div>
-                <span className="text-[15px] font-semibold text-white">RateIQ</span>
+              <div className="flex items-center">
+                <span className="text-[15px] font-semibold text-white">SoleTraderTax</span>
               </div>
               <p className="text-[13px] text-[#8b949e] leading-relaxed">
                 Free tools for Australian contractors and sole traders. Calculate your charge-out rate, tax and take-home pay.
@@ -340,7 +357,7 @@ export default function BlogPostPage() {
             </div>
           </div>
           <div className="border-t border-[#30363d] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[12px] text-[#8b949e]">© {new Date().getFullYear()} RateIQ. Australian Contractor Rate Calculator.</p>
+            <p className="text-[12px] text-[#8b949e]">© {new Date().getFullYear()} SoleTraderTax.com.au · Free Australian sole trader tax calculator.</p>
             <p className="text-[12px] text-[#8b949e]">General guidance only — not financial or tax advice.</p>
           </div>
         </div>

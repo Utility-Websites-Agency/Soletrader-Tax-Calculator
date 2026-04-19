@@ -12,6 +12,8 @@ import {
   BookOpen,
 } from "lucide-react";
 
+import AdSlot from "@/components/AdSlot";
+
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
 // Base rates = typical AU charge-out rate midpoint (excl. GST), sourced from
@@ -450,11 +452,25 @@ export default function Home() {
     },
   ];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((f) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a },
+    })),
+  };
+
   return (
     <div
       className="min-h-screen bg-transparent font-sans text-[#1f2328] selection:bg-[#2b7fff]/15 relative"
       onMouseMove={(e) => { mouseX.set(e.clientX); mouseY.set(e.clientY); }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ── FULL-PAGE GRID (fixed, behind all content) ── */}
       <div className="fixed inset-0 z-0 pointer-events-none text-gray-400 opacity-[0.05]">
         <GridPattern id="grid-static" offsetX={gridOffsetX} offsetY={gridOffsetY} />
@@ -476,16 +492,8 @@ export default function Home() {
       {/* ── NAV ── */}
       <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex h-14 items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#2b7fff] text-white">
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                <path d="M3 4h10M3 8h7M3 12h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">RateIQ</span>
-            <span className="hidden sm:inline ml-1 rounded-full border border-[#2b7fff]/30 bg-[#2b7fff]/8 px-2 py-0.5 text-[14px] font-semibold uppercase tracking-wider text-[#2b7fff]">
-              AU
-            </span>
+          <div className="flex items-center">
+            <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
             <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Calculator</a>
@@ -494,6 +502,8 @@ export default function Home() {
             <a href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</a>
           </nav>
           <div className="flex items-center gap-3">
+            {/* Blog link always visible outside burger on mobile */}
+            <a href="/blog" className="md:hidden text-[14px] font-semibold text-[#1f2328]">Blog</a>
             <a
               href="#calculator"
               onClick={scrollTo("calculator")}
@@ -558,7 +568,7 @@ export default function Home() {
                       <path d="M3 4h10M3 8h7M3 12h5" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <span className="text-[14px] font-semibold text-[#1f2328]">RateIQ</span>
+                  <span className="text-[14px] font-semibold text-[#1f2328]">SoleTraderTax</span>
                 </div>
                 <button
                   onClick={() => setDrawerOpen(false)}
@@ -576,7 +586,6 @@ export default function Home() {
                   { label: "Calculator", id: "calculator", href: "#calculator" },
                   { label: "How it works", id: "how-it-works", href: "#how-it-works" },
                   { label: "FAQ", id: "faq", href: "#faq" },
-                  { label: "Blog", id: "blog", href: "/blog" },
                 ].map((item, i) => (
                   <motion.a
                     key={item.id}
@@ -723,36 +732,37 @@ export default function Home() {
                 </div>
                 <div className="p-5 flex flex-col gap-4">
 
-                  {/* Reverse calc result callout */}
+                  {/* Required pre-tax income */}
                   {calc.auTaxResult && (
-                    <div className="rounded-lg bg-[#f6f8fa] px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                      <div>
-                        <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-0.5">Required pre-tax income</p>
-                        <p className="text-[22px] font-extrabold text-[#1f2328]">
-                          {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
-                        </p>
-                      </div>
-                      <div className="text-[12px] text-[#57606a] sm:text-right">
-                        <p>To take home</p>
-                        <p className="font-bold text-green-600 text-[15px]">{sym}{Math.round(desiredIncome).toLocaleString()}</p>
-                      </div>
+                    <div>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Required pre-tax income</p>
+                      <p className="text-[30px] font-extrabold text-[#1f2328] leading-none">
+                        {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
+                      </p>
+                      <p className="text-[13px] text-[#57606a] mt-1.5">
+                        To take home <span className="font-semibold text-green-600">{sym}{Math.round(desiredIncome).toLocaleString()}</span>
+                      </p>
                     </div>
                   )}
 
-                  {/* 4 stat cards */}
+                  {/* 3 stats — 2 on top row, 1 stacked below on mobile; single row on sm+ */}
                   {calc.auTaxResult && (
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                      <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                        <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Marginal bracket</p>
-                        <p className="text-[16px] font-extrabold text-[#1f2328]">{(calc.auTaxResult.marginalRate * 100).toFixed(0)}%</p>
+                    <div className="border-t border-b border-[#e7e7e7] py-4 flex flex-col gap-4 sm:gap-0 sm:flex-row sm:items-start sm:divide-x sm:divide-[#e7e7e7]">
+                      {/* Top row on mobile: marginal + medicare side by side */}
+                      <div className="flex divide-x divide-[#e7e7e7] sm:contents">
+                        <div className="flex-1 pr-4">
+                          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Marginal bracket</p>
+                          <p className="text-[20px] font-extrabold text-[#1f2328]">{(calc.auTaxResult.marginalRate * 100).toFixed(0)}%</p>
+                        </div>
+                        <div className="flex-1 px-4">
+                          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Medicare levy</p>
+                          <p className="text-[20px] font-extrabold text-[#1f2328]">2%</p>
+                        </div>
                       </div>
-                      <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                        <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Medicare levy</p>
-                        <p className="text-[16px] font-extrabold text-[#1f2328]">2%</p>
-                      </div>
-                      <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                        <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Est. annual tax</p>
-                        <p className="text-[16px] font-extrabold text-[#1f2328]">{sym}{Math.round(calc.taxAmt).toLocaleString()}</p>
+                      {/* Stacked below on mobile, third column on sm+ */}
+                      <div className="border-t border-[#e7e7e7] pt-4 sm:border-t-0 sm:pt-0 sm:flex-1 sm:pl-4">
+                        <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Est. annual tax</p>
+                        <p className="text-[20px] font-extrabold text-[#1f2328]">{sym}{Math.round(calc.taxAmt).toLocaleString()}</p>
                       </div>
                     </div>
                   )}
@@ -847,7 +857,7 @@ export default function Home() {
                 {/* Flat-rate summary — mirrors the AU breakdown cards */}
                 <div className="rounded-lg bg-[#f6f8fa] px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-0.5">Required pre-tax income</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-0.5">Required pre-tax income</p>
                     <p className="text-[22px] font-extrabold text-[#1f2328]">
                       {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
                     </p>
@@ -860,11 +870,11 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                    <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Flat rate applied</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Flat rate applied</p>
                     <p className="text-[16px] font-extrabold text-[#1f2328]">{taxPct}%</p>
                   </div>
                   <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                    <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Est. annual tax</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Est. annual tax</p>
                     <p className="text-[16px] font-extrabold text-[#1f2328]">{sym}{Math.round(calc.taxAmt).toLocaleString()}</p>
                   </div>
                 </div>
@@ -901,8 +911,8 @@ export default function Home() {
 
               {/* Rate Output */}
               <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
-                <div className="border-b border-[#e7e7e7] bg-[#1b1f24] px-5 py-4 text-center">
-                  <p className="text-[14px] font-bold uppercase tracking-widest text-[#c9d1d9] mb-1">
+                <div className="border-b border-[#e7e7e7] bg-[#1b1f24] px-5 py-4 text-center flex flex-col gap-3">
+                  <p className="text-[12px] font-semibold uppercase tracking-wider text-[#c9d1d9]">
                     Your Required Charge-Out Rate
                   </p>
                   <div className="flex items-end justify-center gap-1">
@@ -912,7 +922,7 @@ export default function Home() {
                     </span>
                     <span className="text-[16px] font-medium text-[#c9d1d9] leading-none mb-2">/hr</span>
                   </div>
-                  <p className="mt-2 text-[14px] text-[#c9d1d9] leading-relaxed">
+                  <p className="text-[14px] text-[#c9d1d9] leading-relaxed">
                     Calculated from your take-home target, ATO tax & business overheads
                     {includeGst ? " · inc. GST" : ""}
                   </p>
@@ -922,11 +932,11 @@ export default function Home() {
                   {/* Min / Premium */}
                   <div className="grid grid-cols-2 gap-3">
                     <div className="rounded-lg bg-[#f6f8fa] px-3 py-3 text-center">
-                      <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Minimum safe</p>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Minimum safe</p>
                       <p className="text-[17px] font-bold text-[#1f2328]">{sym}<AnimatedNumber value={calc.minRate} /><span className="text-[12px] font-medium text-[#5f676f]">/hr</span></p>
                     </div>
                     <div className="rounded-lg bg-[#f6f8fa] px-3 py-3 text-center">
-                      <p className="text-[14px] font-bold uppercase tracking-wider text-[#5f676f] mb-1">Premium</p>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Premium</p>
                       <p className="text-[17px] font-bold text-[#1f2328]">{sym}<AnimatedNumber value={calc.preRate} /><span className="text-[12px] font-medium text-[#5f676f]">/hr</span></p>
                     </div>
                   </div>
@@ -1008,8 +1018,8 @@ export default function Home() {
 
       {/* AD SLOT 1 */}
       <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
-        <div className="mx-auto max-w-[1280px] flex items-center justify-center rounded-lg border-2 border-dashed border-[#e7e7e7] bg-[#f6f8fa] py-6">
-          <span className="text-[12px] font-medium text-[#5f676f] uppercase tracking-wide">Ad Slot 1 — Google AdSense</span>
+        <div className="mx-auto max-w-[1280px]">
+          <AdSlot label="Ad Slot 1 — Google AdSense" />
         </div>
       </div>
 
@@ -1018,7 +1028,7 @@ export default function Home() {
         <div className="mx-auto max-w-[860px]">
           <h2 className="text-[28px] font-extrabold tracking-tight text-[#1f2328] mb-2">How the engine works</h2>
           <p className="text-[15px] text-[#57606a] mb-10 font-medium">
-            RateIQ uses a 4-step sole trader pricing engine. Here&apos;s exactly how your charge-out rate is calculated.
+            SoleTraderTax uses a 4-step sole trader pricing engine. Here&apos;s exactly how your charge-out rate is calculated.
           </p>
 
           <div className="flex flex-col gap-6">
@@ -1026,7 +1036,7 @@ export default function Home() {
               {
                 step: "Step 1",
                 title: "Reverse ATO Tax Calculation",
-                desc: "Most tools calculate tax on a gross income. RateIQ works backwards: given your desired take-home, it solves for the pre-tax income that — after ATO progressive brackets and Medicare levy — produces exactly what you want. This is done via binary search accurate to within $1.",
+                desc: "Most tools calculate tax on a gross income. SoleTraderTax works backwards: given your desired take-home, it solves for the pre-tax income that — after ATO progressive brackets and Medicare levy — produces exactly what you want. This is done via binary search accurate to within $1.",
               },
               {
                 step: "Step 2",
@@ -1092,8 +1102,8 @@ export default function Home() {
 
       {/* AD SLOT 2 */}
       <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
-        <div className="mx-auto max-w-[1280px] flex items-center justify-center rounded-lg border-2 border-dashed border-[#e7e7e7] py-6">
-          <span className="text-[12px] font-medium text-[#5f676f] uppercase tracking-wide">Ad Slot 2 — Google AdSense</span>
+        <div className="mx-auto max-w-[1280px]">
+          <AdSlot label="Ad Slot 2 — Google AdSense" />
         </div>
       </div>
 
@@ -1144,15 +1154,15 @@ export default function Home() {
                 <path d="M3 4h10M3 8h7M3 12h5" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
               </svg>
             </div>
-            <span className="text-[14px] font-semibold text-white">RateIQ</span>
-            <span className="text-[14px] text-[#8b949e]">— Australian Contractor Rate Calculator</span>
+            <span className="text-[14px] font-semibold text-white">SoleTraderTax</span>
+            <span className="text-[14px] text-[#8b949e]">— Australian Sole Trader Tax Calculator</span>
           </div>
           <div className="flex flex-col items-center md:items-end gap-1">
             <p className="text-[12px] text-[#8b949e]">
               ATO 2025-26 tax brackets. For general guidance only — not financial or tax advice.
             </p>
             <p className="text-[12px] text-[#8b949e]">
-              © {new Date().getFullYear()} RateIQ. Built for contractors, by contractors.
+              © {new Date().getFullYear()} SoleTraderTax.com.au · Free Australian sole trader tax calculator.
             </p>
           </div>
         </div>
