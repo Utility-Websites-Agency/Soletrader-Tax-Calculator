@@ -13,23 +13,31 @@ export function SiteNav({ activePage }: SiteNavProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-[#e7e7e7] bg-white/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex items-center justify-between py-4">
           <Link href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
           <div className="flex items-center gap-4">
-            {/* Blog link always visible on mobile */}
+            {/* Desktop nav links */}
+            <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
+              <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
+              <Link href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</Link>
+            </nav>
+            {/* Blog link visible on mobile only */}
             <Link
               href="/blog"
-              className={`text-[14px] font-semibold ${activePage === "blog-index" || activePage === "blog-post" ? "text-[#1f2328]" : "text-[#57606a] hover:text-[#1f2328]"} transition-colors`}
+              className="md:hidden text-[14px] font-semibold text-[#1f2328]"
             >
               Blog
             </Link>
-            {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-4 text-[14px] font-medium text-[#57606a]">
-              <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
-            </nav>
+            {/* Desktop CTA — matches homepage "Get started" button to lock nav height */}
+            <Link
+              href="/"
+              className="hidden md:inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+            >
+              Get started
+            </Link>
             {/* Mobile burger — always present to keep nav height consistent */}
             <button
               onClick={() => setDrawerOpen((v) => !v)}
