@@ -282,7 +282,7 @@ function ConfidenceBadge({ level, note }: { level: string; note: string }) {
   return (
     <div className={`flex items-center gap-2 rounded-lg px-3 py-2.5 text-[14px] font-semibold ${color}`}>
       <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
-      <span>Confidence: {level} — <span className="font-medium">{note}</span></span>
+      <span>Confidence: {level}, <span className="font-medium">{note}</span></span>
     </div>
   );
 }
@@ -430,15 +430,15 @@ export default function Home() {
   const faqs = [
     {
       q: "Why is my charge-out rate much higher than my desired income?",
-      a: "Because your hourly rate must cover more than just your take-home pay. It needs to cover: income tax (which is reverse-calculated from your target), all your business overheads (vehicle, tools, insurance, etc.), and it's spread only across your realistic billable hours — not 40 hours a week. Sole traders typically bill 20–25 hours out of every 38-hour week once admin, travel, quoting, and quiet periods are accounted for.",
+      a: "Because your hourly rate must cover more than just your take-home pay. It needs to cover: income tax (which is reverse-calculated from your target), all your business overheads (vehicle, tools, insurance, etc.), and it's spread only across your realistic billable hours, not 40 hours a week. Sole traders typically bill 20–25 hours out of every 38-hour week once admin, travel, quoting, and quiet periods are accounted for.",
     },
     {
       q: "How does the reverse tax calculation work?",
-      a: "Most calculators ask for your gross income and show tax. This one works backwards: you tell us how much you want to take home, and the engine finds the pre-tax income that — after applying ATO's progressive brackets and Medicare levy — leaves you with exactly that amount. It uses an iterative binary search accurate to within $1.",
+      a: "Most calculators ask for your gross income and show tax. This one works backwards: you tell us how much you want to take home, and the engine finds the pre-tax income that, after applying ATO's progressive brackets and Medicare levy, leaves you with exactly that amount. It uses an iterative binary search accurate to within $1.",
     },
     {
       q: "What does the market benchmark show?",
-      a: "The benchmark shows what other contractors in your profession and location are typically charging, based on our dataset. It's informational only — your required rate is driven solely by your take-home target, tax, overheads, and billable hours. You may need to charge above or below market rates depending on your personal situation.",
+      a: "The benchmark shows what other contractors in your profession and location are typically charging, based on our dataset. It's informational only. Your required rate is driven solely by your take-home target, tax, overheads, and billable hours. You may need to charge above or below market rates depending on your personal situation.",
     },
     {
       q: "Why use 25 billable hours as the default?",
@@ -627,7 +627,7 @@ export default function Home() {
             <span className="text-[#2b7fff]">actually charge?</span>
           </h1>
           <p className="mt-5 text-[16px] text-[#1f2328] leading-relaxed font-medium">
-            Enter your desired take-home pay and we reverse-calculate the exact charge-out rate you need — after ATO tax, Medicare levy, and all your business overheads.
+            Enter your desired take-home pay and we reverse-calculate the exact charge-out rate you need, after ATO tax, Medicare levy, and all your business overheads.
           </p>
           <a
             href="#calculator"
@@ -876,7 +876,7 @@ export default function Home() {
                 </div>
 
                 <GitBookCallout type="info">
-                  Manual override uses a flat rate. Real ATO tax uses progressive brackets — your actual bill may differ. Adjust the rate above to match your accountant&apos;s advice.
+                  Manual override uses a flat rate. Real ATO tax uses progressive brackets, so your actual bill may differ. Adjust the rate above to match your accountant&apos;s advice.
                 </GitBookCallout>
               </Section>
             )}
@@ -972,7 +972,7 @@ export default function Home() {
                 <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3 flex items-center justify-between">
                   <div>
                     <h3 className="text-[14px] font-semibold text-[#1f2328] uppercase tracking-wider">Market Benchmark</h3>
-                    <p className="text-[14px] text-[#5f676f] mt-0.5 font-medium">Guide only — does not affect your required rate</p>
+                    <p className="text-[14px] text-[#5f676f] mt-0.5 font-medium">Guide only, does not affect your required rate</p>
                   </div>
                   <TrendingUp className="w-4 h-4 text-[#5f676f]" />
                 </div>
@@ -993,8 +993,8 @@ export default function Home() {
                   }`}>
                     {calc.comparison === "BELOW"  && <TrendingDown className="w-4 h-4 shrink-0" />}
                     {calc.comparison === "ABOVE"  && <TrendingUp className="w-4 h-4 shrink-0" />}
-                    {calc.comparison === "BELOW"  ? "Your required rate is below typical market — you may have room to charge more" :
-                     calc.comparison === "ABOVE"  ? "Your required rate is above typical market — consider adjusting overheads or hours" :
+                    {calc.comparison === "BELOW"  ? "Your required rate is below typical market. You may have room to charge more." :
+                     calc.comparison === "ABOVE"  ? "Your required rate is above typical market. Consider adjusting overheads or hours." :
                                                     "Your required rate is aligned with typical market pricing"}
                   </div>
 
@@ -1004,7 +1004,7 @@ export default function Home() {
 
               {/* Disclaimer */}
               <GitBookCallout type="info">
-                Benchmark ranges are derived from Hipages, ServiceSeeking &amp; ABS 2024 labour data. They are indicative midpoints — actual market rates vary widely. Your required rate is calculated independently from these figures. Not financial or tax advice.
+                Benchmark ranges are derived from Hipages, ServiceSeeking and ABS 2024 labour data. They are indicative midpoints; actual market rates vary widely. Your required rate is calculated independently from these figures. Not financial or tax advice.
               </GitBookCallout>
 
             </div>
@@ -1015,7 +1015,7 @@ export default function Home() {
       {/* AD SLOT 1 */}
       <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad Slot 1 — Google AdSense" />
+          <AdSlot label="Ad slot 1, Google AdSense" />
         </div>
       </div>
 
@@ -1032,7 +1032,7 @@ export default function Home() {
               {
                 step: "Step 1",
                 title: "Reverse ATO Tax Calculation",
-                desc: "Most tools calculate tax on a gross income. SoleTraderTax works backwards: given your desired take-home, it solves for the pre-tax income that — after ATO progressive brackets and Medicare levy — produces exactly what you want. This is done via binary search accurate to within $1.",
+                desc: "Most tools calculate tax on a gross income. SoleTraderTax works backwards: given your desired take-home, it solves for the pre-tax income that, after ATO progressive brackets and Medicare levy, produces exactly what you want. This is done via binary search accurate to within $1.",
               },
               {
                 step: "Step 2",
@@ -1067,7 +1067,7 @@ export default function Home() {
           <div className="mt-10 rounded-xl border border-[#e7e7e7] overflow-hidden">
             <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3">
               <h3 className="text-[12px] font-semibold uppercase tracking-wider text-[#57606a]">
-                Australian resident income tax brackets — 2025-26
+                Australian resident income tax brackets, 2025-26
               </h3>
             </div>
             <div className="overflow-x-auto">
@@ -1099,7 +1099,7 @@ export default function Home() {
       {/* AD SLOT 2 */}
       <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad Slot 2 — Google AdSense" />
+          <AdSlot label="Ad slot 2, Google AdSense" />
         </div>
       </div>
 
