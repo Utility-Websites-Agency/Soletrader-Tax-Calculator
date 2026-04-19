@@ -618,7 +618,7 @@ export default function Home() {
             Free · No sign-up · ATO 2025-26 tax rates
           </div>
           <h1 className="text-[38px] md:text-[54px] font-extrabold tracking-tight text-[#1f2328] leading-[1.1]">
-            What should you{" "}
+            How much should you{" "}
             <span className="text-[#2b7fff]">actually charge?</span>
           </h1>
           <p className="mt-5 text-[16px] text-[#1f2328] leading-relaxed font-medium">
