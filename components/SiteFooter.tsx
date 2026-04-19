@@ -1,16 +1,7 @@
 import Link from "next/link";
+import { BLOG_POSTS } from "@/lib/blog";
 
-const BLOG_CATEGORIES = [
-  "All",
-  "Tax",
-  "Contractor Pay",
-  "Personal Finance",
-  "Tax Refund",
-  "Tax Savings",
-  "Superannuation",
-  "Mortgage",
-  "Work Planning",
-];
+const BLOG_CATEGORIES = ["All", ...Array.from(new Set(BLOG_POSTS.map((p) => p.category)))];
 
 export function SiteFooter() {
   return (
