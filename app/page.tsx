@@ -45,8 +45,8 @@ const AU_STATES = [
 ];
 
 const LOCATION_TYPES = [
-  { id: "METRO",    name: "Metro / High Demand",  flag: "🏙️", mult: 1.08 },
-  { id: "REGIONAL", name: "Regional / Rural",     flag: "🌄", mult: 0.88 },
+  { id: "METRO",    name: "Metro / High Demand",  mult: 1.08 },
+  { id: "REGIONAL", name: "Regional / Rural",     mult: 0.88 },
 ];
 
 // ─── AU PROGRESSIVE TAX ──────────────────────────────────────────────────────
@@ -338,6 +338,20 @@ export default function Home() {
   const [taxBreakdownOpen, setTaxBreakdownOpen]   = useState(false);
   const [openFaq, setOpenFaq]           = useState<number | null>(null);
   const [drawerOpen, setDrawerOpen]     = useState(false);
+  const [showFab, setShowFab]           = useState(false);
+  const fabTriggerRef = React.useRef<HTMLDivElement>(null);
+  const rateRef       = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const trigger = fabTriggerRef.current;
+    if (!trigger) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setShowFab(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    obs.observe(trigger);
+    return () => obs.disconnect();
+  }, []);
 
   // AU only — ATO 2025-26
   const sym = "$";
@@ -660,6 +674,7 @@ export default function Home() {
                   value={desiredIncome}
                   onChange={setDesiredIncome}
                   prefix={sym}
+                  suffix="AUD"
                   helper="After tax, what do you want to earn?"
                 />
                 <NumberInput
@@ -710,14 +725,14 @@ export default function Home() {
             {/* Tax Section */}
             {!manualTaxOverride ? (
               <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
-                <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3 flex items-center justify-between">
+                <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
                     <h2 className="text-[14px] font-semibold text-[#1f2328] uppercase tracking-wider">Tax Estimate (Auto)</h2>
                     <p className="text-[14px] text-[#5f676f] mt-0.5">Reverse-calculated from your take-home target using ATO 2025-26 progressive brackets</p>
                   </div>
                   <button
                     onClick={() => setManualTaxOverride(true)}
-                    className="text-[14px] font-semibold text-[#2b7fff] hover:underline shrink-0 ml-4"
+                    className="text-[14px] font-semibold text-[#2b7fff] hover:underline self-start sm:self-auto sm:shrink-0 sm:ml-4"
                   >
                     Manual override
                   </button>
@@ -888,21 +903,24 @@ export default function Home() {
                   </div>
                   <button
                     onClick={() => setIncludeGst((v) => !v)}
-                    className={`relative h-6 w-11 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/30 ${includeGst ? "bg-[#2b7fff]" : "bg-[#e7e7e7]"}`}
+                    className={`relative flex-shrink-0 h-6 w-11 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-green-400/30 ${includeGst ? "bg-green-500" : "bg-[#e7e7e7]"}`}
                   >
-                    <span className={`absolute top-1 h-4 w-4 rounded-full bg-white shadow transition-all ${includeGst ? "left-[26px]" : "left-[2px]"}`} />
+                    <span className={`absolute top-[4px] h-4 w-4 rounded-full bg-white shadow transition-all duration-200 ${includeGst ? "left-[23px]" : "left-[4px]"}`} />
                   </button>
                 </div>
               </Section>
 
           </div>
 
+          {/* FAB trigger sentinel — FAB appears once this scrolls out of view */}
+          <div ref={fabTriggerRef} />
+
           {/* RIGHT: Results */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-[56px] flex flex-col gap-4">
 
               {/* Rate Output */}
-              <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
+              <div ref={rateRef} className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
                 <div className="border-b border-[#e7e7e7] bg-[#1b1f24] px-5 py-4 text-center flex flex-col gap-3">
                   <p className="text-[12px] font-semibold uppercase tracking-wider text-[#c9d1d9]">
                     Your Required Charge-Out Rate
@@ -1159,6 +1177,25 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* FAB — slide up once user scrolls past the inputs */}
+      <AnimatePresence>
+        {showFab && (
+          <motion.button
+            initial={{ y: 80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 80, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            onClick={() => rateRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 rounded-full bg-[#1b1f24] px-5 py-3 text-[15px] font-semibold text-white shadow-xl lg:hidden"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+            See my charge-out rate
+          </motion.button>
+        )}
+      </AnimatePresence>
 
     </div>
   );
