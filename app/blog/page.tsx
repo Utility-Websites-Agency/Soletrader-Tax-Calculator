@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -24,6 +24,14 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function BlogPage() {
+  return (
+    <Suspense>
+      <BlogPageInner />
+    </Suspense>
+  );
+}
+
+function BlogPageInner() {
   const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState(() => {
     const cat = searchParams.get("cat");
