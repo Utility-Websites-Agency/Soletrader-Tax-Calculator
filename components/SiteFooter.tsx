@@ -47,7 +47,7 @@ export function SiteFooter() {
             </div>
             <div className="flex flex-col gap-3">
               <p className="text-[12px] font-semibold uppercase tracking-wider text-[#d1d1d1]">BLOG</p>
-              <div className="flex flex-col gap-2">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2">
                 {BLOG_CATEGORIES.map((cat) => (
                   <Link
                     key={cat}
