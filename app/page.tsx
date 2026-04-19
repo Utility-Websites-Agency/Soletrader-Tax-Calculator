@@ -148,26 +148,18 @@ function Select({
   onSelect: (o: any) => void;
 }) {
   const [open, setOpen] = useState(false);
-  const [pos, setPos] = useState({ top: 0, left: 0, width: 0 });
-  const btnRef = React.useRef<HTMLButtonElement>(null);
 
-  const handleToggle = () => {
-    if (!open && btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect();
-      setPos({ top: r.bottom + 4, left: r.left, width: r.width });
-    }
-    setOpen((v) => !v);
-  };
+  const handleToggle = () => setOpen((v) => !v);
 
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781]">
         {label}
       </label>
+      <div className="relative">
       <button
-        ref={btnRef}
         onClick={handleToggle}
-        className="flex items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[14px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/20"
+        className="flex w-full items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[14px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/20"
       >
         <span className="flex items-center gap-2">
           {selected.flag && <span>{selected.flag}</span>}
@@ -184,8 +176,7 @@ function Select({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 4 }}
               transition={{ duration: 0.15 }}
-              style={{ position: "fixed", top: pos.top, left: pos.left, width: pos.width }}
-              className="z-50 overflow-y-auto rounded-lg border border-[#e7e7e7] bg-white py-1 max-h-60"
+              className="absolute top-full left-0 z-50 mt-1 w-full overflow-y-auto rounded-lg border border-[#e7e7e7] bg-white py-1 max-h-60"
             >
               {options.map((opt) => (
                 <li key={opt.id}>
@@ -207,6 +198,7 @@ function Select({
           </>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }
