@@ -490,21 +490,23 @@ export default function Home() {
           <a href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </a>
+          {/* Desktop center nav */}
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
             <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Calculator</a>
             <a href="#how-it-works" onClick={scrollTo("how-it-works")} className="hover:text-[#1f2328] transition-colors">How it works</a>
             <a href="#faq" onClick={scrollTo("faq")} className="hover:text-[#1f2328] transition-colors">FAQ</a>
             <a href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</a>
           </nav>
+
+          {/* Right group: CTA + burger */}
           <div className="flex items-center gap-4">
-            {/* Blog link always visible outside burger on mobile */}
-            <a href="/blog" className="md:hidden text-[14px] font-semibold text-[#1f2328]">Blog</a>
+            {/* Blue CTA — visible on all breakpoints */}
             <a
               href="#calculator"
               onClick={scrollTo("calculator")}
-              className="hidden md:inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+              className="inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
             >
-              Get started
+              Calculate rate
             </a>
             {/* Mobile burger */}
             <button

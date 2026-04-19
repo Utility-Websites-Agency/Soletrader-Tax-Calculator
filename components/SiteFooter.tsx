@@ -13,7 +13,7 @@ export function SiteFooter() {
             <Link href="/" className="flex items-center">
               <span className="text-[28px] font-semibold text-white">SoleTraderTax</span>
             </Link>
-            <p className="text-[16px] text-[#8b949e] leading-relaxed">
+            <p className="text-[14px] text-[#8b949e] leading-relaxed">
               Free tools for Australian contractors and sole traders. Calculate your charge-out rate, tax and take-home pay.
             </p>
           </div>

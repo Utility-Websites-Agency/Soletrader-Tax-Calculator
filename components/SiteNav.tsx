@@ -18,27 +18,22 @@ export function SiteNav({ activePage }: SiteNavProps) {
           <Link href="/" className="flex items-center">
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
+          {/* Desktop center nav */}
+          <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
+            <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
+            <Link href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</Link>
+          </nav>
+
+          {/* Right group: CTA + burger */}
           <div className="flex items-center gap-4">
-            {/* Desktop nav links */}
-            <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
-              <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
-              <Link href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</Link>
-            </nav>
-            {/* Blog link visible on mobile only */}
-            <Link
-              href="/blog"
-              className="md:hidden text-[14px] font-semibold text-[#1f2328]"
-            >
-              Blog
-            </Link>
-            {/* Desktop CTA — matches homepage "Get started" button to lock nav height */}
+            {/* Blue CTA — visible on all breakpoints */}
             <Link
               href="/"
-              className="hidden md:inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+              className="inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
             >
-              Get started
+              Calculate rate
             </Link>
-            {/* Mobile burger — always present to keep nav height consistent */}
+            {/* Mobile burger */}
             <button
               onClick={() => setDrawerOpen((v) => !v)}
               className="md:hidden flex flex-col items-center justify-center w-9 h-9 rounded-lg border border-[#e7e7e7] bg-white/80 gap-1.5 focus:outline-none"
