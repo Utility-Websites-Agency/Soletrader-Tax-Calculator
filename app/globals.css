@@ -15,3 +15,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Prevent iOS Safari auto-zoom on input focus */
+input, select, textarea, button {
+  font-size: max(16px, 1em);
+}

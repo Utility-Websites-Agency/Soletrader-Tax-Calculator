@@ -159,7 +159,7 @@ function Select({
       <div className="relative">
       <button
         onClick={handleToggle}
-        className="flex w-full items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[14px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/20"
+        className="flex w-full items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[16px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/20"
       >
         <span className="flex items-center gap-2">
           {selected.flag && <span>{selected.flag}</span>}
