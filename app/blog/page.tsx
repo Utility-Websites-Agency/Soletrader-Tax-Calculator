@@ -223,12 +223,12 @@ const filtered = useMemo(() => {
                       </span>
 
                       {/* Title */}
-                      <h2 className="text-[15px] font-bold text-[#1f2328] leading-snug group-hover:text-[#2b7fff] transition-colors line-clamp-3">
+                      <h2 className="text-[18px] font-bold text-[#1f2328] leading-[28px] group-hover:text-[#2b7fff] transition-colors line-clamp-3">
                         {post.title}
                       </h2>
 
                       {/* Excerpt */}
-                      <p className="text-[13px] text-[#57606a] leading-relaxed line-clamp-3 flex-1">
+                      <p className="text-[16px] text-[#57606a] leading-[24px] line-clamp-3 flex-1">
                         {post.excerpt}
                       </p>
 
