@@ -903,7 +903,7 @@ export default function Home() {
 
           {/* RIGHT: Results */}
           <div className="lg:col-span-5">
-            <div className="lg:sticky lg:top-[56px] flex flex-col gap-4">
+            <div className="lg:sticky lg:top-[84px] flex flex-col gap-4">
 
               {/* Rate Output */}
               <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
