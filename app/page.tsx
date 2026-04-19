@@ -243,7 +243,7 @@ function NumberInput({
           value={value || ""}
           onChange={(e) => onChange(Number(e.target.value) || 0)}
           inputMode="numeric"
-          className={`w-full rounded-lg border border-[#e7e7e7] bg-white py-2.5 text-[14px] font-medium text-[#1f2328] outline-none transition focus:border-[#2b7fff] focus:ring-2 focus:ring-[#2b7fff]/20 ${prefix ? "pl-8" : "pl-3"} ${suffix ? "pr-10" : "pr-3"}`}
+          className={`w-full rounded-lg border border-[#e7e7e7] bg-white py-2.5 text-[16px] font-medium text-[#1f2328] outline-none transition focus:border-[#2b7fff] focus:ring-2 focus:ring-[#2b7fff]/20 ${prefix ? "pl-8" : "pl-3"} ${suffix ? "pr-10" : "pr-3"}`}
           placeholder="0"
         />
         {suffix && (
