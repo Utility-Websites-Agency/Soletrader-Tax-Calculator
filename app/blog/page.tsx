@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { BLOG_POSTS } from "@/lib/blog";
 import { ChevronRight, Clock, Tag, Calendar } from "lucide-react";
@@ -23,9 +24,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function BlogPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const searchParams = useSearchParams();
+  const [activeCategory, setActiveCategory] = useState(() => {
+    const cat = searchParams.get("cat");
+    return cat && ALL_CATEGORIES.includes(cat) ? cat : "All";
+  });
   const [search, setSearch] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    const cat = searchParams.get("cat");
+    setActiveCategory(cat && ALL_CATEGORIES.includes(cat) ? cat : "All");
+  }, [searchParams]);
 
 const filtered = useMemo(() => {
     return [...BLOG_POSTS].sort((a, b) => {
@@ -212,9 +222,6 @@ const filtered = useMemo(() => {
                     href={`/blog/${post.slug}`}
                     className="group flex flex-col h-full rounded-xl border border-[#e7e7e7] bg-white hover:border-[#2b7fff]/40 hover:shadow-md transition-all duration-200 overflow-hidden"
                   >
-                    {/* Card color bar */}
-                    <div className="h-1 w-full bg-gradient-to-r from-[#2b7fff] to-[#60a5fa]" />
-
                     <div className="flex flex-col flex-1 p-5 gap-3">
                       {/* Category */}
                       <span className={`inline-flex self-start items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider ${CATEGORY_COLORS[post.category] ?? "bg-gray-50 text-gray-600"}`}>
