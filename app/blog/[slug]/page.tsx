@@ -177,7 +177,7 @@ export default function BlogPostPage() {
 
       {/* Breadcrumb */}
       <div className="border-b border-[#e7e7e7] py-3">
-        <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex items-center gap-2 text-[14px] text-[#8b949e]">
+        <div className="mx-auto max-w-[1280px] px-6 flex items-center gap-2 text-[14px] text-[#8b949e]">
           <Link href="/blog" className="flex items-center gap-1.5 hover:text-[#2b7fff] transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" />
             All articles
