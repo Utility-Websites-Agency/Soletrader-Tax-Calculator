@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Australian Contractor Tax Calculator | Charge-Out Rate & Take-Home Pay",
-  description: "Calculate your charge-out rate and take-home pay as an Australian ABN contractor. Instant GST threshold check, PAYG schedule and per-invoice tax set-aside. Free, no login.",
+  title: "Australian Contractor Tax Calculator | ABN Take-Home Pay",
+  description: "Free Australian contractor tax calculator. Calculate your charge-out rate, take-home pay, GST obligations and PAYG instalments. No login required.",
   metadataBase: new URL("https://soletradertax.com.au"),
   openGraph: {
-    title: "Australian Contractor Tax Calculator | Charge-Out Rate & Take-Home Pay",
+    title: "Australian Contractor Tax Calculator | ABN Take-Home Pay",
     description: "Free Australian sole trader tax calculator. Know exactly what to set aside for tax, when your PAYG installments are due, and what charge-out rate to charge.",
     url: "https://soletradertax.com.au",
     siteName: "SoleTraderTax",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Australian Contractor Tax Calculator | Charge-Out Rate & Take-Home Pay",
+    title: "Australian Contractor Tax Calculator | ABN Take-Home Pay",
     description: "Calculate your charge-out rate and take-home pay as an Australian ABN contractor. Free, no login.",
     images: ["/soletradertax.jpg"],
   },
