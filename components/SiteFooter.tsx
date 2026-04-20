@@ -20,15 +20,16 @@ export function SiteFooter() {
           {/* Links */}
           <div className="flex flex-wrap gap-10">
             <div className="flex flex-col gap-3">
-              <p className="text-[12px] font-semibold uppercase tracking-wider text-[#d1d1d1]">CALCULATOR</p>
+              <p className="text-[12px] font-semibold uppercase tracking-wider text-white">CALCULATOR</p>
               <div className="flex flex-col gap-2">
                 <Link href="/#calculator" className="text-[14px] text-[#c9d1d9] hover:text-white transition-colors">Rate calculator</Link>
+                <Link href="/tools/gst-calculator" className="text-[14px] text-[#c9d1d9] hover:text-white transition-colors">GST calculator</Link>
                 <Link href="/#how-it-works" className="text-[14px] text-[#c9d1d9] hover:text-white transition-colors">How it works</Link>
                 <Link href="/#faq" className="text-[14px] text-[#c9d1d9] hover:text-white transition-colors">FAQ</Link>
               </div>
             </div>
             <div className="flex flex-col gap-3">
-              <p className="text-[12px] font-semibold uppercase tracking-wider text-[#d1d1d1]">GUIDES</p>
+              <p className="text-[12px] font-semibold uppercase tracking-wider text-white">GUIDES</p>
               <div className="flex flex-col gap-2">
                 <Link href="/blog" className="text-[14px] text-[#c9d1d9] hover:text-white transition-colors">All articles</Link>
                 <Link href="/blog/contractor-tax-planning-guide" className="text-[14px] text-[#c9d1d9] hover:text-white transition-colors">Contractor tax guide</Link>
@@ -37,7 +38,7 @@ export function SiteFooter() {
               </div>
             </div>
             <div className="flex flex-col gap-3">
-              <p className="text-[12px] font-semibold uppercase tracking-wider text-[#d1d1d1]">BLOG</p>
+              <p className="text-[12px] font-semibold uppercase tracking-wider text-white">BLOG</p>
               <div className="grid grid-cols-2 gap-x-8 gap-y-2">
                 {BLOG_CATEGORIES.map((cat) => (
                   <Link

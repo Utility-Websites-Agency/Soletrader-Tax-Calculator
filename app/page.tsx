@@ -516,7 +516,7 @@ export default function Home() {
           </a>
           {/* Desktop center nav */}
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#343638]">
-            <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Calculator</a>
+            <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Rate calculator</a>
             <a href="#how-it-works" onClick={scrollTo("how-it-works")} className="hover:text-[#1f2328] transition-colors">How it works</a>
             <a href="#faq" onClick={scrollTo("faq")} className="hover:text-[#1f2328] transition-colors">FAQ</a>
             <a href="/tools/gst-calculator" className="hover:text-[#1f2328] transition-colors">GST Calculator</a>
@@ -597,7 +597,7 @@ export default function Home() {
               {/* Drawer links */}
               <nav className="flex flex-col gap-1 px-4 flex-1">
                 {[
-                  { label: "Calculator", id: "calculator", href: "#calculator" },
+                  { label: "Rate calculator", id: "calculator", href: "#calculator" },
                   { label: "How it works", id: "how-it-works", href: "#how-it-works" },
                   { label: "FAQ", id: "faq", href: "#faq" },
                   { label: "GST Calculator", id: "gst-calculator", href: "/tools/gst-calculator" },

@@ -20,7 +20,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
           </Link>
           {/* Desktop center nav — same 4 links as homepage */}
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#343638]">
-            <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
+            <Link href="/" className="hover:text-[#1f2328] transition-colors">Rate calculator</Link>
             <Link href="/#how-it-works" className="hover:text-[#1f2328] transition-colors">How it works</Link>
             <Link href="/#faq" className="hover:text-[#1f2328] transition-colors">FAQ</Link>
             <Link href="/tools/gst-calculator" className="hover:text-[#1f2328] transition-colors">GST Calculator</Link>
@@ -97,7 +97,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
               </div>
               <nav className="flex flex-col gap-1 px-4 flex-1">
                 {[
-                  { label: "Calculator", href: "/" },
+                  { label: "Rate calculator", href: "/" },
                   { label: "How it works", href: "/#how-it-works" },
                   { label: "FAQ", href: "/#faq" },
                   { label: "GST Calculator", href: "/tools/gst-calculator" },
