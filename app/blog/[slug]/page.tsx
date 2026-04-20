@@ -293,7 +293,7 @@ export default function BlogPostPage() {
           {/* CTA card */}
           <div className="rounded-xl border border-[#e7e7e7] overflow-hidden sticky top-20">
             <div className="bg-[#1b1f24] px-5 py-4">
-              <p className="text-[13px] font-bold uppercase tracking-widest text-[#c9d1d9] mb-1">Try the Calculator</p>
+              <p className="text-[16px] font-bold text-white leading-snug mb-1">Try the Calculator</p>
               <p className="text-[13px] text-[#c9d1d9] leading-relaxed">Find your exact charge-out rate in 60 seconds.</p>
             </div>
             <div className="p-4 bg-white">
