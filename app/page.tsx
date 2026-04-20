@@ -155,7 +155,7 @@ function Select({
 
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781]">
+      <label className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563]">
         {label}
       </label>
       <div className="relative">
@@ -223,12 +223,12 @@ function NumberInput({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781]">
+      <label className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563]">
         {label}
       </label>
       <div className="relative flex items-center">
         {prefix && (
-          <span className="absolute left-3 text-[#6e7781] text-[14px] font-medium pointer-events-none">
+          <span className="absolute left-3 text-[#4b5563] text-[14px] font-medium pointer-events-none">
             {prefix}
           </span>
         )}
@@ -241,7 +241,7 @@ function NumberInput({
           placeholder="0"
         />
         {suffix && (
-          <span className="absolute right-3 text-[#6e7781] text-[14px] font-medium pointer-events-none">
+          <span className="absolute right-3 text-[#4b5563] text-[14px] font-medium pointer-events-none">
             {suffix}
           </span>
         )}
@@ -752,12 +752,12 @@ export default function Home() {
                   {/* Required pre-tax income */}
                   {calc.auTaxResult && (
                     <div>
-                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] pb-2">Required pre-tax income</p>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] pb-2">Required pre-tax income</p>
                       <p className="text-[30px] leading-[38px] font-extrabold text-[#1f2328]">
                         {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
                       </p>
                       <p className="text-[16px] text-[#343638] mt-1.5">
-                        To take home <span className="font-semibold text-green-600">{sym}{Math.round(desiredIncome).toLocaleString()}</span>
+                        To take home <span className="font-semibold text-green-700">{sym}{Math.round(desiredIncome).toLocaleString()}</span>
                       </p>
                     </div>
                   )}
@@ -768,17 +768,17 @@ export default function Home() {
                       {/* Top row on mobile: marginal + medicare side by side */}
                       <div className="flex divide-x divide-[#e7e7e7] sm:contents">
                         <div className="flex-1 pr-4">
-                          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Marginal bracket</p>
+                          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Marginal bracket</p>
                           <p className="text-[20px] font-extrabold text-[#1f2328]">{(calc.auTaxResult.marginalRate * 100).toFixed(0)}%</p>
                         </div>
                         <div className="flex-1 px-4">
-                          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Medicare levy</p>
+                          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Medicare levy</p>
                           <p className="text-[20px] font-extrabold text-[#1f2328]">2%</p>
                         </div>
                       </div>
                       {/* Stacked below on mobile, third column on sm+ */}
                       <div className="border-t border-[#e7e7e7] pt-4 sm:border-t-0 sm:pt-0 sm:flex-1 sm:pl-4">
-                        <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Est. annual tax</p>
+                        <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Est. annual tax</p>
                         <p className="text-[20px] font-extrabold text-[#1f2328]">{sym}{Math.round(calc.taxAmt).toLocaleString()}</p>
                       </div>
                     </div>
@@ -874,24 +874,24 @@ export default function Home() {
                 {/* Flat-rate summary — mirrors the AU breakdown cards */}
                 <div className="rounded-lg bg-[#f6f8fa] px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-0.5">Required pre-tax income</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-0.5">Required pre-tax income</p>
                     <p className="text-[22px] font-extrabold text-[#1f2328]">
                       {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
                     </p>
                   </div>
                   <div className="text-[12px] text-[#343638] sm:text-right">
                     <p>To take home</p>
-                    <p className="font-bold text-green-600 text-[15px]">{sym}{Math.round(desiredIncome).toLocaleString()}</p>
+                    <p className="font-bold text-green-700 text-[15px]">{sym}{Math.round(desiredIncome).toLocaleString()}</p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Flat rate applied</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Flat rate applied</p>
                     <p className="text-[16px] font-extrabold text-[#1f2328]">{taxPct}%</p>
                   </div>
                   <div className="rounded-lg bg-[#f6f8fa] px-3 py-3">
-                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Est. annual tax</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Est. annual tax</p>
                     <p className="text-[16px] font-extrabold text-[#1f2328]">{sym}{Math.round(calc.taxAmt).toLocaleString()}</p>
                   </div>
                 </div>
@@ -913,6 +913,7 @@ export default function Home() {
                   </div>
                   <button
                     onClick={() => setIncludeGst((v) => !v)}
+                    aria-label={includeGst ? "Disable GST" : "Enable GST"}
                     className={`relative flex-shrink-0 h-6 w-11 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-green-400/30 ${includeGst ? "bg-green-500" : "bg-[#e7e7e7]"}`}
                   >
                     <span className={`absolute top-[4px] h-4 w-4 rounded-full bg-white shadow transition-all duration-200 ${includeGst ? "left-[23px]" : "left-[4px]"}`} />
@@ -949,11 +950,11 @@ export default function Home() {
                   {/* Min / Premium */}
                   <div className="grid grid-cols-2 gap-3">
                     <div className="rounded-lg bg-[#f6f8fa] px-3 py-3 text-center">
-                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Minimum safe</p>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Minimum safe</p>
                       <p className="text-[17px] font-bold text-[#1f2328]">{sym}<AnimatedNumber value={calc.minRate} /><span className="text-[12px] font-medium text-[#5f676f]">/hr</span></p>
                     </div>
                     <div className="rounded-lg bg-[#f6f8fa] px-3 py-3 text-center">
-                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] mb-1">Premium</p>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#4b5563] mb-1">Premium</p>
                       <p className="text-[17px] font-bold text-[#1f2328]">{sym}<AnimatedNumber value={calc.preRate} /><span className="text-[12px] font-medium text-[#5f676f]">/hr</span></p>
                     </div>
                   </div>
@@ -962,7 +963,7 @@ export default function Home() {
                   <div className="border-t border-[#e7e7e7] pt-4 flex flex-col gap-2.5">
                     <div className="flex justify-between text-[14px]">
                       <span className="text-[#343638] font-medium">Take-home target</span>
-                      <span className="font-semibold text-green-600">{sym}<AnimatedNumber value={calc.netTakeHome} /></span>
+                      <span className="font-semibold text-green-700">{sym}<AnimatedNumber value={calc.netTakeHome} /></span>
                     </div>
                     <div className="flex justify-between text-[14px]">
                       <span className="text-[#343638] font-medium">Required pre-tax income</span>
@@ -970,11 +971,11 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between text-[14px]">
                       <span className="text-[#343638] font-medium">Est. income tax + Medicare</span>
-                      <span className="font-semibold text-red-500">+{sym}<AnimatedNumber value={calc.taxAmt} /></span>
+                      <span className="font-semibold text-red-600">+{sym}<AnimatedNumber value={calc.taxAmt} /></span>
                     </div>
                     <div className="flex justify-between text-[14px]">
                       <span className="text-[#343638] font-medium">Annual overheads</span>
-                      <span className="font-semibold text-red-500">+{sym}<AnimatedNumber value={calc.annualCosts} /></span>
+                      <span className="font-semibold text-red-600">+{sym}<AnimatedNumber value={calc.annualCosts} /></span>
                     </div>
                     <div className="flex justify-between text-[14px] border-t border-[#e7e7e7] pt-2.5 mt-1">
                       <span className="font-bold text-[#1f2328]">Required revenue / yr</span>
