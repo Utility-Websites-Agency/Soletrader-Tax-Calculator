@@ -726,7 +726,7 @@ export default function Home() {
                   {/* Required pre-tax income */}
                   {calc.auTaxResult && (
                     <div>
-                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] pb-3">Required pre-tax income</p>
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-[#6e7781] pb-2">Required pre-tax income</p>
                       <p className="text-[30px] leading-[38px] font-extrabold text-[#1f2328]">
                         {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
                       </p>
