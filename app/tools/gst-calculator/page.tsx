@@ -37,7 +37,7 @@ function ResultRow({ label, value, highlight }: { label: string; value: string; 
   return (
     <div className={`flex items-center justify-between py-3.5 border-b border-[#e7e7e7] last:border-0 ${highlight ? "bg-[#f0f6ff] -mx-5 px-5 rounded-lg" : ""}`}>
       <span className="text-[15px] text-[#343638]">{label}</span>
-      <span className={`text-[16px] font-bold ${highlight ? "text-[#2b7fff]" : "text-[#1f2328]"}`}>{value}</span>
+      <span className={`text-[16px] font-bold ${highlight ? "text-[#1a6fe8]" : "text-[#1f2328]"}`}>{value}</span>
     </div>
   );
 }
@@ -96,9 +96,9 @@ export default function GSTCalculatorPage() {
       {/* Breadcrumb */}
       <div className="border-b border-[#e7e7e7] px-4 md:px-6 py-3">
         <div className="mx-auto max-w-[1280px] lg:px-6 flex items-center gap-2 text-[14px] text-[#8b949e]">
-          <Link href="/" className="hover:text-[#2b7fff] transition-colors">Home</Link>
+          <Link href="/" className="hover:text-[#1a6fe8] transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/tools" className="hover:text-[#2b7fff] transition-colors">Tools</Link>
+          <Link href="/tools" className="hover:text-[#1a6fe8] transition-colors">Tools</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-[#343638]">GST Calculator</span>
         </div>
@@ -162,7 +162,7 @@ export default function GSTCalculatorPage() {
                     value={amount}
                     onChange={handleAmount}
                     placeholder="0.00"
-                    className="w-full rounded-xl border border-[#e7e7e7] bg-[#f6f8fa] pl-9 pr-4 py-4 text-[24px] font-bold text-[#1f2328] placeholder:text-[#c9d1d9] focus:outline-none focus:border-[#2b7fff] focus:bg-white transition-colors"
+                    className="w-full rounded-xl border border-[#e7e7e7] bg-[#f6f8fa] pl-9 pr-4 py-4 text-[24px] font-bold text-[#1f2328] placeholder:text-[#c9d1d9] focus:outline-none focus:border-[#1a6fe8] focus:bg-white transition-colors"
                   />
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function GSTCalculatorPage() {
               transition={{ duration: 0.35, delay: 0.15 }}
               className="mb-8"
             >
-              <h2 className="text-[20px] font-bold text-[#1f2328] mb-4 border-l-4 border-[#2b7fff] pl-4">
+              <h2 className="text-[20px] font-bold text-[#1f2328] mb-4 border-l-4 border-[#1a6fe8] pl-4">
                 How GST works in Australia
               </h2>
               <div className="flex flex-col gap-3 text-[15px] text-[#343638] leading-relaxed">
@@ -250,7 +250,7 @@ export default function GSTCalculatorPage() {
               transition={{ duration: 0.35, delay: 0.2 }}
               className="mb-8"
             >
-              <h2 className="text-[20px] font-bold text-[#1f2328] mb-4 border-l-4 border-[#2b7fff] pl-4">
+              <h2 className="text-[20px] font-bold text-[#1f2328] mb-4 border-l-4 border-[#1a6fe8] pl-4">
                 GST formulas
               </h2>
               <div className="rounded-xl border border-[#e7e7e7] overflow-hidden">
@@ -289,7 +289,7 @@ export default function GSTCalculatorPage() {
               transition={{ duration: 0.35, delay: 0.25 }}
               className="mb-8"
             >
-              <h2 className="text-[20px] font-bold text-[#1f2328] mb-4 border-l-4 border-[#2b7fff] pl-4">
+              <h2 className="text-[20px] font-bold text-[#1f2328] mb-4 border-l-4 border-[#1a6fe8] pl-4">
                 Frequently asked questions
               </h2>
               <div className="rounded-xl border border-[#e7e7e7] bg-white px-5">
@@ -324,7 +324,7 @@ export default function GSTCalculatorPage() {
               </div>
               <Link
                 href="/#calculator"
-                className="shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-[#2b7fff] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                className="shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-[#1a6fe8] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
               >
                 Try the calculator <ArrowRight className="w-4 h-4" />
               </Link>
@@ -344,7 +344,7 @@ export default function GSTCalculatorPage() {
               <div className="p-4 bg-white">
                 <Link
                   href="/#calculator"
-                  className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                  className="flex items-center justify-center w-full rounded-full bg-[#1a6fe8] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
                 >
                   Calculate my rate
                 </Link>
@@ -380,15 +380,15 @@ export default function GSTCalculatorPage() {
               </div>
               <div className="divide-y divide-[#e7e7e7]">
                 <Link href="/#calculator" className="group flex flex-col gap-0.5 px-4 py-3.5 hover:bg-[#f6f8fa] transition-colors">
-                  <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors">Contractor Rate Calculator</span>
+                  <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#1a6fe8] transition-colors">Contractor Rate Calculator</span>
                   <span className="text-[12px] text-[#8b949e]">Take-home pay & charge-out rate</span>
                 </Link>
                 <Link href="/blog/quarterly-bas-lodgement-guide-for-sole-traders" className="group flex flex-col gap-0.5 px-4 py-3.5 hover:bg-[#f6f8fa] transition-colors">
-                  <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors">BAS Lodgement Guide</span>
+                  <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#1a6fe8] transition-colors">BAS Lodgement Guide</span>
                   <span className="text-[12px] text-[#8b949e]">How to lodge your quarterly BAS</span>
                 </Link>
                 <Link href="/blog/contractor-tax-planning-guide" className="group flex flex-col gap-0.5 px-4 py-3.5 hover:bg-[#f6f8fa] transition-colors">
-                  <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors">Contractor Tax Guide</span>
+                  <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#1a6fe8] transition-colors">Contractor Tax Guide</span>
                   <span className="text-[12px] text-[#8b949e]">Tax planning for contractors</span>
                 </Link>
               </div>

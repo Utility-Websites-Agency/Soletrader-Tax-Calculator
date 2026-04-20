@@ -161,7 +161,7 @@ function Select({
       <div className="relative">
       <button
         onClick={handleToggle}
-        className="flex w-full items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[16px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/20"
+        className="flex w-full items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[16px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#1a6fe8]/20"
       >
         <span className="flex items-center gap-2">
           {selected.flag && <span>{selected.flag}</span>}
@@ -191,7 +191,7 @@ function Select({
                       {opt.name}
                     </span>
                     {selected.id === opt.id && (
-                      <Check className="w-3.5 h-3.5 text-[#2b7fff]" />
+                      <Check className="w-3.5 h-3.5 text-[#1a6fe8]" />
                     )}
                   </button>
                 </li>
@@ -237,7 +237,7 @@ function NumberInput({
           value={value || ""}
           onChange={(e) => onChange(Number(e.target.value) || 0)}
           inputMode="numeric"
-          className={`w-full rounded-lg border border-[#e7e7e7] bg-white py-2.5 text-[16px] font-medium text-[#1f2328] outline-none transition focus:border-[#2b7fff] focus:ring-2 focus:ring-[#2b7fff]/20 ${prefix ? "pl-8" : "pl-3"} ${suffix ? "pr-10" : "pr-3"}`}
+          className={`w-full rounded-lg border border-[#e7e7e7] bg-white py-2.5 text-[16px] font-medium text-[#1f2328] outline-none transition focus:border-[#1a6fe8] focus:ring-2 focus:ring-[#1a6fe8]/20 ${prefix ? "pl-8" : "pl-3"} ${suffix ? "pr-10" : "pr-3"}`}
           placeholder="0"
         />
         {suffix && (
@@ -478,7 +478,7 @@ export default function Home() {
 
   return (
     <div
-      className="min-h-screen bg-transparent font-sans text-[#1f2328] selection:bg-[#2b7fff]/15 relative"
+      className="min-h-screen bg-transparent font-sans text-[#1f2328] selection:bg-[#1a6fe8]/15 relative"
       onMouseMove={(e) => { mouseX.set(e.clientX); mouseY.set(e.clientY); }}
     >
       <ScrollProgress />
@@ -529,7 +529,7 @@ export default function Home() {
             <a
               href="#calculator"
               onClick={scrollTo("calculator")}
-              className="inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+              className="inline-flex rounded-full border border-[#1a6fe8] bg-[#1a6fe8] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1560d0]"
             >
               Calculate rate
             </a>
@@ -621,7 +621,7 @@ export default function Home() {
                 <a
                   href="#calculator"
                   onClick={scrollTo("calculator")}
-                  className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-3 text-[15px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                  className="flex items-center justify-center w-full rounded-full bg-[#1a6fe8] px-5 py-3 text-[15px] font-semibold text-white transition hover:bg-[#1560d0]"
                 >
                   Calculate rate
                 </a>
@@ -645,7 +645,7 @@ export default function Home() {
           </div>
           <h1 className="text-[38px] md:text-[54px] font-extrabold tracking-tight text-[#1f2328] leading-[1.1]">
             How much should you{" "}
-            <span className="text-[#2b7fff]">actually charge?</span>
+            <span className="text-[#1a6fe8]">actually charge?</span>
           </h1>
           <p className="mt-5 text-[16px] text-[#1f2328] leading-relaxed font-medium">
             Enter your desired take-home pay and we reverse-calculate the exact charge-out rate you need, after ATO tax, Medicare levy, and all your business overheads.
@@ -653,7 +653,7 @@ export default function Home() {
           <a
             href="#calculator"
             onClick={scrollTo("calculator")}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#2b7fff] px-8 py-3 text-[16px] font-semibold text-white transition hover:bg-[#1a6fe8] active:scale-95"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#1a6fe8] px-8 py-3 text-[16px] font-semibold text-white transition hover:bg-[#1560d0] active:scale-95"
           >
             Calculate my rate →
           </a>
@@ -742,7 +742,7 @@ export default function Home() {
                   </div>
                   <button
                     onClick={() => setManualTaxOverride(true)}
-                    className="text-[14px] font-semibold text-[#2b7fff] hover:underline self-start sm:self-auto sm:shrink-0 sm:ml-4"
+                    className="text-[14px] font-semibold text-[#1a6fe8] hover:underline self-start sm:self-auto sm:shrink-0 sm:ml-4"
                   >
                     Manual override
                   </button>
@@ -789,7 +789,7 @@ export default function Home() {
                     <div className="flex flex-col">
                       <button
                         onClick={() => setTaxBreakdownOpen((v) => !v)}
-                        className="flex items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[14px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#2b7fff]/20"
+                        className="flex items-center justify-between rounded-lg border border-[#e7e7e7] bg-white px-3 py-2.5 text-[14px] font-medium text-[#1f2328] transition hover:border-[#5f676f] focus:outline-none focus:ring-2 focus:ring-[#1a6fe8]/20"
                       >
                         <span>See tax breakdown by bracket</span>
                         <ChevronDown className={`w-4 h-4 text-[#5f676f] transition-transform ${taxBreakdownOpen ? "rotate-180" : ""}`} />
@@ -812,14 +812,14 @@ export default function Home() {
                                   <div key={b.label} className={`px-4 py-2.5 flex items-center justify-between text-[12px] ${isActive ? "bg-white" : "bg-[#f6f8fa] opacity-50"}`}>
                                     <div className="flex items-center gap-2">
                                       {isActive
-                                        ? <span className="h-1.5 w-1.5 rounded-full bg-[#2b7fff] shrink-0" />
+                                        ? <span className="h-1.5 w-1.5 rounded-full bg-[#1a6fe8] shrink-0" />
                                         : <span className="h-1.5 w-1.5 rounded-full bg-[#e7e7e7] shrink-0" />}
                                       <span className="font-medium text-[#343638]">{b.label}</span>
                                       <span className="font-bold text-[#1f2328]">→ {(b.rate * 100).toFixed(0)}%</span>
                                     </div>
                                     {isActive && slice ? (
                                       <span className="font-semibold text-[#1f2328]">
-                                        {sym}{Math.round(slice.taxable).toLocaleString()} × {(b.rate * 100).toFixed(0)}% = <span className="text-[#2b7fff]">{sym}{Math.round(slice.amount).toLocaleString()}</span>
+                                        {sym}{Math.round(slice.taxable).toLocaleString()} × {(b.rate * 100).toFixed(0)}% = <span className="text-[#1a6fe8]">{sym}{Math.round(slice.amount).toLocaleString()}</span>
                                       </span>
                                     ) : (
                                       <span className="text-[#5f676f]">—</span>
@@ -864,7 +864,7 @@ export default function Home() {
                   </GitBookCallout>
                   <button
                     onClick={() => setManualTaxOverride(false)}
-                    className="shrink-0 text-[14px] font-semibold text-[#2b7fff] hover:underline"
+                    className="shrink-0 text-[14px] font-semibold text-[#1a6fe8] hover:underline"
                   >
                     Use auto
                   </button>
@@ -1073,7 +1073,7 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-5 rounded-xl border border-[#e7e7e7] bg-white p-5">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#2b7fff]/10 text-[14px] font-bold text-[#2b7fff] uppercase tracking-wide">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1a6fe8]/10 text-[14px] font-bold text-[#1a6fe8] uppercase tracking-wide">
                   {i + 1}
                 </div>
                 <div>

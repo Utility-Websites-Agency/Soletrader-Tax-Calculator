@@ -32,7 +32,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
             {/* Blue CTA — visible on all breakpoints */}
             <Link
               href="/"
-              className="inline-flex rounded-full border border-[#2b7fff] bg-[#2b7fff] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+              className="inline-flex rounded-full border border-[#1a6fe8] bg-[#1a6fe8] px-5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-[#1560d0]"
             >
               Calculate rate
             </Link>
@@ -119,7 +119,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
               <div className="p-4 border-t border-[#e7e7e7]">
                 <Link
                   href="/"
-                  className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-3 text-[15px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                  className="flex items-center justify-center w-full rounded-full bg-[#1a6fe8] px-5 py-3 text-[15px] font-semibold text-white transition hover:bg-[#1560d0]"
                 >
                   Calculate rate
                 </Link>

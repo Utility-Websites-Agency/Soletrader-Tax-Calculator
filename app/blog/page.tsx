@@ -96,7 +96,7 @@ const filtered = useMemo(() => {
               placeholder="Search articles…"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full max-w-[600px] rounded-lg border border-[#e7e7e7] bg-white px-4 py-2.5 text-[14px] text-[#1f2328] outline-none focus:border-[#2b7fff] focus:ring-2 focus:ring-[#2b7fff]/20 placeholder:text-[#8b949e]"
+              className="w-full max-w-[600px] rounded-lg border border-[#e7e7e7] bg-white px-4 py-2.5 text-[14px] text-[#1f2328] outline-none focus:border-[#1a6fe8] focus:ring-2 focus:ring-[#1a6fe8]/20 placeholder:text-[#8b949e]"
             />
             <div className="flex flex-wrap gap-2">
               {ALL_CATEGORIES.map((cat) => (
@@ -105,8 +105,8 @@ const filtered = useMemo(() => {
                   onClick={() => setActiveCategory(cat)}
                   className={`rounded-full px-4 py-2 text-[13px] font-semibold transition-colors border ${
                     activeCategory === cat
-                      ? "bg-[#2b7fff] text-white border-[#2b7fff]"
-                      : "bg-white text-[#343638] border-[#e7e7e7] hover:border-[#2b7fff] hover:text-[#2b7fff]"
+                      ? "bg-[#1a6fe8] text-white border-[#1a6fe8]"
+                      : "bg-white text-[#343638] border-[#e7e7e7] hover:border-[#1a6fe8] hover:text-[#1a6fe8]"
                   }`}
                 >
                   {cat}
@@ -136,7 +136,7 @@ const filtered = useMemo(() => {
                 >
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="group flex flex-col h-full rounded-xl border border-[#e7e7e7] bg-white hover:border-[#2b7fff]/40 hover:shadow-md transition-all duration-200 overflow-hidden"
+                    className="group flex flex-col h-full rounded-xl border border-[#e7e7e7] bg-white hover:border-[#1a6fe8]/40 hover:shadow-md transition-all duration-200 overflow-hidden"
                   >
                     <div className="flex flex-col flex-1 p-5 gap-3">
                       {/* Category */}
@@ -146,7 +146,7 @@ const filtered = useMemo(() => {
                       </span>
 
                       {/* Title */}
-                      <h2 className="text-[18px] font-bold text-[#1f2328] leading-[28px] group-hover:text-[#2b7fff] transition-colors line-clamp-3">
+                      <h2 className="text-[18px] font-bold text-[#1f2328] leading-[28px] group-hover:text-[#1a6fe8] transition-colors line-clamp-3">
                         {post.title}
                       </h2>
 
@@ -167,7 +167,7 @@ const filtered = useMemo(() => {
                             {post.date}
                           </span>
                         </div>
-                        <span className="flex items-center gap-1 text-[12px] font-semibold text-[#2b7fff] group-hover:gap-2 transition-all">
+                        <span className="flex items-center gap-1 text-[12px] font-semibold text-[#1a6fe8] group-hover:gap-2 transition-all">
                           Read <ChevronRight className="w-3.5 h-3.5" />
                         </span>
                       </div>

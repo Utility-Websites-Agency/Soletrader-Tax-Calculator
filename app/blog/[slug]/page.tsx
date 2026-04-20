@@ -46,7 +46,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
       className="mb-8"
     >
       {section.heading && (
-        <h2 className="text-[20px] font-bold text-[#1f2328] mb-3 mt-8 first:mt-0 leading-snug border-l-4 border-[#2b7fff] pl-4">
+        <h2 className="text-[20px] font-bold text-[#1f2328] mb-3 mt-8 first:mt-0 leading-snug border-l-4 border-[#1a6fe8] pl-4">
           {section.heading}
         </h2>
       )}
@@ -92,8 +92,8 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
         <ul className="flex flex-col gap-2 my-3">
           {section.list.map((item, li) => (
             <li key={li} className="flex items-start gap-2.5 text-[14px] text-[#343638] leading-relaxed">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2b7fff]/10 mt-0.5">
-                <Check className="w-3 h-3 text-[#2b7fff]" />
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1a6fe8]/10 mt-0.5">
+                <Check className="w-3 h-3 text-[#1a6fe8]" />
               </span>
               <span>{item}</span>
             </li>
@@ -178,7 +178,7 @@ export default function BlogPostPage() {
       {/* Breadcrumb */}
       <div className="border-b border-[#e7e7e7] py-3">
         <div className="mx-auto max-w-[1240px] flex items-center gap-2 text-[14px] text-[#8b949e]">
-          <Link href="/blog" className="flex items-center gap-1.5 hover:text-[#2b7fff] transition-colors">
+          <Link href="/blog" className="flex items-center gap-1.5 hover:text-[#1a6fe8] transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" />
             All articles
           </Link>
@@ -243,7 +243,7 @@ export default function BlogPostPage() {
             </div>
             <Link
               href="/#calculator"
-              className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#2b7fff] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+              className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#1a6fe8] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
             >
               Calculate my rate
             </Link>
@@ -257,12 +257,12 @@ export default function BlogPostPage() {
             {prev ? (
               <Link
                 href={`/blog/${prev.slug}`}
-                className="group flex flex-col gap-1.5 rounded-xl border border-[#e7e7e7] bg-white p-4 hover:border-[#2b7fff]/40 hover:shadow-sm transition-all"
+                className="group flex flex-col gap-1.5 rounded-xl border border-[#e7e7e7] bg-white p-4 hover:border-[#1a6fe8]/40 hover:shadow-sm transition-all"
               >
                 <span className="flex items-center gap-1.5 text-[12px] font-semibold text-[#8b949e] uppercase tracking-wider">
                   <ChevronLeft className="w-3.5 h-3.5" /> Previous
                 </span>
-                <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors line-clamp-2 leading-snug">
+                <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#1a6fe8] transition-colors line-clamp-2 leading-snug">
                   {prev.title}
                 </span>
                 <span className="text-[12px] text-[#8b949e]">{prev.readTime}</span>
@@ -272,12 +272,12 @@ export default function BlogPostPage() {
             {next ? (
               <Link
                 href={`/blog/${next.slug}`}
-                className="group flex flex-col gap-1.5 rounded-xl border border-[#e7e7e7] bg-white p-4 hover:border-[#2b7fff]/40 hover:shadow-sm transition-all sm:text-right"
+                className="group flex flex-col gap-1.5 rounded-xl border border-[#e7e7e7] bg-white p-4 hover:border-[#1a6fe8]/40 hover:shadow-sm transition-all sm:text-right"
               >
                 <span className="flex items-center gap-1.5 sm:justify-end text-[12px] font-semibold text-[#8b949e] uppercase tracking-wider">
                   Next <ChevronRight className="w-3.5 h-3.5" />
                 </span>
-                <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors line-clamp-2 leading-snug">
+                <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#1a6fe8] transition-colors line-clamp-2 leading-snug">
                   {next.title}
                 </span>
                 <span className="text-[12px] text-[#8b949e]">{next.readTime}</span>
@@ -299,7 +299,7 @@ export default function BlogPostPage() {
             <div className="p-4 bg-white">
               <Link
                 href="/#calculator"
-                className="flex items-center justify-center w-full rounded-full bg-[#2b7fff] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                className="flex items-center justify-center w-full rounded-full bg-[#1a6fe8] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
               >
                 Calculate my rate
               </Link>
@@ -319,7 +319,7 @@ export default function BlogPostPage() {
                     href={`/blog/${p.slug}`}
                     className="group flex flex-col gap-1 px-4 py-3.5 hover:bg-[#f6f8fa] transition-colors"
                   >
-                    <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#2b7fff] transition-colors line-clamp-2 leading-[22px]">
+                    <span className="text-[14px] font-semibold text-[#1f2328] group-hover:text-[#1a6fe8] transition-colors line-clamp-2 leading-[22px]">
                       {p.title}
                     </span>
                     <span className="flex items-center gap-1 text-[12px] text-[#8b949e]">
@@ -334,7 +334,7 @@ export default function BlogPostPage() {
           {/* All articles link */}
           <Link
             href="/blog"
-            className="flex items-center justify-center gap-2 rounded-xl border border-[#e7e7e7] bg-white px-4 py-3 text-[14px] leading-[22px] font-semibold text-[#343638] hover:text-[#2b7fff] hover:border-[#2b7fff]/40 transition-all"
+            className="flex items-center justify-center gap-2 rounded-xl border border-[#e7e7e7] bg-white px-4 py-3 text-[14px] leading-[22px] font-semibold text-[#343638] hover:text-[#1a6fe8] hover:border-[#1a6fe8]/40 transition-all"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> Browse all articles
           </Link>
