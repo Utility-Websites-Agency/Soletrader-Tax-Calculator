@@ -56,7 +56,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
         </h3>
       )}
       {section.body && (
-        <p className="text-[16px] text-[#57606a] leading-[24px] mb-3">
+        <p className="text-[16px] text-[#343638] leading-[24px] mb-3">
           {section.body}
         </p>
       )}
@@ -67,7 +67,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
               <thead>
                 <tr className="border-b border-[#e7e7e7] bg-[#f6f8fa]">
                   {section.table.headers.map((h) => (
-                    <th key={h} className="text-left px-4 py-2.5 font-semibold text-[#57606a]">
+                    <th key={h} className="text-left px-4 py-2.5 font-semibold text-[#343638]">
                       {h}
                     </th>
                   ))}
@@ -91,7 +91,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
       {section.list && (
         <ul className="flex flex-col gap-2 my-3">
           {section.list.map((item, li) => (
-            <li key={li} className="flex items-start gap-2.5 text-[14px] text-[#57606a] leading-relaxed">
+            <li key={li} className="flex items-start gap-2.5 text-[14px] text-[#343638] leading-relaxed">
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2b7fff]/10 mt-0.5">
                 <Check className="w-3 h-3 text-[#2b7fff]" />
               </span>
@@ -177,13 +177,13 @@ export default function BlogPostPage() {
 
       {/* Breadcrumb */}
       <div className="border-b border-[#e7e7e7] px-4 md:px-6 py-3">
-        <div className="mx-auto max-w-[1280px] flex items-center gap-2 text-[13px] text-[#8b949e]">
+        <div className="mx-auto max-w-[1280px] flex items-center gap-2 text-[14px] text-[#8b949e]">
           <Link href="/blog" className="flex items-center gap-1.5 hover:text-[#2b7fff] transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" />
             All articles
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#57606a] truncate max-w-[200px] sm:max-w-none">{post.title}</span>
+          <span className="text-[#343638] truncate max-w-[200px] sm:max-w-none">{post.title}</span>
         </div>
       </div>
 
@@ -214,7 +214,7 @@ export default function BlogPostPage() {
               </span>
               <span>{post.date}</span>
             </div>
-            <p className="mt-5 text-[16px] text-[#57606a] leading-relaxed border-l-4 border-[#e7e7e7] pl-4 italic">
+            <p className="mt-5 text-[16px] text-[#343638] leading-relaxed border-l-4 border-[#e7e7e7] pl-4 italic">
               {post.excerpt}
             </p>
           </motion.div>
@@ -229,7 +229,7 @@ export default function BlogPostPage() {
           {/* Tags */}
           <div className="mt-10 pt-6 border-t border-[#e7e7e7] flex flex-wrap gap-2">
             {post.tags.map((tag) => (
-              <span key={tag} className="rounded-full border border-[#e7e7e7] bg-[#f6f8fa] px-3 py-1 text-[12px] font-medium text-[#57606a]">
+              <span key={tag} className="rounded-full border border-[#e7e7e7] bg-[#f6f8fa] px-3 py-1 text-[12px] font-medium text-[#343638]">
                 {tag}
               </span>
             ))}
@@ -310,7 +310,7 @@ export default function BlogPostPage() {
           {relatedPosts.length > 0 && (
             <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
               <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-4 py-3">
-                <h3 className="text-[12px] font-semibold uppercase tracking-wider text-[#57606a]">Related Articles</h3>
+                <h3 className="text-[12px] font-semibold uppercase tracking-wider text-[#343638]">Related Articles</h3>
               </div>
               <div className="divide-y divide-[#e7e7e7]">
                 {relatedPosts.map((p) => (
@@ -334,7 +334,7 @@ export default function BlogPostPage() {
           {/* All articles link */}
           <Link
             href="/blog"
-            className="flex items-center justify-center gap-2 rounded-xl border border-[#e7e7e7] bg-white px-4 py-3 text-[14px] leading-[22px] font-semibold text-[#57606a] hover:text-[#2b7fff] hover:border-[#2b7fff]/40 transition-all"
+            className="flex items-center justify-center gap-2 rounded-xl border border-[#e7e7e7] bg-white px-4 py-3 text-[14px] leading-[22px] font-semibold text-[#343638] hover:text-[#2b7fff] hover:border-[#2b7fff]/40 transition-all"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> Browse all articles
           </Link>

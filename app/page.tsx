@@ -515,7 +515,7 @@ export default function Home() {
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </a>
           {/* Desktop center nav */}
-          <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
+          <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#343638]">
             <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Calculator</a>
             <a href="#how-it-works" onClick={scrollTo("how-it-works")} className="hover:text-[#1f2328] transition-colors">How it works</a>
             <a href="#faq" onClick={scrollTo("faq")} className="hover:text-[#1f2328] transition-colors">FAQ</a>
@@ -585,7 +585,7 @@ export default function Home() {
               <div className="flex justify-end p-3">
                 <button
                   onClick={() => setDrawerOpen(false)}
-                  className="w-10 h-10 rounded-lg flex items-center justify-center text-[#57606a] hover:bg-[#f6f8fa] transition-colors"
+                  className="w-10 h-10 rounded-lg flex items-center justify-center text-[#343638] hover:bg-[#f6f8fa] transition-colors"
                   aria-label="Close menu"
                 >
                   <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -637,7 +637,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl"
         >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#e7e7e7] bg-white px-3 py-1.5 text-[14px] font-medium text-[#57606a]">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#e7e7e7] bg-white px-3 py-1.5 text-[14px] font-medium text-[#343638]">
             <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
             Free · No sign-up · ATO 2025-26 tax rates
           </div>
@@ -723,7 +723,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="rounded-lg bg-[#f6f8fa] px-4 py-3 flex justify-between items-center text-[14px]">
-                <span className="text-[#57606a] font-medium">Total annual overheads</span>
+                <span className="text-[#343638] font-medium">Total annual overheads</span>
                 <span className="font-bold text-[#1f2328]">
                   {sym}{(Object.values(overheads).reduce((a, b) => a + b, 0) * 12).toLocaleString()}
                 </span>
@@ -754,7 +754,7 @@ export default function Home() {
                       <p className="text-[30px] leading-[38px] font-extrabold text-[#1f2328]">
                         {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
                       </p>
-                      <p className="text-[16px] text-[#57606a] mt-1.5">
+                      <p className="text-[16px] text-[#343638] mt-1.5">
                         To take home <span className="font-semibold text-green-600">{sym}{Math.round(desiredIncome).toLocaleString()}</span>
                       </p>
                     </div>
@@ -812,7 +812,7 @@ export default function Home() {
                                       {isActive
                                         ? <span className="h-1.5 w-1.5 rounded-full bg-[#2b7fff] shrink-0" />
                                         : <span className="h-1.5 w-1.5 rounded-full bg-[#e7e7e7] shrink-0" />}
-                                      <span className="font-medium text-[#57606a]">{b.label}</span>
+                                      <span className="font-medium text-[#343638]">{b.label}</span>
                                       <span className="font-bold text-[#1f2328]">→ {(b.rate * 100).toFixed(0)}%</span>
                                     </div>
                                     {isActive && slice ? (
@@ -829,7 +829,7 @@ export default function Home() {
                               <div className="px-4 py-2.5 flex items-center justify-between text-[12px] bg-white">
                                 <div className="flex items-center gap-2">
                                   <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shrink-0" />
-                                  <span className="font-medium text-[#57606a]">Medicare levy</span>
+                                  <span className="font-medium text-[#343638]">Medicare levy</span>
                                   <span className="font-bold text-[#1f2328]">→ 2%</span>
                                 </div>
                                 <span className="font-semibold text-[#1f2328]">
@@ -877,7 +877,7 @@ export default function Home() {
                       {sym}{Math.round(calc.requiredTaxableIncome).toLocaleString()}
                     </p>
                   </div>
-                  <div className="text-[12px] text-[#57606a] sm:text-right">
+                  <div className="text-[12px] text-[#343638] sm:text-right">
                     <p>To take home</p>
                     <p className="font-bold text-green-600 text-[15px]">{sym}{Math.round(desiredIncome).toLocaleString()}</p>
                   </div>
@@ -959,19 +959,19 @@ export default function Home() {
                   {/* Calculation breakdown */}
                   <div className="border-t border-[#e7e7e7] pt-4 flex flex-col gap-2.5">
                     <div className="flex justify-between text-[14px]">
-                      <span className="text-[#57606a] font-medium">Take-home target</span>
+                      <span className="text-[#343638] font-medium">Take-home target</span>
                       <span className="font-semibold text-green-600">{sym}<AnimatedNumber value={calc.netTakeHome} /></span>
                     </div>
                     <div className="flex justify-between text-[14px]">
-                      <span className="text-[#57606a] font-medium">Required pre-tax income</span>
+                      <span className="text-[#343638] font-medium">Required pre-tax income</span>
                       <span className="font-semibold text-[#1f2328]">{sym}<AnimatedNumber value={calc.requiredTaxableIncome} /></span>
                     </div>
                     <div className="flex justify-between text-[14px]">
-                      <span className="text-[#57606a] font-medium">Est. income tax + Medicare</span>
+                      <span className="text-[#343638] font-medium">Est. income tax + Medicare</span>
                       <span className="font-semibold text-red-500">+{sym}<AnimatedNumber value={calc.taxAmt} /></span>
                     </div>
                     <div className="flex justify-between text-[14px]">
-                      <span className="text-[#57606a] font-medium">Annual overheads</span>
+                      <span className="text-[#343638] font-medium">Annual overheads</span>
                       <span className="font-semibold text-red-500">+{sym}<AnimatedNumber value={calc.annualCosts} /></span>
                     </div>
                     <div className="flex justify-between text-[14px] border-t border-[#e7e7e7] pt-2.5 mt-1">
@@ -979,7 +979,7 @@ export default function Home() {
                       <span className="font-bold text-[#1f2328]">{sym}<AnimatedNumber value={calc.requiredRevenue} /></span>
                     </div>
                     <div className="flex justify-between text-[14px] border-t border-[#e7e7e7] pt-2.5">
-                      <span className="text-[#57606a] font-medium">Annual billable hours</span>
+                      <span className="text-[#343638] font-medium">Annual billable hours</span>
                       <span className="font-semibold text-[#1f2328]"><AnimatedNumber value={calc.billableHours} /> hrs</span>
                     </div>
                   </div>
@@ -996,7 +996,7 @@ export default function Home() {
                   <TrendingUp className="w-4 h-4 text-[#5f676f]" />
                 </div>
                 <div className="p-5 flex flex-col gap-4">
-                  <p className="text-[12px] text-[#57606a]">
+                  <p className="text-[12px] text-[#343638]">
                     Typical market range for <strong className="text-[#1f2328]">{profession.name}</strong> in <strong className="text-[#1f2328]">{locationLabel}</strong>:
                   </p>
 
@@ -1042,7 +1042,7 @@ export default function Home() {
       <section id="how-it-works" className="relative z-10 border-b border-[#e7e7e7] py-20 px-6">
         <div className="mx-auto max-w-[860px]">
           <h2 className="text-[28px] font-extrabold tracking-tight text-[#1f2328] mb-2">How the engine works</h2>
-          <p className="text-[15px] text-[#57606a] mb-10 font-medium">
+          <p className="text-[15px] text-[#343638] mb-10 font-medium">
             SoleTraderTax uses a 4-step sole trader pricing engine. Here&apos;s exactly how your charge-out rate is calculated.
           </p>
 
@@ -1076,7 +1076,7 @@ export default function Home() {
                 <div>
                   <p className="text-[14px] font-semibold uppercase tracking-wider text-[#5f676f] mb-0.5">{item.step}</p>
                   <h3 className="text-[15px] font-bold text-[#1f2328] mb-1">{item.title}</h3>
-                  <p className="text-[14px] text-[#57606a] leading-relaxed">{item.desc}</p>
+                  <p className="text-[14px] text-[#343638] leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -1085,7 +1085,7 @@ export default function Home() {
           {/* ATO brackets table */}
           <div className="mt-10 rounded-xl border border-[#e7e7e7] overflow-hidden">
             <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3">
-              <h3 className="text-[12px] font-semibold uppercase tracking-wider text-[#57606a]">
+              <h3 className="text-[12px] font-semibold uppercase tracking-wider text-[#343638]">
                 Australian resident income tax brackets, 2025-26
               </h3>
             </div>
@@ -1093,8 +1093,8 @@ export default function Home() {
               <table className="w-full text-[14px]">
                 <thead>
                   <tr className="border-b border-[#e7e7e7] bg-[#f6f8fa]">
-                    <th className="text-left px-5 py-2.5 font-semibold text-[#57606a]">Income range</th>
-                    <th className="text-right px-5 py-2.5 font-semibold text-[#57606a]">Rate</th>
+                    <th className="text-left px-5 py-2.5 font-semibold text-[#343638]">Income range</th>
+                    <th className="text-right px-5 py-2.5 font-semibold text-[#343638]">Rate</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1105,8 +1105,8 @@ export default function Home() {
                     </tr>
                   ))}
                   <tr className="bg-[#f6f8fa] border-t border-[#e7e7e7]">
-                    <td className="px-5 py-2.5 font-medium text-[#57606a]">Medicare levy (all income)</td>
-                    <td className="px-5 py-2.5 text-right font-semibold text-[#57606a]">2%</td>
+                    <td className="px-5 py-2.5 font-medium text-[#343638]">Medicare levy (all income)</td>
+                    <td className="px-5 py-2.5 text-right font-semibold text-[#343638]">2%</td>
                   </tr>
                 </tbody>
               </table>
@@ -1126,7 +1126,7 @@ export default function Home() {
       <section id="faq" className="relative z-10 border-b border-[#e7e7e7] py-20 px-6">
         <div className="mx-auto max-w-[860px]">
           <h2 className="text-[28px] font-extrabold tracking-tight text-[#1f2328] mb-2">Frequently asked questions</h2>
-          <p className="text-[15px] text-[#57606a] mb-10 font-medium">
+          <p className="text-[15px] text-[#343638] mb-10 font-medium">
             Everything you need to understand the model and trust the output.
           </p>
           <div className="flex flex-col gap-2">
@@ -1148,7 +1148,7 @@ export default function Home() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-4 border-t border-[#e7e7e7] pt-4 text-[14px] text-[#57606a] leading-relaxed bg-[#f6f8fa]">
+                      <div className="px-5 pb-4 border-t border-[#e7e7e7] pt-4 text-[14px] text-[#343638] leading-relaxed bg-[#f6f8fa]">
                         {item.a}
                       </div>
                     </motion.div>

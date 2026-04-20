@@ -19,7 +19,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </Link>
           {/* Desktop center nav — same 4 links as homepage */}
-          <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#57606a]">
+          <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#343638]">
             <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
             <Link href="/#how-it-works" className="hover:text-[#1f2328] transition-colors">How it works</Link>
             <Link href="/#faq" className="hover:text-[#1f2328] transition-colors">FAQ</Link>
@@ -86,7 +86,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
               <div className="flex justify-end p-3">
                 <button
                   onClick={() => setDrawerOpen(false)}
-                  className="w-10 h-10 rounded-lg flex items-center justify-center text-[#57606a] hover:bg-[#f6f8fa] transition-colors"
+                  className="w-10 h-10 rounded-lg flex items-center justify-center text-[#343638] hover:bg-[#f6f8fa] transition-colors"
                   aria-label="Close menu"
                 >
                   <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">

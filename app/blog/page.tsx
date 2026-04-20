@@ -78,7 +78,7 @@ const filtered = useMemo(() => {
             <h1 className="text-[32px] md:text-[48px] font-extrabold tracking-tight text-[#1f2328] leading-[1.1] mb-4">
               Contractor &amp; Tax Guides
             </h1>
-            <p className="text-[16px] text-[#57606a] max-w-xl leading-relaxed">
+            <p className="text-[16px] text-[#343638] max-w-xl leading-relaxed">
               Plain-English guides for Australian contractors and sole traders. Tax planning, rate setting, super and more.
             </p>
           </motion.div>
@@ -106,7 +106,7 @@ const filtered = useMemo(() => {
                   className={`rounded-full px-4 py-2 text-[13px] font-semibold transition-colors border ${
                     activeCategory === cat
                       ? "bg-[#2b7fff] text-white border-[#2b7fff]"
-                      : "bg-white text-[#57606a] border-[#e7e7e7] hover:border-[#2b7fff] hover:text-[#2b7fff]"
+                      : "bg-white text-[#343638] border-[#e7e7e7] hover:border-[#2b7fff] hover:text-[#2b7fff]"
                   }`}
                 >
                   {cat}
@@ -151,7 +151,7 @@ const filtered = useMemo(() => {
                       </h2>
 
                       {/* Excerpt */}
-                      <p className="text-[16px] text-[#57606a] leading-[24px] line-clamp-3 flex-1">
+                      <p className="text-[16px] text-[#343638] leading-[24px] line-clamp-3 flex-1">
                         {post.excerpt}
                       </p>
 
