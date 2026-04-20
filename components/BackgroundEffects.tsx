@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion, useMotionValue, useMotionTemplate, useAnimationFrame } from "framer-motion";
 
 function GridPattern({ id, offsetX, offsetY }: { id: string; offsetX: any; offsetY: any }) {
@@ -21,6 +22,15 @@ export function BackgroundEffects() {
   const gridOffsetX = useMotionValue(0);
   const gridOffsetY = useMotionValue(0);
 
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+    window.addEventListener("mousemove", handler);
+    return () => window.removeEventListener("mousemove", handler);
+  }, [mouseX, mouseY]);
+
   useAnimationFrame(() => {
     gridOffsetX.set((gridOffsetX.get() + 0.5) % 40);
     gridOffsetY.set((gridOffsetY.get() + 0.5) % 40);
@@ -29,10 +39,7 @@ export function BackgroundEffects() {
   const maskImage = useMotionTemplate`radial-gradient(300px circle at ${mouseX}px ${mouseY}px, black, transparent)`;
 
   return (
-    <div
-      className="fixed inset-0 z-0 pointer-events-none"
-      onMouseMove={(e) => { mouseX.set(e.clientX); mouseY.set(e.clientY); }}
-    >
+    <div className="fixed inset-0 z-0 pointer-events-none">
       <div className="absolute inset-0 text-gray-400 opacity-[0.05]">
         <GridPattern id="grid-static" offsetX={gridOffsetX} offsetY={gridOffsetY} />
       </div>
