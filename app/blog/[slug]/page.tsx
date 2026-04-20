@@ -239,7 +239,7 @@ export default function BlogPostPage() {
           <div className="mt-10 rounded-xl bg-[#1b1f24] px-6 py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <p className="text-[16px] font-bold text-white leading-snug mb-1">Know what you should charge?</p>
-              <p className="text-[14px] text-[#8b949e] leading-relaxed">Use our free calculator to find your exact charge-out rate in 60 seconds.</p>
+              <p className="text-[14px] text-[#c9d1d9] leading-relaxed">Use our free calculator to find your exact charge-out rate in 60 seconds.</p>
             </div>
             <Link
               href="/#calculator"
