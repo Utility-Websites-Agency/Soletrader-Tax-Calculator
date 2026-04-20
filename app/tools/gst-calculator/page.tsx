@@ -130,7 +130,7 @@ export default function GSTCalculatorPage() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.08 }}
-              className="rounded-2xl border border-[#e7e7e7] bg-white p-5 md:p-7 shadow-sm mb-6"
+              className="rounded-2xl border border-[#e7e7e7] bg-white p-5 md:p-7 mb-6"
             >
               {/* Mode toggle */}
               <div className="flex rounded-xl bg-[#f6f8fa] p-1 mb-6 gap-1">
