@@ -851,6 +851,91 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "As a sole trader hiring help, understanding when you must pay superannuation is crucial. Learn the key differences between contractors and employees, and how to stay compliant with ATO requirements.",
+  date: "April 20, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "contractors", "employees", "super guarantee", "sole traders", "ATO compliance"],
+  content: [
+    {
+      heading: "The Superannuation Question Every Sole Trader Faces",
+      body: "When you're running your own business and need extra hands, one of the first questions is: do I need to pay superannuation? The answer depends entirely on whether you're hiring an employee or engaging a contractor. Get this wrong, and you could face penalties from the ATO – plus potentially awkward conversations with your workers. The good news? The rules are clearer than many sole traders think."
+    },
+    {
+      heading: "Employees: Your Super Guarantee Obligation is Non-Negotiable",
+      body: "If you hire someone as an employee, superannuation isn't optional – it's mandatory. For the 2025-26 financial year, the super guarantee rate is 11.5% of ordinary time earnings. This means you must contribute to your employee's superannuation fund on top of their wages.",
+      list: [
+        "Super guarantee applies to all employees earning $11,800 or more per financial year",
+        "You contribute to the fund of your employee's choice (or a default fund if they don't nominate)",
+        "Contributions are made quarterly, though many employers do it monthly",
+        "Your employee cannot opt out – it's a legal requirement",
+        "You must keep records of all super contributions for at least 5 years",
+        "Failure to pay super can result in ATO penalties up to 200% of the unpaid amount"
+      ]
+    },
+    {
+      heading: "Contractors: The Super Guarantee Doesn't Apply",
+      body: "Contractors are a different story entirely. When you engage someone as a contractor (whether as an ABN holder or sole trader themselves), you don't pay their superannuation. They're responsible for their own super contributions – or choosing not to make them. This is a key distinction that affects your business costs."
+    },
+    {
+      heading: "How Do You Know If Someone Is an Employee or Contractor?",
+      subheading: "The ATO's Definition Matters",
+      body: "The ATO looks at the practical reality of the working relationship, not just what you call the person. Here are the main factors they consider:",
+      list: [
+        "Control: Do you control how, when and where the work is done?",
+        "Risk: Does the person carry the financial and legal risk of their work?",
+        "Independence: Can they work for other clients or businesses?",
+        "Equipment: Who provides the tools and materials needed?",
+        "Legitimacy: Are they genuinely running their own business?",
+        "Exclusivity: Are they expected to work only for you?"
+      ],
+      callout: {
+        type: "warning",
+        text: "The ATO actively audits sole traders on this issue. If they determine someone you've classified as a contractor is actually an employee, you could owe back super payments plus interest and penalties. If in doubt, seek professional advice."
+      }
+    },
+    {
+      heading: "Real-World Examples: Employee or Contractor?",
+      table: {
+        headers: ["Scenario", "Classification", "Why?"],
+        rows: [
+          ["Designer working 3 days/week in your office on your projects, using your equipment", "Employee", "You control when/where they work, they use your equipment, they're integrated into your business"],
+          ["Accountant with their own practice doing your books 1 day/month using their software", "Contractor", "They control their own schedule, use their own equipment, have other clients"],
+          ["Virtual assistant doing admin tasks only for your business, reporting to you daily", "Likely Employee", "You control the work, set their hours, they're dependent on your income"],
+          ["SEO specialist with multiple clients, delivering results on their timeline with their methods", "Contractor", "They're independent, carry their own business risk, have other clients"]
+        ]
+      }
+    },
+    {
+      heading: "The Financial Impact on Your Bottom Line",
+      body: "Understanding this distinction directly affects your hiring costs and business planning. Let's look at the real numbers for the 2025-26 tax year.",
+      callout: {
+        type: "info",
+        text: "If you're paying someone $1,000 per week as an employee, your super cost is $115 per week (11.5%). As a contractor, you pay only the agreed rate – no super obligation."
+      }
+    },
+    {
+      heading: "Staying Compliant: Practical Steps for Sole Traders",
+      list: [
+        "Before hiring anyone, write down the arrangement – is it employment or contracting?",
+        "If you hire an employee, register with the ATO for PAYG withholding before they start",
+        "Set up a system to calculate and track super contributions quarterly",
+        "Ask employees to nominate their preferred super fund in writing",
+        "Keep all payslips, super contribution records, and communications for 5+ years",
+        "Use the ATO's Employee or Contractor tool online if you're genuinely unsure",
+        "Consider speaking with an accountant – a few hundred dollars in advice is cheaper than ATO penalties",
+        "Remember: super contributions are tax-deductible for your business"
+      ]
+    },
+    {
+      heading: "Key Takeaway: Get It Right from the Start",
+      body: "The difference between hiring an employee and engaging a contractor goes far beyond super guarantee. It affects tax withholding, workers' compensation insurance, leave entitlements, and unfair dismissal claims. Super guarantee is just one piece of the puzzle, but it's a big one. As a sole trader, taking 30 minutes to properly understand this distinction – and getting professional advice if you're uncertain – will save you thousands in potential penalties and give you peace of mind that your business is compliant with ATO requirements."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
