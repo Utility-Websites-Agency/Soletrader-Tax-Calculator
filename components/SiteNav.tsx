@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface SiteNavProps {
-  activePage?: "blog-index" | "blog-post";
+  activePage?: "blog-index" | "blog-post" | "tools";
 }
 
 export function SiteNav({ activePage }: SiteNavProps) {
