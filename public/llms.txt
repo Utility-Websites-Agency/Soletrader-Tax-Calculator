@@ -1,0 +1,14 @@
+# SoleTraderTax.com.au
+
+> Free tools for Australian contractors and sole traders.
+
+## Tools
+- [Contractor Tax Calculator](https://soletradertax.com.au/): Calculate charge-out rate, take-home pay, GST obligations and PAYG instalments for 2025-26.
+- [GST Calculator](https://soletradertax.com.au/tools/gst-calculator): Add or remove 10% GST from any amount instantly.
+
+## Blog
+- [All articles](https://soletradertax.com.au/blog): Tax guides, GST, super, PAYG and invoicing tips for Australian sole traders and ABN contractors.
+
+## Notes
+- General guidance only, not financial or tax advice.
+- Based on 2025-26 ATO rates.
