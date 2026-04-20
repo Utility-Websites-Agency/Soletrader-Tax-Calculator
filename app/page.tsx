@@ -519,6 +519,7 @@ export default function Home() {
             <a href="#calculator" onClick={scrollTo("calculator")} className="hover:text-[#1f2328] transition-colors">Calculator</a>
             <a href="#how-it-works" onClick={scrollTo("how-it-works")} className="hover:text-[#1f2328] transition-colors">How it works</a>
             <a href="#faq" onClick={scrollTo("faq")} className="hover:text-[#1f2328] transition-colors">FAQ</a>
+            <a href="/tools/gst-calculator" className="hover:text-[#1f2328] transition-colors">GST Calculator</a>
             <a href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</a>
           </nav>
 
@@ -599,6 +600,7 @@ export default function Home() {
                   { label: "Calculator", id: "calculator", href: "#calculator" },
                   { label: "How it works", id: "how-it-works", href: "#how-it-works" },
                   { label: "FAQ", id: "faq", href: "#faq" },
+                  { label: "GST Calculator", id: "gst-calculator", href: "/tools/gst-calculator" },
                   { label: "Blog", id: "blog", href: "/blog" },
                 ].map((item, i) => (
                   <motion.a

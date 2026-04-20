@@ -23,6 +23,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
             <Link href="/" className="hover:text-[#1f2328] transition-colors">Calculator</Link>
             <Link href="/#how-it-works" className="hover:text-[#1f2328] transition-colors">How it works</Link>
             <Link href="/#faq" className="hover:text-[#1f2328] transition-colors">FAQ</Link>
+            <Link href="/tools/gst-calculator" className="hover:text-[#1f2328] transition-colors">GST Calculator</Link>
             <Link href="/blog" className="hover:text-[#1f2328] transition-colors">Blog</Link>
           </nav>
 
@@ -99,6 +100,7 @@ export function SiteNav({ activePage }: SiteNavProps) {
                   { label: "Calculator", href: "/" },
                   { label: "How it works", href: "/#how-it-works" },
                   { label: "FAQ", href: "/#faq" },
+                  { label: "GST Calculator", href: "/tools/gst-calculator" },
                   { label: "Blog", href: "/blog" },
                 ].map((item, i) => (
                   <motion.a
