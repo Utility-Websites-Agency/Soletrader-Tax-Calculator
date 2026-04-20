@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sole Trader Tax Calculator 2025-26 | ABN Take-Home Pay | SoleTraderTax.com.au",
+  title: "Australian Contractor Tax Calculator: How Much Should You Charge?",
   description: "Calculate your take-home pay as an Australian sole trader or ABN contractor. Includes GST threshold warning, PAYG installment schedule, super contributions, and per-invoice tax set-aside. Free, no login.",
   metadataBase: new URL("https://soletradertax.com.au"),
   openGraph: {
-    title: "Sole Trader Tax Calculator 2025-26 | SoleTraderTax.com.au",
+    title: "Australian Contractor Tax Calculator: How Much Should You Charge?",
     description: "Free Australian sole trader tax calculator. Know exactly what to set aside for tax, when your PAYG installments are due, and what charge-out rate to charge.",
     url: "https://soletradertax.com.au",
     siteName: "SoleTraderTax",
