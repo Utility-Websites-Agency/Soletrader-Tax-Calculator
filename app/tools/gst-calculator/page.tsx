@@ -95,7 +95,7 @@ export default function GSTCalculatorPage() {
 
       {/* Breadcrumb */}
       <div className="border-b border-[#e7e7e7] px-4 md:px-6 py-3">
-        <div className="mx-auto max-w-[1280px] flex items-center gap-2 text-[14px] text-[#8b949e]">
+        <div className="mx-auto max-w-[1280px] lg:px-6 flex items-center gap-2 text-[14px] text-[#8b949e]">
           <Link href="/" className="hover:text-[#2b7fff] transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <Link href="/tools" className="hover:text-[#2b7fff] transition-colors">Tools</Link>
