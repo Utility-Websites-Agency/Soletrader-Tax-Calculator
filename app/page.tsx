@@ -446,6 +446,26 @@ export default function Home() {
     },
   ];
 
+  const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Australian Contractor Tax Calculator",
+    "url": "https://soletradertax.com.au",
+    "description": "Free calculator for Australian contractors and sole traders. Calculate your charge-out rate, take-home pay, GST obligations and PAYG instalments for 2025-26.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SoleTraderTax",
+      "url": "https://soletradertax.com.au",
+    },
+  };
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -462,6 +482,10 @@ export default function Home() {
       onMouseMove={(e) => { mouseX.set(e.clientX); mouseY.set(e.clientY); }}
     >
       <ScrollProgress />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

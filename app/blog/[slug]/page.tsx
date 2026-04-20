@@ -136,12 +136,41 @@ export default function BlogPostPage() {
     "keywords": post.tags.join(", "),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://soletradertax.com.au",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://soletradertax.com.au/blog",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://soletradertax.com.au/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white font-sans text-[#1f2328] flex flex-col">
       <ScrollProgress />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <SiteNav activePage="blog-post" />
@@ -204,6 +233,20 @@ export default function BlogPostPage() {
                 {tag}
               </span>
             ))}
+          </div>
+
+          {/* End-of-post CTA */}
+          <div className="mt-10 rounded-xl bg-[#1b1f24] px-6 py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="text-[16px] font-bold text-white leading-snug mb-1">Know what you should charge?</p>
+              <p className="text-[14px] text-[#8b949e] leading-relaxed">Use our free calculator to find your exact charge-out rate in 60 seconds.</p>
+            </div>
+            <Link
+              href="/#calculator"
+              className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#2b7fff] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+            >
+              Calculate my rate
+            </Link>
           </div>
 
           {/* AD SLOT 1 — after article body */}
