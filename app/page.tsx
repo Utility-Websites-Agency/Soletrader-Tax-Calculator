@@ -1,8 +1,5 @@
 import { HomeNav } from "@/components/HomeNav";
-import { BackgroundEffects } from "@/components/BackgroundEffects";
-import { CalculatorSection } from "@/components/CalculatorSection";
-import { FaqAccordion } from "@/components/FaqAccordion";
-import { ScrollProgress } from "@/components/ScrollProgress";
+import { BackgroundEffects, CalculatorSection, FaqAccordion, ScrollProgress } from "@/components/DeferredSections";
 import { SiteFooter } from "@/components/SiteFooter";
 import AdSlot from "@/components/AdSlot";
 
