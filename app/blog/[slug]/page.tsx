@@ -250,7 +250,7 @@ export default function BlogPostPage() {
           </div>
 
           {/* AD SLOT 1 — after article body */}
-          <AdSlot label="Ad slot 1, Google AdSense" className="mt-10" />
+          <AdSlot slotId="8333140991" className="mt-10" />
 
           {/* Prev / Next navigation */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -339,13 +339,15 @@ export default function BlogPostPage() {
             <ArrowLeft className="w-3.5 h-3.5" /> Browse all articles
           </Link>
 
+          <AdSlot slotId="8333140991" />
+
         </aside>
       </div>
 
       {/* AD SLOT 2 — above footer */}
       <div className="px-4 md:px-6 py-2">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad slot 2, Google AdSense" />
+          <AdSlot slotId="8333140991" />
         </div>
       </div>
 

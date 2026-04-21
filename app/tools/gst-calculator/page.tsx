@@ -218,7 +218,7 @@ export default function GSTCalculatorPage() {
             </motion.div>
 
             {/* Ad slot */}
-            <AdSlot label="Ad slot 1, Google AdSense" className="mb-8" />
+            <AdSlot slotId="9454650972" className="mb-8" />
 
             {/* How GST works */}
             <motion.div
@@ -401,7 +401,7 @@ export default function GSTCalculatorPage() {
       {/* Ad slot 2 */}
       <div className="px-4 md:px-6 py-2">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad slot 2, Google AdSense" />
+          <AdSlot slotId="9454650972" />
         </div>
       </div>
 

@@ -73,7 +73,7 @@ export default function Home() {
       {/* ── AD SLOT 1 ── */}
       <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad slot 1, Google AdSense" />
+          <AdSlot slotId="7926794347" />
         </div>
       </div>
 
@@ -135,7 +135,7 @@ export default function Home() {
       {/* ── AD SLOT 2 ── */}
       <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad slot 2, Google AdSense" />
+          <AdSlot slotId="6282540183" />
         </div>
       </div>
 

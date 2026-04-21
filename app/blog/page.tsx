@@ -183,14 +183,14 @@ const filtered = useMemo(() => {
       {/* AD SLOT 1 — after article grid */}
       <div className="px-4 md:px-6 py-2">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad slot 1, Google AdSense" />
+          <AdSlot slotId="8772972152" />
         </div>
       </div>
 
       {/* AD SLOT 2 — above footer */}
       <div className="px-4 md:px-6 py-2">
         <div className="mx-auto max-w-[1280px]">
-          <AdSlot label="Ad slot 2, Google AdSense" />
+          <AdSlot slotId="8772972152" />
         </div>
       </div>
 

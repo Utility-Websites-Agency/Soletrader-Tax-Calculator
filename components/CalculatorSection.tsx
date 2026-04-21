@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Check, TrendingUp, TrendingDown, AlertTriangle, Info, BookOpen } from "lucide-react";
+import AdSlot from "@/components/AdSlot";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -500,6 +501,8 @@ export function CalculatorSection() {
                 </div>
               </div>
             </div>
+
+            <AdSlot slotId="7926794347" />
 
             <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
               <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3 flex items-center justify-between">
