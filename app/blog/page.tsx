@@ -157,7 +157,7 @@ const filtered = useMemo(() => {
 
                       {/* Footer */}
                       <div className="flex items-center justify-between pt-3 border-t border-[#e7e7e7] mt-auto">
-                        <div className="flex items-center gap-3 text-[12px] text-[#8b949e]">
+                        <div className="flex items-center gap-3 text-[12px] text-[#5f6266]">
                           <span className="flex items-center gap-1.5">
                             <Clock className="w-3.5 h-3.5" />
                             {post.readTime}

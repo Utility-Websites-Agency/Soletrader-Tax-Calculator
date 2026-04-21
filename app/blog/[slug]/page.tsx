@@ -207,7 +207,7 @@ export default function BlogPostPage() {
             <h1 className="text-[26px] md:text-[36px] font-extrabold tracking-tight text-[#1f2328] leading-[1.15] mb-5">
               {post.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-[13px] text-[#8b949e]">
+            <div className="flex flex-wrap items-center gap-4 text-[13px] text-[#5f6266]">
               <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5" />
                 {post.readTime}
