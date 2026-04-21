@@ -27,7 +27,7 @@ export default function AdSlot({ slotId, className = "" }: AdSlotProps) {
       <ins
         ref={ref}
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={{ display: "block", minHeight: 0 }}
         data-ad-client={CLIENT}
         data-ad-slot={slotId}
         data-ad-format="auto"

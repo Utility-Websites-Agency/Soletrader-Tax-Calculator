@@ -71,7 +71,7 @@ export default function Home() {
       <CalculatorSection />
 
       {/* ── AD SLOT 1 ── */}
-      <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
+      <div className="relative z-10 px-6 py-2">
         <div className="mx-auto max-w-[1280px]">
           <AdSlot slotId="7926794347" />
         </div>
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* ── AD SLOT 2 ── */}
-      <div className="relative z-10 border-b border-[#e7e7e7] px-6 py-4">
+      <div className="relative z-10 px-6 py-2">
         <div className="mx-auto max-w-[1280px]">
           <AdSlot slotId="6282540183" />
         </div>
