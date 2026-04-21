@@ -502,8 +502,6 @@ export function CalculatorSection() {
               </div>
             </div>
 
-            <AdSlot slotId="7926794347" />
-
             <div className="rounded-xl border border-[#e7e7e7] bg-white overflow-hidden">
               <div className="border-b border-[#e7e7e7] bg-[#f6f8fa] px-5 py-3 flex items-center justify-between">
                 <div>
@@ -541,6 +539,8 @@ export function CalculatorSection() {
             <GitBookCallout type="info">
               Benchmark ranges are derived from Hipages, ServiceSeeking and ABS 2024 labour data. They are indicative midpoints; actual market rates vary widely. Not financial or tax advice.
             </GitBookCallout>
+
+            <AdSlot slotId="7926794347" />
 
           </div>
         </div>
