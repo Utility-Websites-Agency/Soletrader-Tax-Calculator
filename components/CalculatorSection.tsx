@@ -263,7 +263,7 @@ export function CalculatorSection() {
   const locationLabel = `${state.id} · ${locType.name}`;
 
   return (
-    <section id="calculator" className="relative z-10 border-b border-[#e7e7e7] pb-16 md:py-16 px-4 md:px-6">
+    <section id="calculator" className="relative z-10 pb-16 md:py-16 px-4 md:px-6">
       <div className="mx-auto max-w-[1280px] grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 
         {/* LEFT: Inputs */}
