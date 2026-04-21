@@ -151,7 +151,7 @@ const filtered = useMemo(() => {
                       </h2>
 
                       {/* Excerpt */}
-                      <p className="text-[16px] text-[#343638] leading-[24px] line-clamp-3 flex-1">
+                      <p className="text-[16px] text-[#343638] leading-[28px] line-clamp-3 flex-1">
                         {post.excerpt}
                       </p>
 

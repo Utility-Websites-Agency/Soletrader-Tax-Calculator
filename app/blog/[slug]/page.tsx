@@ -56,7 +56,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
         </h3>
       )}
       {section.body && (
-        <p className="text-[16px] text-[#343638] leading-[24px] mb-3">
+        <p className="text-[16px] text-[#343638] leading-[28px] mb-3">
           {section.body}
         </p>
       )}
@@ -91,7 +91,7 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
       {section.list && (
         <ul className="flex flex-col gap-2 my-3">
           {section.list.map((item, li) => (
-            <li key={li} className="flex items-start gap-2.5 text-[14px] text-[#343638] leading-relaxed">
+            <li key={li} className="flex items-start gap-2.5 text-[16px] text-[#343638] leading-relaxed">
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1a6fe8]/10 mt-0.5">
                 <Check className="w-3 h-3 text-[#1a6fe8]" />
               </span>
@@ -243,7 +243,7 @@ export default function BlogPostPage() {
             </div>
             <Link
               href="/#calculator"
-              className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#1a6fe8] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+              className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#1a6fe8] px-6 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1560d0]"
             >
               Calculate my rate
             </Link>
@@ -299,7 +299,7 @@ export default function BlogPostPage() {
             <div className="p-4 bg-white">
               <Link
                 href="/#calculator"
-                className="flex items-center justify-center w-full rounded-full bg-[#1a6fe8] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1a6fe8]"
+                className="flex items-center justify-center w-full rounded-full bg-[#1a6fe8] px-5 py-2.5 text-[14px] font-semibold text-white transition hover:bg-[#1560d0]"
               >
                 Calculate my rate
               </Link>
