@@ -116,7 +116,7 @@ const filtered = useMemo(() => {
           </div>
 
           {/* Results count */}
-          <p className="text-[13px] text-[#8b949e] mb-6">
+          <p className="text-[13px] text-[#5f6266] mb-4">
             {filtered.length} article{filtered.length !== 1 ? "s" : ""}
             {activeCategory !== "All" ? ` in ${activeCategory}` : ""}
             {search ? ` matching "${search}"` : ""}
