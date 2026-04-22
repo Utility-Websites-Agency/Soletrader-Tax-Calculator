@@ -27,9 +27,11 @@ export default function AdSlot({ slotId, className = "" }: AdSlotProps) {
       <ins
         ref={ref}
         className="adsbygoogle"
-        style={{ display: "inline-block", width: "728px", height: "90px" }}
+        style={{ display: "block" }}
         data-ad-client={CLIENT}
         data-ad-slot={slotId}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
       />
     </div>
   );
