@@ -21,7 +21,8 @@ export function HomeNav() {
     <>
       <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md">
         <div className="mx-4 md:mx-6 lg:mx-auto lg:max-w-[1280px] lg:px-6 flex items-center justify-between py-4">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center gap-2">
+            <span className="flex h-7 w-7 items-center justify-center rounded-[6px] bg-[#1a6fe8] text-[11px] font-bold text-white tracking-tight shrink-0">ST</span>
             <span className="text-[15px] font-semibold text-[#1f2328] tracking-tight">SoleTraderTax</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-[14px] font-medium text-[#343638]">

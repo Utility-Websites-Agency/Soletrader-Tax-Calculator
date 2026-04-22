@@ -10,7 +10,8 @@ export function SiteFooter() {
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
           {/* Brand */}
           <div className="flex flex-col gap-3 max-w-xs">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 items-center justify-center rounded-[7px] bg-[#1a6fe8] text-[13px] font-bold text-white tracking-tight shrink-0">ST</span>
               <span className="text-[28px] font-semibold text-white">SoleTraderTax</span>
             </Link>
             <p className="text-[14px] text-[#c9d1d9] leading-relaxed">
