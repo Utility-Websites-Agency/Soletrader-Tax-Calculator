@@ -936,6 +936,72 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "how-to-set-up-a-tax-set-aside-system-as-a-contractor",
+  title: "How to Set Up a Tax Set-Aside System as a Contractor",
+  excerpt: "Stop stressing about tax bills. Learn how to set up a simple, effective tax set-aside system that keeps your cash flow healthy and your ATO obligations on track.",
+  date: "April 27, 2026",
+  readTime: "6 min read",
+  category: "Tax Savings",
+  tags: ["contractors", "sole traders", "tax planning", "cash flow", "self-employed", "ATO"],
+  content: [
+    {
+      heading: "Why Contractors Need a Tax Set-Aside System",
+      body: "As an Australian contractor or sole trader, you don't have tax automatically deducted from your income like employees do. This means the entire tax bill lands on you—usually all at once during tax time. Without a proper set-aside system, many contractors face two common problems: spending money that should go to the ATO, or scrambling to find cash when their tax bill arrives. A tax set-aside system solves both problems by helping you build a dedicated fund throughout the year."
+    },
+    {
+      heading: "Calculate Your Tax Set-Aside Rate",
+      subheading: "What percentage of your income should you set aside?",
+      body: "The first step is working out how much to set aside from each invoice or weekly earnings. This depends on your expected taxable income and your tax bracket. For the 2025–26 financial year, Australian tax rates are:\n\nIf you earn $18,200–$45,000: you'll pay 19% tax (plus 2% Medicare Levy = 21% total)\nIf you earn $45,001–$120,000: you'll pay 32.5% tax (plus 2% Medicare Levy = 34.5% total)\nIf you earn $120,001–$180,000: you'll pay 37% tax (plus 2% Medicare Levy = 39% total)\nIf you earn over $180,000: you'll pay 45% tax (plus 2% Medicare Levy = 47% total)\n\nYou'll also need to account for any tax-deductible expenses. If your net profit after expenses is lower, your tax bill will be lower too. A conservative approach is to set aside 30–35% if you're in the $45,001–$120,000 bracket, and adjust as you learn your actual profit margins.",
+      callout: {
+        type: "tip",
+        text: "Use SoleTraderTax.com.au's charge-out rate calculator to factor in your expected tax liability and get a more precise set-aside percentage based on your specific income and expenses."
+      }
+    },
+    {
+      heading: "Choose Your Set-Aside Account",
+      body: "Your tax set-aside money needs to be kept separate from your everyday operating account. It's too easy to dip into a mixed account when cash flow is tight. Here are your best options:",
+      list: [
+        "High-interest savings account: Look for a dedicated savings account with a competitive rate. Many banks offer bonus interest if you make regular deposits and no withdrawals.",
+        "Term deposit: If you're disciplined, lock your money away in a term deposit that matures around June 30 (end of financial year). This prevents accidental spending and earns you extra interest.",
+        "Offset account: If you have a mortgage, an offset account linked to your home loan lets you earn interest on your tax set-aside while reducing your home loan interest.",
+        "Separate transaction account: At minimum, keep your tax money in a different bank account with a different card to make it harder to spend accidentally."
+      ]
+    },
+    {
+      heading: "Automate Your Set-Aside Deposits",
+      body: "The best way to ensure you actually set money aside is to make it automatic. Set up a recurring transfer that happens on the same day you get paid—weekly, fortnightly, or monthly, depending on your invoicing schedule. This removes the temptation to 'forget' to set aside tax money.\n\nFor example, if you invoice clients for $5,000 and your set-aside rate is 32.5%, transfer $1,625 to your tax account immediately and leave it there. Over a full financial year, this discipline adds up and means no nasty surprises on tax day.",
+      callout: {
+        type: "info",
+        text: "Some accounting software and invoicing tools (like Xero or Wave) can automatically calculate and track your tax liability as you invoice, making it easier to see exactly how much you should be setting aside."
+      }
+    },
+    {
+      heading: "Track Your Expenses and Adjust",
+      body: "Your tax set-aside rate should be based on your net profit (income minus tax-deductible expenses), not your gross income. If you're self-employed, you can claim deductions for things like:\n\nWork-related equipment and tools\nHome office expenses\nVehicle expenses (if used for work)\nSoftware, apps, and subscriptions\nProfessional development and training\nInsurance and accounting fees\n\nKeep good records of all expenses throughout the year. By mid-year (around December or January), review your actual income and expenses. If your profit is lower than expected, you might be setting aside too much—adjust your set-aside rate down. If profits are higher, adjust up. This keeps your system realistic and prevents you from over- or under-saving.",
+      callout: {
+        type: "warning",
+        text: "Don't just guess your expenses. The ATO requires you to keep receipts and records for at least five years. Poor record-keeping can lead to denied deductions and bigger tax bills."
+      }
+    },
+    {
+      heading: "Plan for Other Tax Obligations",
+      body: "If you're registered for GST, remember that GST is not your money—it belongs to the ATO. You're just holding it temporarily. Keep GST collected in a separate section of your tax account, and set it aside to pay the ATO when your quarterly or annual GST return is due.\n\nYou may also need to make quarterly tax instalments (PAYG instalments) if the ATO has issued you a notice of assessment requiring it. These are essentially advance tax payments, so factor them into your set-aside plan. Your accountant or tax advisor can tell you if you need to make these payments."
+    },
+    {
+      heading: "What to Do at Tax Time",
+      body: "When you lodge your tax return (usually by October 31 for most taxpayers, or November 15 if you have a tax agent), your accountant will calculate your exact tax bill based on your actual income and expenses. Here's how your set-aside money works:\n\nIf you've set aside the right amount, your tax account balance should roughly equal your tax bill. You pay the ATO from this account, and any surplus stays in the account as a buffer for next year.\n\nIf you've set aside too much, congratulations—you'll have a little extra cash to reinvest in your business or keep as a buffer.\n\nIf you've set aside too little, you'll need to pay the difference from your operating account. This is a sign to increase your set-aside rate next year.\n\nAfter paying your tax, don't raid your tax account. It's tempting, but you'll need that buffer again next year. Instead, start fresh and begin building your tax fund for 2026–27."
+    },
+    {
+      heading: "Key Takeaways",
+      body: "Setting up a tax set-aside system is one of the smartest moves you can make as a contractor. It removes stress, keeps your cash flow stable, and ensures you're never caught short when the tax bill arrives. Start by calculating your set-aside rate based on your expected income and tax bracket, automate your weekly or monthly transfers, track your expenses carefully, and adjust as needed throughout the year. By June 30 each year, you'll have the cash ready to pay your tax bill without scrambling.\n\nFor personalised advice tailored to your specific income and situation, consider working with a tax agent or accountant. The investment is usually worth it when it comes to maximising deductions and staying on the right side of the ATO.",
+      callout: {
+        type: "tip",
+        text: "Use SoleTraderTax.com.au to calculate your ideal charge-out rate and get a clearer picture of how much tax you're likely to owe based on your business structure and income level."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
