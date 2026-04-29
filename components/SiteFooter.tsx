@@ -54,7 +54,12 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
-        <div className="border-t border-[#30363d] pt-6 flex flex-col gap-1">
+        <div className="border-t border-[#30363d] pt-6 flex flex-col gap-2">
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/about" className="text-[12px] text-[#c9d1d9] hover:text-white transition-colors">About</Link>
+            <Link href="/contact" className="text-[12px] text-[#c9d1d9] hover:text-white transition-colors">Contact</Link>
+            <Link href="/privacy-policy" className="text-[12px] text-[#c9d1d9] hover:text-white transition-colors">Privacy policy</Link>
+          </div>
           <p className="text-[12px] text-[#c9d1d9]">© {new Date().getFullYear()} SoleTraderTax.com.au · Free Australian sole trader tax calculator.</p>
           <p className="text-[12px] text-[#c9d1d9]">General guidance only, not financial or tax advice.</p>
         </div>
