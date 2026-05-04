@@ -1002,6 +1002,102 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "As an Australian sole trader or contractor, understanding your super guarantee obligations is critical. Learn the key differences between hiring contractors and employees, and avoid costly mistakes.",
+  date: "May 4, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "contractors", "employees", "super guarantee", "sole traders", "business expenses"],
+  content: [
+    {
+      heading: "Why Super Guarantee Matters for Your Business",
+      body: "As a sole trader hiring staff, you have legal obligations to contribute to superannuation for eligible employees. However, many contractors don't realise that super guarantee rules are completely different when you hire independent contractors versus employees. Getting this wrong can result in significant penalties from the ATO, so it's worth understanding the distinction clearly."
+    },
+    {
+      heading: "The Fundamental Difference",
+      body: "The key question the ATO asks is: 'Who has control?' Employees work under your direction and control, while contractors operate independently. This distinction determines your super guarantee obligations. For the 2025-26 financial year, the super guarantee rate is 11.5% of ordinary time earnings for eligible employees, with plans to reach 12% by 2025."
+    },
+    {
+      heading: "Super Guarantee for Employees",
+      subheading: "Your Legal Obligation",
+      list: [
+        "You must contribute 11.5% of ordinary time earnings to your employee's chosen superannuation fund",
+        "This applies to employees aged 18-74 who earn $11,800 or more per year",
+        "Contributions are made quarterly (or more frequently if you choose)",
+        "You cannot deduct super contributions from wages—they're employer contributions",
+        "Failure to pay super can result in ATO penalties of up to 200% of the unpaid amount",
+        "Super contributions are tax-deductible expenses for your business"
+      ]
+    },
+    {
+      heading: "Contractors and Super Guarantee",
+      subheading: "No Obligation (Usually)",
+      body: "If someone is genuinely a contractor, you have NO super guarantee obligation. Contractors are considered independent business operators who are responsible for their own superannuation. However, this doesn't mean you can simply call someone a 'contractor' to avoid super contributions. The ATO will look at the actual working arrangement to determine employment status.",
+      callout: {
+        type: "warning",
+        text: "Don't misclassify employees as contractors to avoid super guarantee obligations. The ATO actively investigates misclassification and penalties are severe."
+      }
+    },
+    {
+      heading: "How the ATO Determines Employment Status",
+      body: "The ATO uses a multi-factor test to determine whether someone is genuinely a contractor or actually an employee. Just having a contract that says 'contractor' isn't enough. Here's what the ATO looks at:",
+      table: {
+        headers: ["Factor", "Employee Indicator", "Contractor Indicator"],
+        rows: [
+          ["Control", "You control how, when and where work is done", "Contractor controls their own methods and timing"],
+          ["Payment", "Paid regular wage or salary", "Paid by the job or project"],
+          ["Equipment", "You provide tools and equipment", "Contractor provides their own equipment"],
+          ["Risk", "Minimal financial risk", "Carries financial risk of loss"],
+          ["Availability", "Works exclusively or primarily for you", "Works for multiple clients"],
+          ["Superannuation", "You contribute to super", "Contractor responsible for own super"],
+          ["Tax", "PAYG tax withheld from pay", "No tax withheld; contractor pays tax"],
+          ["Termination", "Can dismiss with notice and entitlements", "Can terminate without entitlements"]
+        ]
+      }
+    },
+    {
+      heading: "Practical Tips for Sole Traders",
+      list: [
+        "Document the employment relationship clearly—set out terms in writing whether someone is an employee or contractor",
+        "If hiring employees, budget for super contributions from day one (it's 11.5% on top of wages)",
+        "Use payroll software to calculate and track super contributions accurately",
+        "Pay super on time—the ATO can impose penalties for late or missing payments",
+        "If unsure about classification, ask the ATO or seek advice from an accountant",
+        "Remember that super contributions reduce your taxable income, so they're a tax-deductible expense",
+        "Keep records of all super contributions for at least 5 years"
+      ]
+    },
+    {
+      heading: "2025-26 Super Guarantee at a Glance",
+      body: "For the current tax year, here are the key rates and thresholds you need to know:",
+      table: {
+        headers: ["Item", "2025-26 Rate/Amount"],
+        rows: [
+          ["Super guarantee rate", "11.5%"],
+          ["Minimum annual salary for super", "$11,800"],
+          ["Minimum age", "18 years"],
+          ["Maximum age", "74 years"],
+          ["Contribution cap (non-concessional)", "$110,000 per year"],
+          ["Quarterly payment deadline", "31 days after quarter end"]
+        ]
+      },
+      callout: {
+        type: "info",
+        text: "The super guarantee rate is scheduled to increase to 12% on 1 July 2025. Make sure you update your payroll calculations accordingly."
+      }
+    },
+    {
+      heading: "The Bottom Line",
+      body: "If you hire employees, super guarantee contributions are a legal obligation and a business expense. If you hire contractors, there's no super guarantee obligation, but you must genuinely treat them as independent operators—not as disguised employees. When in doubt, it's worth paying for professional advice to get your employment relationships right. The cost of a quick accountant consultation is far less than the cost of ATO penalties.",
+      callout: {
+        type: "tip",
+        text: "Use SoleTraderTax.com.au's charge-out rate calculator to factor in super contributions and other employment costs when pricing your services or budgeting for staff."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
