@@ -1098,6 +1098,113 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "end-of-financial-year-checklist-for-australian-contractors",
+  title: "End of Financial Year Checklist for Australian Contractors",
+  excerpt: "Don't leave money on the table. Use our comprehensive EOFY checklist to maximise your tax deductions, organise your records, and prepare for the 2025-26 tax year.",
+  date: "May 11, 2026",
+  readTime: "7 min read",
+  category: "Tax",
+  tags: ["tax deductions", "end of financial year", "sole traders", "contractors", "tax planning", "ato compliance"],
+  content: [
+    {
+      heading: "Why Your EOFY Checklist Matters",
+      body: "The end of the financial year (30 June) is the most important date in your calendar as an Australian contractor or sole trader. It's your final opportunity to claim deductions, organise your records, and set yourself up for a successful tax return. Many contractors leave thousands of dollars in potential deductions on the table simply because they weren't organised when it came time to lodge. This checklist will help you avoid that mistake."
+    },
+    {
+      heading: "1. Gather Your Income Records",
+      body: "Start by collecting all evidence of income earned during the 2025-26 financial year (1 July 2025 to 30 June 2026). This includes invoices issued, bank statements, payment receipts, and any contracts showing work completed.",
+      list: [
+        "Compile all invoices issued to clients",
+        "Print or download bank statements for all business accounts",
+        "Collect GST records if you're registered",
+        "Gather evidence of cash payments received",
+        "Document any bartering or non-monetary income",
+        "Collect income statements from platforms (if you use Uber, Airtasker, etc.)"
+      ]
+    },
+    {
+      heading: "2. Review and Claim Your Deductions",
+      body: "This is where you can significantly reduce your tax bill. The ATO allows contractors to claim expenses that are directly related to earning their income. Common deductions include home office costs, vehicle expenses, tools and equipment, professional development, and subscriptions.",
+      callout: {
+        type: "tip",
+        text: "Keep receipts for all expenses claimed. The ATO requires evidence for anything over $75, and may request supporting documents for smaller amounts too. Digital copies are acceptable."
+      },
+      list: [
+        "Home office expenses (proportion of rent/mortgage interest, rates, utilities, internet)",
+        "Vehicle expenses (fuel, maintenance, registration, insurance)",
+        "Tools, equipment and software under $20,000",
+        "Professional development courses and memberships",
+        "Subscriptions and subscriptions (industry publications, software)",
+        "Phone and internet costs (if used for business)",
+        "Travel expenses (client visits, industry events)",
+        "Work-related clothing and uniforms",
+        "Insurance (public liability, professional indemnity)",
+        "Accounting and tax return preparation fees"
+      ]
+    },
+    {
+      heading: "3. Manage Capital Assets and Depreciation",
+      body: "If you've purchased equipment, tools, vehicles, or other assets over $20,000 (or under for certain items), you may be able to claim depreciation. Assets under $20,000 can usually be claimed immediately under the simplified depreciation rules.",
+      callout: {
+        type: "info",
+        text: "Capital works (like renovations to a home office) may be eligible for the construction expenditure deduction. Keep all receipts and get written quotes for work done."
+      }
+    },
+    {
+      heading: "4. Reconcile Your Accounts",
+      body: "Before you lodge your tax return, make sure your business records match your bank statements. Reconciliation helps you identify any missing income or expense records, and prevents costly mistakes when dealing with the ATO.",
+      list: [
+        "Match all invoices to bank deposits",
+        "Reconcile expense receipts to bank withdrawals",
+        "Account for any personal/private transactions mixed with business accounts",
+        "Check for duplicate entries or missing records",
+        "Review GST ledger (if applicable) for accuracy",
+        "Identify any outstanding invoices or unpaid bills"
+      ]
+    },
+    {
+      heading: "5. Super Contributions and Tax Concessions",
+      body: "One of the best ways to reduce your tax bill while planning for retirement is to make concessional superannuation contributions. As a contractor, you can claim a deduction for contributions made by 30 June 2026 for the 2025-26 financial year.",
+      callout: {
+        type: "warning",
+        text: "Make sure your super contribution is actually received by your fund before 30 June 2026 to be claimed in this tax year. Simply initiating a transfer may not be enough."
+      }
+    },
+    {
+      heading: "6. Get Your Tax Return Ready",
+      body: "With all your records organised, it's time to prepare for lodging. You'll need to lodge your return by 31 October 2026 (or 15 May 2027 if you use a tax agent). Having everything in order now means a smoother process with your accountant.",
+      list: [
+        "Prepare a summary of total income by source",
+        "List all deductions claimed with supporting totals",
+        "Gather depreciation schedules for capital assets",
+        "Prepare details of any GST returns lodged",
+        "Collect records of HELP/HECS repayments if applicable",
+        "Gather records of any quarterly tax instalments paid",
+        "Calculate your net taxable income"
+      ]
+    },
+    {
+      heading: "7. Plan for Next Financial Year",
+      body: "Once your current year is sorted, take 30 minutes to set up systems for 2026-27. This might include a simple expense tracker, regular invoicing schedule, or quarterly reconciliation routine. The easier you make record-keeping now, the less stressful next EOFY will be.",
+      callout: {
+        type: "info",
+        text: "Consider using accounting software like MYOB, Xero, or Wave. Many small contractors find this saves hours at tax time and helps track their charge-out rates and profitability throughout the year."
+      }
+    },
+    {
+      heading: "Final Reminders",
+      list: [
+        "Lodge before 31 October 2026 (or 15 May 2027 if using a tax agent)",
+        "Keep all records for 5 years",
+        "Update your address with the ATO if you've moved",
+        "Check your Medicare Levy status",
+        "Review any other tax obligations (activity statements, etc.)",
+        "Consider your estimated tax position for 2026-27"
+      ]
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
