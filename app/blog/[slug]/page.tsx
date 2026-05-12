@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { notFound, useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { notFound } from "next/navigation";
 import { BLOG_POSTS, getPostBySlug, getAdjacentPosts, BlogSection } from "@/lib/blog";
 import {
   ChevronLeft,
@@ -20,8 +17,6 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 
-// ─── Small components ──────────────────────────────────────────────────────────
-
 function Callout({ type, text }: { type: "info" | "tip" | "warning"; text: string }) {
   const styles = {
     info:    { border: "border-blue-200",  bg: "bg-blue-50",  icon: <Info className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />,          text: "text-blue-900"  },
@@ -37,14 +32,9 @@ function Callout({ type, text }: { type: "info" | "tip" | "warning"; text: strin
   );
 }
 
-function PostSection({ section, index }: { section: BlogSection; index: number }) {
+function PostSection({ section }: { section: BlogSection }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: 0.05 + index * 0.04 }}
-      className="mb-8"
-    >
+    <div className="mb-8">
       {section.heading && (
         <h2 className="text-[20px] font-bold text-[#1f2328] mb-3 mt-8 first:mt-0 leading-snug border-l-4 border-[#1a6fe8] pl-4">
           {section.heading}
@@ -103,16 +93,16 @@ function PostSection({ section, index }: { section: BlogSection; index: number }
       {section.callout && (
         <Callout type={section.callout.type} text={section.callout.text} />
       )}
-    </motion.div>
+    </div>
   );
 }
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
+export async function generateStaticParams() {
+  return BLOG_POSTS.map((post) => ({ slug: post.slug }));
+}
 
-export default function BlogPostPage() {
-  const params = useParams();
-  const slug = params?.slug as string;
-
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
@@ -140,24 +130,9 @@ export default function BlogPostPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://soletradertax.com.au",
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://soletradertax.com.au/blog",
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": post.title,
-        "item": `https://soletradertax.com.au/blog/${post.slug}`,
-      },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://soletradertax.com.au" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://soletradertax.com.au/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://soletradertax.com.au/blog/${post.slug}` },
     ],
   };
 
@@ -194,13 +169,8 @@ export default function BlogPostPage() {
         <article className="flex-1 min-w-0">
 
           {/* Post header */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="mb-10"
-          >
-            <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[12px] font-semibold uppercase tracking-wider mb-4 bg-blue-50 text-blue-700`}>
+          <div className="mb-10">
+            <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[12px] font-semibold uppercase tracking-wider mb-4 bg-blue-50 text-blue-700">
               <Tag className="w-3 h-3" />
               {post.category}
             </span>
@@ -217,12 +187,12 @@ export default function BlogPostPage() {
             <p className="mt-5 text-[16px] text-[#343638] leading-relaxed border-l-4 border-[#e7e7e7] pl-4 italic">
               {post.excerpt}
             </p>
-          </motion.div>
+          </div>
 
           {/* Article body */}
           <div className="prose-content">
             {post.content.map((section, i) => (
-              <PostSection key={i} section={section} index={i} />
+              <PostSection key={i} section={section} />
             ))}
           </div>
 
@@ -351,7 +321,6 @@ export default function BlogPostPage() {
         </div>
       </div>
 
-      {/* Footer */}
       <SiteFooter />
     </div>
   );
