@@ -1205,6 +1205,109 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "tools-and-equipment-deductions-for-tradies-2025-26",
+  title: "Tools and Equipment Deductions for Tradies: 2025-26 Tax Year Guide",
+  excerpt: "Learn what tools and equipment you can claim as tax deductions in 2025-26, including the instant asset write-off threshold, depreciation rules, and what the ATO will actually allow.",
+  date: "May 18, 2026",
+  readTime: "6 min read",
+  category: "Tax Savings",
+  tags: ["tax deductions", "tools", "equipment", "sole traders", "tradies", "2025-26"],
+  content: [
+    {
+      heading: "What Can You Claim for Tools and Equipment?",
+      body: "As a tradie or contractor, your tools and equipment are essential to your business. The good news is that the ATO lets you claim most of these expenses as tax deductions. But there are rules about what qualifies, how much you can claim, and when you can claim it."
+    },
+    {
+      heading: "The Key Rule: Business Use Only",
+      body: "Here's the golden rule: you can only claim a deduction for tools and equipment that you use to earn your income. If you use something for personal reasons—even occasionally—you need to work out the business-use percentage. For example, if you use a ute 80% for work and 20% for personal use, you can only claim 80% of the costs.",
+      callout: {
+        type: "warning",
+        text: "The ATO scrutinises personal-use claims carefully. Keep detailed records of when and how you use each item. If you can't prove the business-use percentage, you'll lose the deduction."
+      }
+    },
+    {
+      heading: "Instant Asset Write-Off: What's Changed for 2025-26",
+      body: "The instant asset write-off (IAWO) is a valuable tool that lets you claim the full cost of certain items immediately, rather than depreciating them over several years. For the 2025-26 tax year, eligible businesses can claim an immediate deduction for depreciable assets that cost less than $20,000 each.",
+      list: [
+        "Individual items under $20,000 qualify for instant write-off",
+        "You can claim multiple items in the same tax year",
+        "The asset must be used in your business and first used during the 2025-26 year",
+        "This applies to new and second-hand assets",
+        "You need to be carrying on a business and have a turnover of less than $50 million"
+      ]
+    },
+    {
+      heading: "Examples of Tools and Equipment You Can Claim",
+      body: "Most work-related tools and equipment qualify for deductions. Here are common examples tradies claim:",
+      list: [
+        "Hand tools (hammers, spanners, screwdrivers, etc.)",
+        "Power tools (drills, angle grinders, circular saws)",
+        "Safety equipment (hard hats, boots, high-visibility clothing)",
+        "Ladders and work platforms",
+        "Measuring tools and levels",
+        "Work vehicle or ute (for business-use portion)",
+        "Scaffolding and temporary site structures",
+        "Testing and diagnostic equipment",
+        "Specialist equipment for your trade"
+      ]
+    },
+    {
+      heading: "How Depreciation Works for Items Over $20,000",
+      body: "If a single item costs $20,000 or more, you can't use the instant write-off. Instead, you claim depreciation (called 'decline in value' by the ATO) over the asset's effective life. Different items have different effective lives. For tradies, here are some common ones:",
+      table: {
+        headers: ["Asset Type", "Effective Life"],
+        rows: [
+          ["Hand tools and small equipment", "5 years"],
+          ["Plant and machinery", "5-10 years"],
+          ["Work vehicles (utes, vans)", "5 years"],
+          ["Scaffolding and site equipment", "3-5 years"],
+          ["Specialised trade equipment", "Varies by type"]
+        ]
+      }
+    },
+    {
+      heading: "Repairs vs. Capital Improvements: Know the Difference",
+      body: "Here's where tradies often get confused. You can claim repairs immediately, but improvements and upgrades often need to be depreciated. A repair keeps something working as it was. An improvement makes it better, more efficient, or extends its life. For example: replacing a worn drill bit is a repair (claim it immediately); buying a new $5,000 drill is a capital purchase (claim via IAWO or depreciation).",
+      callout: {
+        type: "tip",
+        text: "Keep your receipts organised by category: repairs, maintenance, and capital purchases. This makes it much easier when you're preparing your tax return or if the ATO asks questions."
+      }
+    },
+    {
+      heading: "Record-Keeping: What You Need to Keep",
+      body: "The ATO requires you to keep records to back up your claims. This doesn't have to be complicated, but it does need to be done properly.",
+      list: [
+        "Receipts or invoices showing what you bought and the cost",
+        "Dates of purchase and when the item was first used for business",
+        "Description of the item and its business purpose",
+        "For items with mixed use, notes about the business-use percentage",
+        "Photos or inventory lists of tools and equipment",
+        "Service and maintenance records for major items"
+      ],
+      callout: {
+        type: "info",
+        text: "Keep records for at least 5 years. Digital copies (scanned receipts) are fine, but make sure they're legible and properly organised."
+      }
+    },
+    {
+      heading: "Getting Your Deductions Right: Common Mistakes to Avoid",
+      body: "We've helped hundreds of tradies maximise their deductions. Here are the most common mistakes we see—and how to avoid them:",
+      list: [
+        "Claiming items that aren't actually used for business (the ATO will disallow these)",
+        "Forgetting to claim the business-use percentage for shared assets like vehicles",
+        "Losing receipts and relying on memory (the ATO wants proof)",
+        "Mixing personal and business tools without tracking the split",
+        "Not claiming depreciation on items that qualify",
+        "Claiming items that are actually repairs or consumables separately"
+      ]
+    },
+    {
+      heading: "Bottom Line: Maximise Your Tools Deductions",
+      body: "Tools and equipment are one of the biggest deductions available to tradies. By understanding the instant asset write-off rules, depreciation, and what the ATO will accept, you can significantly reduce your tax bill. Keep good records, be honest about personal-use percentages, and don't be afraid to claim what you're entitled to. If you're unsure about a specific item, our charge-out rate calculator can help you factor these deductions into your pricing—making sure your tax position is built into your business model from day one."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
