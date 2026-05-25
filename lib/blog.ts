@@ -1308,6 +1308,72 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "personal-services-income-psi-rules-explained-simply",
+  title: "Personal Services Income (PSI) Rules Explained Simply",
+  excerpt: "Understand PSI rules and how they affect your tax as an Australian sole trader or contractor. We break down the rules, thresholds, and what you need to know for the 2025-26 tax year.",
+  date: "May 25, 2026",
+  readTime: "7 min read",
+  category: "Tax",
+  tags: ["PSI", "Personal Services Income", "Sole Trader", "Tax Rules", "Contractor Tax", "ATO"],
+  content: [
+    {
+      heading: "What is Personal Services Income (PSI)?",
+      body: "Personal Services Income (PSI) is income you earn from providing your personal services—essentially, you're selling your time, effort, and expertise. As a sole trader or contractor, most of your income is likely PSI. The ATO has specific rules about PSI to prevent tax avoidance and ensure fair taxation across the economy.\n\nSimply put, if you earn money by doing work yourself (rather than employing others or selling products), you're generating PSI. This includes consultants, tradespeople, writers, coaches, and virtually any contractor who invoices for services."
+    },
+    {
+      heading: "The PSI Integrity Rules: What You Need to Know",
+      body: "The ATO's PSI integrity rules apply when certain conditions are met. These rules can affect how you claim deductions and structure your business. The key thing to understand is that if you're caught by the PSI rules, you can't claim some deductions that other businesses can, and you may be subject to different tax treatment.\n\nThe good news? Most sole traders and contractors won't be affected by the full PSI rules if they meet certain criteria. Let's break down when these rules apply and when they don't."
+    },
+    {
+      heading: "The Four-Part Test",
+      body: "The ATO uses a four-part test to determine if the PSI integrity rules apply to your income. You'll be caught by the rules if ALL four of these conditions are met:\n\n1. You provide services to a client (not general public)\n2. A client-related entity provides services using your services income\n3. That entity is entitled to a deduction for paying you\n4. A principal (client) is entitled to a deduction for the services",
+      list: [
+        "You provide services to a specific client or small group of clients",
+        "Your income is paid to or used by a related entity (like a company or trust you own)",
+        "That entity claims a tax deduction",
+        "The client can claim a deduction for the services"
+      ]
+    },
+    {
+      heading: "The $20,000 Threshold and Special Conditions",
+      body: "There's some good news for many contractors: if your PSI is below $20,000 per year, you won't be caught by the PSI integrity rules, even if all four conditions are met.\n\nHowever, there are some special exceptions where you might be caught even below this threshold, or conversely, where the rules might not apply at higher income levels. These exceptions relate to specific work arrangements and how you structure your services.\n\nFor the 2025-26 tax year, make sure you're tracking your PSI separately so you know exactly how much you're earning from personal services versus other income sources."
+    },
+    {
+      heading: "What Happens If You're Caught by the PSI Rules?",
+      body: "If the four-part test applies to your income and you exceed the $20,000 threshold, the PSI integrity rules can restrict your deductions. Specifically, you can generally only claim deductions up to the amount of your PSI income.\n\nThis is different from other businesses, where you might be able to carry forward losses or claim deductions that exceed current income. The rules are designed to ensure that income earned from personal services is taxed more directly, without offsetting losses from other activities.",
+      callout: {
+        type: "warning",
+        text: "If you're subject to PSI rules, your tax position could be significantly affected. It's worth getting professional advice if you think the rules might apply to you, especially as you grow your income."
+      }
+    },
+    {
+      heading: "How to Check If You're Affected",
+      body: "Here's a practical checklist to see if you might be caught by the PSI rules:\n\n• Do you work primarily for one client or a small group of clients?\n• Is your income paid to a company, trust, or other entity you control?\n• Does that entity claim a deduction for your income?\n• Does your client claim a business deduction for your services?\n• Is your annual PSI income above $20,000?\n\nIf you answered yes to all five questions, you're likely caught by the PSI rules and should seek professional advice. If you answered no to any question—especially the threshold question—you're probably okay.",
+      table: {
+        headers: ["Situation", "Caught by PSI Rules?", "Action Needed"],
+        rows: [
+          ["Solo contractor, income under $20,000", "No", "Keep normal records"],
+          ["Solo contractor, income over $20,000", "Unlikely", "Track income by client"],
+          ["Using a company, one main client, over $20,000", "Possibly yes", "Seek professional advice"],
+          ["Using a company, many clients, over $20,000", "Less likely", "Seek professional advice"]
+        ]
+      }
+    },
+    {
+      heading: "What You Should Do Now",
+      body: "For the 2025-26 tax year, here are the practical steps to take:\n\n1. Categorise your income clearly—identify what is PSI and what isn't\n2. Track which clients your income comes from and in what amounts\n3. Document your business structure and how income flows through it\n4. Keep records of invoices, contracts, and client relationships\n5. If you're earning above $20,000 from services to specific clients, get advice from a tax professional\n\nUnderstanding PSI rules doesn't have to be complicated. The key is knowing whether the rules apply to you, and if they do, understanding what restrictions they place on your deductions.",
+      callout: {
+        type: "tip",
+        text: "Use the SoleTraderTax.com.au calculator to model your tax position under different scenarios. If you're unsure whether PSI rules apply, this can help clarify your situation before you speak to an accountant."
+      }
+    },
+    {
+      heading: "Final Thoughts",
+      body: "The PSI integrity rules exist to ensure tax fairness, but they don't affect most sole traders and contractors who work independently or for multiple clients. If you're concerned about whether these rules apply to you, the investment in professional advice is usually worthwhile—it could save you thousands in tax and help you structure your business more efficiently.\n\nFor the 2025-26 tax year, make sure you have clear records of your income sources and business structure. This will make tax time easier and help you stay compliant with ATO requirements."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
