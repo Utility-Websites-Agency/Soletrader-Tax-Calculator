@@ -1455,6 +1455,92 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "record-keeping-requirements-for-australian-sole-traders",
+  title: "Record Keeping Requirements for Australian Sole Traders: A Complete Guide",
+  excerpt: "Learn what records you need to keep as an Australian sole trader, how long to keep them, and why proper documentation is essential for tax time and ATO compliance.",
+  date: "June 8, 2026",
+  readTime: "8 min read",
+  category: "Tax",
+  tags: ["record keeping", "sole traders", "tax compliance", "ATO requirements", "business records"],
+  content: [
+    {
+      heading: "Why Record Keeping Matters for Sole Traders",
+      body: "As an Australian sole trader, keeping accurate records isn't just about staying organised—it's a legal requirement. The ATO expects you to maintain records that clearly show your income and expenses, and these records are essential if you're ever audited. Good record keeping also makes tax time significantly easier and helps you identify where your money is actually going, which is crucial for managing your business profitably."
+    },
+    {
+      heading: "What Records You Must Keep",
+      subheading: "The Essential Documentation",
+      list: [
+        "Income records: invoices issued, payment receipts, bank statements showing money received",
+        "Expense records: receipts, invoices paid, credit card statements, bank statements",
+        "Tax documents: PAYG withholding statements, GST records (if registered)",
+        "Employment records: if you have employees, payroll records and superannuation documentation",
+        "Asset records: invoices and receipts for equipment purchases and capital improvements",
+        "Motor vehicle records: logbooks, fuel receipts, maintenance invoices (if claiming vehicle expenses)",
+        "Substantiation records: evidence supporting claims (especially for home office, meals, entertainment)",
+        "Bank and financial records: statements showing all business transactions"
+      ]
+    },
+    {
+      heading: "How Long You Need to Keep Records",
+      body: "The ATO requires you to keep records for at least five years from the date you prepared them (or should have prepared them). This means records for the 2025-26 tax year should be kept until 30 June 2031. However, if you have a dispute with the ATO or they're conducting an investigation, you may need to keep records for longer. It's a good idea to keep records for at least seven years just to be safe, and many accountants recommend keeping them indefinitely where possible.",
+      callout: {
+        type: "warning",
+        text: "If you fail to keep adequate records or can't substantiate your claims, the ATO can disallow deductions or issue penalties. Keep your records safe and organised."
+      }
+    },
+    {
+      heading: "Digital vs Paper Records",
+      body: "You can keep records in either digital or paper format, but digital is increasingly preferred. Digital records are easier to organise, backup, and retrieve when needed. If you keep paper records, make sure they're stored safely and kept dry. Many sole traders use accounting software (like Xero, MYOB, or Wave) which automatically tracks income and expenses, making record keeping much easier. Whatever system you choose, consistency is key."
+    },
+    {
+      heading: "Specific Record Requirements by Category",
+      table: {
+        headers: ["Record Type", "What to Keep", "How Long"],
+        rows: [
+          ["Income", "Invoices, receipts, bank statements", "5+ years"],
+          ["Expenses", "Receipts, invoices, statements", "5+ years"],
+          ["Vehicle", "Logbook, fuel, maintenance records", "5+ years"],
+          ["Home Office", "Photos, measurements, utility bills", "5+ years"],
+          ["GST (if registered)", "Tax invoices, GST returns", "5+ years"],
+          ["Superannuation", "Contribution records and statements", "5+ years"]
+        ]
+      }
+    },
+    {
+      heading: "Best Practices for Sole Trader Record Keeping",
+      list: [
+        "Keep records in real-time: Don't wait until tax time to organise your records",
+        "Use accounting software: Automate tracking of income and expenses",
+        "Separate business and personal: Use a dedicated business bank account",
+        "Scan or photograph receipts: Create digital backups of paper receipts immediately",
+        "Create a filing system: Organise records by category and date",
+        "Back up digital records: Use cloud storage or external hard drives",
+        "Keep a logbook for vehicle use: Especially if claiming work-related travel expenses",
+        "Document home office setup: Photographs and measurements support your claims",
+        "Review records regularly: Monthly or quarterly reviews catch issues early",
+        "Update your records after tax time: Keep a copy of your tax return and supporting schedules"
+      ]
+    },
+    {
+      heading: "Common Record Keeping Mistakes to Avoid",
+      body: "Many sole traders lose deductions because they can't substantiate their claims. Common mistakes include: not keeping receipts for cash purchases, mixing personal and business expenses, claiming expenses without documentation, not keeping invoices you've issued, failing to track GST (if registered), and disposing of records too early. The ATO's 80/20 rule also applies—if you claim an expense that's partly personal and partly business (like a mobile phone or internet), you can only claim the business-related percentage. Make sure your records clearly show this split.",
+      callout: {
+        type: "tip",
+        text: "Use the ATO's MyTax or accounting software to match your records against your bank statements during tax time. This helps identify any discrepancies before you submit your return."
+      }
+    },
+    {
+      heading: "Getting Help with Your Records",
+      body: "If record keeping feels overwhelming, consider working with an accountant or bookkeeper. For the 2025-26 tax year, many sole traders find that outsourcing this task pays for itself through better tax outcomes and peace of mind. You can also access free resources on the ATO website, including guides on record keeping, deductions, and business expenses. Whatever you do, don't ignore this requirement—good records are the foundation of a successful, compliant business.",
+      callout: {
+        type: "info",
+        text: "Use SoleTraderTax.com.au to calculate your charge-out rate and understand your tax obligations as a sole trader in the 2025-26 tax year."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
