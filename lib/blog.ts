@@ -1541,6 +1541,94 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "As a sole trader hiring support, understanding your super guarantee obligations is crucial. Learn the key differences between paying contractors and employees, and how it impacts your tax position.",
+  date: "June 15, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["super guarantee", "contractors", "employees", "sole traders", "payroll tax", "hiring"],
+  content: [
+    {
+      heading: "Understanding Your Super Obligations as a Sole Trader",
+      body: "When you're running your own business and considering hiring help, one of the most important distinctions you'll need to understand is the difference between hiring an employee and engaging a contractor. This distinction affects not only your tax obligations but also your superannuation guarantee responsibilities. As of June 2026, the super guarantee rate sits at 11.5% for the 2025-26 financial year, and it's critical to get this right to avoid penalties and complications."
+    },
+    {
+      heading: "The Key Difference: Employees vs Contractors",
+      body: "The fundamental difference between an employee and a contractor determines whether you need to contribute to superannuation. An employee works under your direction and control, following your instructions on how, when, and where they work. A contractor, by contrast, is typically an independent operator who agrees to deliver a specific outcome and has control over how they achieve it. This distinction isn't just semantic – it has real financial and legal implications for your business.",
+      list: [
+        "Employees: You control how they work, provide tools/equipment, set their hours, and direct their activities",
+        "Contractors: They control their own methods, use their own equipment, work flexibly, and may work for multiple clients",
+        "Independent status: Contractors typically have their own business entity or ABN and invoice for their services",
+        "Risk allocation: Contractors generally bear more of the financial and operational risk"
+      ]
+    },
+    {
+      heading: "Super Guarantee: Your Legal Obligation for Employees",
+      body: "If someone qualifies as your employee, you are legally required to contribute to their superannuation fund. This is a non-negotiable obligation set by the Australian Taxation Office (ATO). The minimum contribution rate for the 2025-26 financial year is 11.5% of their ordinary time earnings. This obligation applies even if the employee asks you not to contribute or prefers you to pay them the money directly instead."
+    },
+    {
+      heading: "No Super Guarantee for Contractors",
+      subheading: "But Watch the Risks",
+      body: "When you engage a contractor, you generally have no super guarantee obligation. The contractor is responsible for managing their own superannuation contributions. However, it's essential to ensure the contractor relationship is genuinely independent. If the ATO later determines that someone you classified as a contractor was actually an employee, you could face significant penalties, back-pay obligations, and interest charges.",
+      callout: {
+        type: "warning",
+        text: "The ATO actively audits contractor relationships. Misclassifying an employee as a contractor to avoid super contributions can result in penalties of up to 200% of the unpaid super guarantee amount, plus interest."
+      }
+    },
+    {
+      heading: "How to Determine If Someone Should Be Classified as an Employee",
+      body: "The ATO uses a multi-factor test to determine employment status. No single factor is decisive, but taken together, they paint a clear picture:",
+      list: [
+        "Control: Do you direct how, when, and where the work is performed?",
+        "Integration: Is the work integral to your business operations?",
+        "Exclusivity: Do they work exclusively for you or for multiple clients?",
+        "Equipment: Do you provide tools, technology, and equipment or do they provide their own?",
+        "Payment method: Are they paid a regular wage or invoiced for completed work?",
+        "Termination: Can you terminate them at will, or do they have the right to cease the engagement?",
+        "Superannuation: Are they entitled to super contributions?",
+        "Tax withholding: Do you withhold tax under PAYG arrangements?"
+      ]
+    },
+    {
+      heading: "Super Guarantee Rates and Thresholds for 2025-26",
+      body: "Understanding the specific rates and thresholds is essential for accurate compliance and budgeting:",
+      table: {
+        headers: ["Item", "2025-26 Rate/Amount"],
+        rows: [
+          ["Super guarantee contribution rate", "11.5%"],
+          ["Ordinary time earnings threshold (under which no contributions required)", "$165 per week (approx $8,580 per year)"],
+          ["Contribution base", "Ordinary time earnings only"],
+          ["Superannuation guarantee administration charge", "Varies by fund (typically $1-2 per week)"]
+        ]
+      }
+    },
+    {
+      heading: "Practical Tips for Managing Your Obligations",
+      list: [
+        "Document your hiring decision: Create clear contracts that specify whether the person is an employee or contractor, outlining control, payment terms, and the nature of work",
+        "Keep accurate records: Maintain payroll records for employees showing wages, super contributions, and tax withheld",
+        "Use the ATO's tool: The ATO provides a 'Worker Classification Tool' on its website to help you assess whether someone is likely an employee or contractor",
+        "Get professional advice: If you're uncertain, consult an accountant or tax advisor before engaging someone",
+        "Review contractor arrangements regularly: If circumstances change and someone becomes more integrated into your business, you may need to reclassify them",
+        "Pay super on time: Ensure super contributions are made by the 28th of the following month (the Super Guarantee Payment Due Date)"
+      ],
+      callout: {
+        type: "tip",
+        text: "Use the ATO's SuperStream system to make super contributions electronically. It's faster, more secure, and provides a clear audit trail of your compliance."
+      }
+    },
+    {
+      heading: "What Happens If You Get It Wrong?",
+      body: "Misclassifying workers or missing super contributions can have serious consequences. The ATO actively pursues non-compliance, particularly in industries where contractor misclassification is common. Penalties include the unpaid super amount, interest (currently around 10% per annum), and additional penalties. Beyond the financial cost, misclassification can damage your reputation and expose you to disputes with workers. If you discover you've made a mistake, it's often better to proactively contact the ATO or seek professional advice rather than hoping it goes undetected.",
+      callout: {
+        type: "info",
+        text: "The ATO's amnesty programs occasionally allow businesses to correct errors without maximum penalties. Stay informed about current compliance initiatives on the ATO website."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
