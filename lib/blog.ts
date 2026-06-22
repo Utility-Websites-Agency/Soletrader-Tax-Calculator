@@ -1629,6 +1629,131 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "work-from-home-tax-deductions-for-sole-traders-2025-26",
+  title: "Work-from-Home Tax Deductions for Sole Traders 2025-26",
+  excerpt: "A practical guide to claiming home office expenses as a sole trader in the 2025-26 tax year. Learn the ATO rules, approved methods, and how to maximise your tax deductions.",
+  date: "June 22, 2026",
+  readTime: "8 minutes",
+  category: "Tax Savings",
+  tags: [
+    "work from home",
+    "tax deductions",
+    "sole trader",
+    "home office",
+    "2025-26 tax year",
+    "ATO"
+  ],
+  content: [
+    {
+      heading: "Work-from-Home Tax Deductions Explained",
+      body: "If you're a sole trader working from home, you can claim tax deductions for the expenses you incur. The ATO allows deductions for the business portion of your home office costs, including rent, mortgage interest, utilities, and depreciation. The key principle is that you can only claim expenses that are directly related to earning your income and that you wouldn't have incurred otherwise."
+    },
+    {
+      heading: "The Two ATO Methods for Claiming Home Office Expenses",
+      body: "The ATO provides two approved methods to calculate your home office tax deduction. You can choose whichever method works best for your situation, but you must be consistent year to year unless your circumstances change significantly.",
+      subheading: "Method 1: The Simplified Fixed Rate Method",
+      list: [
+        "Use the ATO's fixed rate of 67 cents per hour (2025-26)",
+        "Calculate the hours you actually worked from home during the tax year",
+        "Multiply hours by 67 cents to get your total deduction",
+        "No need to keep receipts or detailed records of expenses",
+        "Maximum claim of 52 weeks per year (1,820 hours)",
+        "Ideal for sole traders with fluctuating home office use"
+      ]
+    },
+    {
+      heading: "Method 2: The Detailed Calculation Method",
+      body: "This method requires you to calculate the actual expenses of your home office and claim a proportionate share based on the floor area used for work.",
+      list: [
+        "Identify all home office expenses (rent/mortgage interest, council rates, water, electricity, internet, phone, insurance, depreciation)",
+        "Determine the percentage of your home used exclusively for work",
+        "Calculate your claim as: (total home expense × work area percentage)",
+        "Keep detailed records and receipts for all expenses",
+        "Generally suits sole traders with dedicated office space",
+        "Often results in higher deductions than the fixed rate method"
+      ]
+    },
+    {
+      heading: "Expenses You Can Claim Using Either Method",
+      body: "Certain expenses can be claimed in addition to whichever primary method you choose:",
+      list: [
+        "Office furniture and equipment (desk, chair, filing cabinet)",
+        "Computer equipment and software",
+        "Office supplies (stationery, printer ink, paper)",
+        "Telephone and internet costs (business portion)",
+        "Professional subscriptions and memberships",
+        "Repairs and maintenance to home office items",
+        "Accounting and tax preparation fees"
+      ]
+    },
+    {
+      heading: "Important Exclusions and Limitations",
+      body: "The ATO has clear rules about what you cannot claim as a work-from-home deduction:",
+      list: [
+        "You cannot claim the full cost of your home mortgage or rent (only interest on the mortgage, not principal)",
+        "General home maintenance and repairs to non-office areas",
+        "Expenses for a room used for multiple purposes (bedroom that's sometimes an office)",
+        "Personal expenses like meals or entertainment",
+        "Capital improvements to your home (kitchen renovation, new roof)",
+        "Loan repayments on your mortgage",
+        "Cost of cleaning or gardening (unless part of a regular service)"
+      ],
+      callout: {
+        type: "warning",
+        text: "The ATO requires that your home office is used exclusively or almost exclusively for work. If your spare room is used for multiple purposes, you'll struggle to justify the claim."
+      }
+    },
+    {
+      heading: "Practical Tips for Maximising Your Claim",
+      list: [
+        "Keep a diary for at least four weeks to establish your typical home working pattern",
+        "Collect and file all receipts for office equipment and supplies",
+        "Take photos of your dedicated office space",
+        "Document your internet and phone bills (identify the business portion)",
+        "Review your home loan statement for the interest component",
+        "Track any home repairs or maintenance related to the office",
+        "Consult with a tax professional if your situation is complex"
+      ],
+      callout: {
+        type: "tip",
+        text: "Using the fixed rate method requires fewer records, but the detailed method often generates larger deductions. Run the numbers both ways before deciding which suits your situation."
+      }
+    },
+    {
+      heading: "2025-26 ATO Rates and Key Figures",
+      table: {
+        headers: [
+          "Item",
+          "2025-26 Rate/Amount"
+        ],
+        rows: [
+          [
+            "Fixed rate (simplified method)",
+            "67 cents per hour"
+          ],
+          [
+            "Maximum working hours per year",
+            "1,820 hours (52 weeks)"
+          ],
+          [
+            "Maximum claim (fixed rate method)",
+            "Approximately $1,219 per year"
+          ]
+        ]
+      },
+      body: "These rates are set by the ATO annually and apply from 1 July 2025 to 30 June 2026. If you're claiming deductions after this period, check the ATO website for updated rates."
+    },
+    {
+      heading: "Get Your Deductions Right",
+      body: "Work-from-home tax deductions can significantly reduce your tax bill as a sole trader. Whether you choose the simple fixed rate method or the detailed calculation approach, the key is accurate record-keeping and understanding the ATO's rules. Consider using our sole trader tax calculator to estimate your tax liability and deductions for the 2025-26 financial year. If your home office claim is substantial or your situation is complex, seek advice from a qualified tax accountant to ensure you're maximising your entitlements while staying compliant with the ATO.",
+      callout: {
+        type: "info",
+        text: "The ATO regularly audits home office deduction claims. Make sure your claim is genuine and well-documented. If you can't justify it, don't claim it."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
