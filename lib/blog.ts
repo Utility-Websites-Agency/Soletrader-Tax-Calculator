@@ -1754,6 +1754,91 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "As a sole trader or contractor, understanding when you must pay superannuation is crucial. We explain the key differences between hiring contractors and employees, and what the 2025-26 ATO rates mean for your business.",
+  date: "June 29, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "contractors", "employees", "super guarantee", "sole traders", "ATO obligations"],
+  content: [
+    {
+      heading: "The Big Question: Do You Need to Pay Super?",
+      body: "If you're running a sole trading business and thinking about hiring help, one of the first questions you'll ask is: 'Do I have to pay superannuation?' The answer depends entirely on whether you're hiring an employee or an independent contractor. This distinction can significantly impact your costs and obligations, so it's worth getting right from the start."
+    },
+    {
+      heading: "Contractors vs Employees: The Key Difference",
+      subheading: "Why Classification Matters",
+      body: "The Australian Taxation Office (ATO) has strict rules about who is classified as an employee versus who is an independent contractor. This isn't just about terminology—it fundamentally changes your legal obligations. If you misclassify someone, you could face penalties, back-payment demands, and serious compliance issues."
+    },
+    {
+      heading: "Super Guarantee: Your Legal Obligation with Employees",
+      body: "If you hire someone as an employee, you are legally required to contribute to their superannuation. For the 2025-26 financial year, the super guarantee rate is 11.5% of their ordinary time earnings (OTE). This is a non-negotiable obligation that applies to all employers, regardless of business size.",
+      list: [
+        "Super guarantee applies to employees earning $14,500 or more per financial year (2025-26 threshold)",
+        "You must contribute at least 11.5% of ordinary time earnings",
+        "Contributions must be made quarterly (or as per your pay cycle)",
+        "Non-compliance can result in penalties of up to 200% of the unpaid super"
+      ]
+    },
+    {
+      heading: "Contractors: No Super Guarantee Obligation",
+      subheading: "But There's a Catch",
+      body: "When you hire an independent contractor, you generally have no obligation to pay their superannuation. Contractors are responsible for their own super contributions—this is their responsibility, not yours. However, don't be tempted to misclassify an employee as a contractor just to avoid super payments. The ATO is very good at spotting this practice.",
+      callout: {
+        type: "warning",
+        text: "Deliberately misclassifying an employee as a contractor is illegal and can result in significant fines, back-payment of super with penalties, and potential prosecution. If you're unsure about someone's employment status, speak to an accountant or the ATO before proceeding."
+      }
+    },
+    {
+      heading: "How to Determine Employment Status",
+      body: "The ATO uses several tests to determine whether someone is genuinely an independent contractor or should be classified as an employee. Here are the key factors they consider:",
+      list: [
+        "Control: Do you control how, when, and where the work is done?",
+        "Risk: Does the worker bear the financial risk if things go wrong?",
+        "Integration: Are they integrated into your business or operating independently?",
+        "Exclusivity: Can they work for other clients or must they work exclusively for you?",
+        "Equipment: Does the worker provide their own tools and equipment?",
+        "Tax treatment: Do they have their own ABN and invoice you for services?",
+        "Availability: Are they available to do similar work for others?"
+      ]
+    },
+    {
+      heading: "2025-26 Super Guarantee Rates at a Glance",
+      body: "Here's what you need to know about super contributions for the current financial year:",
+      table: {
+        headers: ["Item", "2025-26 Rate/Threshold"],
+        rows: [
+          ["Super guarantee rate", "11.5%"],
+          ["Maximum contributions base (2024-25)", "$180,000"],
+          ["Employee minimum earnings threshold", "$14,500 per annum"],
+          ["Contribution frequency", "At least quarterly"]
+        ]
+      }
+    },
+    {
+      heading: "Practical Tips for Sole Traders",
+      body: "If you're thinking about bringing people into your business, here's what you should do:",
+      list: [
+        "Determine employment status early: Get professional advice before hiring, not after problems arise",
+        "Budget for super: If hiring employees, factor in the 11.5% super guarantee cost on top of wages",
+        "Use the ATO's Employee/Contractor decision tool: Available on ato.gov.au to help clarify status",
+        "Keep good records: Document the arrangement, agreements, and how payment is structured",
+        "Review regularly: Employment arrangements can change—what started as contractor work might evolve",
+        "Register as an employer: Once you have employees, register with the ATO for PAYG and super purposes"
+      ]
+    },
+    {
+      heading: "The Bottom Line",
+      body: "Understanding the difference between contractors and employees—and the super obligations that come with each—is essential for any sole trader. Getting it wrong can be expensive. If you're planning to hire help, invest in getting proper advice upfront. It's far cheaper than dealing with ATO penalties later.",
+      callout: {
+        type: "tip",
+        text: "Use our charge-out rate calculator at SoleTraderTax.com.au to factor in super contributions when pricing your services. If you're an employee elsewhere earning super, you'll want to ensure contractor rates reflect this cost when you're on your own."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
