@@ -1839,6 +1839,95 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "how-to-compare-two-contractor-offers-with-different-rate-str",
+  title: "How to Compare Two Contractor Offers with Different Rate Structures",
+  excerpt: "Two contractor offers might look similar on the surface, but different rate structures can mean significantly different take-home pay. Learn how to compare them fairly and choose the one that's actually better for your business.",
+  date: "July 6, 2026",
+  readTime: "6 min read",
+  category: "Work Planning",
+  tags: ["contractor rates", "charge-out rates", "income comparison", "sole trader", "negotiation"],
+  content: [
+    {
+      heading: "Why Rate Structure Matters More Than You Think",
+      body: "When you're comparing two contractor job offers, it's tempting to just look at the hourly rate or daily rate and pick the higher one. But that's not how it works in the real world. A $65 per hour offer might actually be worth less than a $55 per hour offer, depending on what's included in each rate and what costs you'll need to cover."
+    },
+    {
+      heading: "The Three Main Rate Structures",
+      subheading: "Understanding what you're being offered",
+      list: [
+        "Gross rate (all-inclusive): This single rate is supposed to cover your wages, superannuation, tax, and business expenses. It's the simplest to understand but often the lowest-paying option.",
+        "Net rate plus super: You receive a base rate plus superannuation on top (typically 11.5% for 2025-26). This is more transparent but requires you to cover your own tax and expenses.",
+        "Net rate plus super plus allowances: A base rate, superannuation, plus specific allowances for things like tools, training, or travel. This is the most detailed and usually reflects the true value of the engagement."
+      ]
+    },
+    {
+      heading: "Step-by-Step Comparison Process",
+      subheading: "How to calculate your real take-home income",
+      body: "The key to comparing offers fairly is to convert both to the same basis. Here's how:",
+      list: [
+        "Step 1: Write down all the details of each offer, including base rate, superannuation treatment, allowances, and any conditions (like travel, tools, or software you need to provide).",
+        "Step 2: Identify your business expenses. These typically include ABN registration, accounting fees, software subscriptions, equipment, vehicle costs (if applicable), and insurance.",
+        "Step 3: Calculate your tax obligation. Using 2025-26 ATO rates, you'll pay income tax on your profit (income minus deductible expenses). Don't forget the Medicare levy at 2%.",
+        "Step 4: Convert both offers to an annual net figure after tax and all expenses.",
+        "Step 5: Divide by the number of hours you'll actually work (accounting for leave, public holidays, and non-billable time) to get your true hourly rate."
+      ]
+    },
+    {
+      heading: "A Practical Example",
+      body: "Let's say you have two offers for a 6-month contract:",
+      table: {
+        headers: ["Factor", "Offer A", "Offer B"],
+        rows: [
+          ["Base rate", "$60/hour", "$55/hour"],
+          ["Superannuation", "Included in rate", "Paid separately at 11.5%"],
+          ["Tools allowance", "None", "$100/week"],
+          ["Expected hours", "38 hours/week", "38 hours/week"],
+          ["Contract length", "26 weeks", "26 weeks"]
+        ]
+      }
+    },
+    {
+      heading: "Working Out the Real Numbers",
+      body: "For Offer A (gross $60/hour): You receive $60/hour all-in. Over 26 weeks at 38 hours per week, that's $59,280 gross. After estimated business expenses of $3,000 and tax (at 37% + 2% Medicare levy for 2025-26), your take-home is approximately $35,400.\n\nFor Offer B ($55/hour + 11.5% super): You receive $55/hour plus $6.33/hour super ($61.33 total value). Over the same period, that's $60,600 gross. The super ($6,318) goes into your fund, leaving $54,282 to cover tax and expenses. After $3,000 in expenses and tax, your take-home is approximately $31,800 cash, plus $6,318 in super.\n\nOffer A delivers better cash flow, but Offer B builds more superannuation. Your choice depends on your priorities.",
+      callout: {
+        type: "tip",
+        text: "Use SoleTraderTax.com.au's calculator to run these scenarios. Input each offer's details and see instantly what you'll actually take home after tax and expenses."
+      }
+    },
+    {
+      heading: "Hidden Costs and Conditions to Watch",
+      list: [
+        "Travel requirements: If one offer requires more travel, factor in fuel, vehicle wear and tear, or public transport costs.",
+        "Equipment or software: Does the client provide tools, or do you need to buy them? This affects your deductible expenses.",
+        "Flexibility: A lower-paying job with flexible hours might deliver better overall value if you can fit in other work.",
+        "Payment terms: 30-day invoicing delays mean you need bigger cash reserves. Factor this into your decision.",
+        "Contract stability: A 'permanent' contract might justify a lower rate than a risky 2-week engagement.",
+        "Professional development: Some roles include training or qualifications that increase your future earning potential."
+      ]
+    },
+    {
+      heading: "Questions to Ask Before Deciding",
+      body: "Before you commit to either offer, clarify these points with the client:",
+      list: [
+        "Is the rate negotiable, especially if you bring specific skills or experience?",
+        "Are there penalties or holdbacks if you leave before the contract ends?",
+        "Will you be invoicing weekly, fortnightly, or monthly? When do you get paid?",
+        "What happens if the project ends early? Is there notice required?",
+        "Are there any non-compete or intellectual property clauses that limit your other work?",
+        "Will they provide equipment, or do you supply your own?"
+      ]
+    },
+    {
+      heading: "The Bottom Line",
+      body: "Never assume the higher headline rate is the better deal. Take 20 minutes to compare both offers on a like-for-like basis using the steps above. The difference in your actual take-home pay might surprise you—and it could be worth thousands over the length of the contract.",
+      callout: {
+        type: "warning",
+        text: "Remember to set aside funds for tax throughout the year. As a sole trader, you're responsible for paying your own income tax in instalments if you earn more than $4,700 per year. The 2025-26 ATO rates apply from July 1, 2025, so check your tax bracket and plan accordingly."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
