@@ -1928,6 +1928,102 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "how-to-invoice-as-an-abn-contractor-including-gst",
+  title: "How to Invoice as an ABN Contractor Including GST",
+  excerpt: "A straightforward guide to creating compliant invoices as an Australian ABN contractor, including GST calculations and ATO requirements for the 2025-26 tax year.",
+  date: "July 13, 2026",
+  readTime: "6 min read",
+  category: "Contractor Pay",
+  tags: ["ABN", "invoicing", "GST", "contractors", "sole traders", "ATO compliance"],
+  content: [
+    {
+      heading: "Why Getting Your Invoicing Right Matters",
+      body: "As an ABN contractor or sole trader in Australia, your invoices are more than just requests for payment—they're legal documents that form the foundation of your tax records. If you're registered for GST, invoicing correctly is a requirement, not an option. The ATO expects your invoices to meet specific standards, and getting this right protects both you and your clients."
+    },
+    {
+      heading: "Do You Need to Register for GST?",
+      body: "If your annual turnover is $75,000 or more, you must register for GST with the ATO. If you're below this threshold, registration is optional but often beneficial—you can claim back GST on your business expenses. Once registered, every invoice you issue for taxable supplies must include GST.",
+      callout: {
+        type: "info",
+        text: "The $75,000 GST threshold applies to the financial year from 1 July 2025 to 30 June 2026. Check the ATO website for any updates if your turnover is close to this figure."
+      }
+    },
+    {
+      heading: "What Must Be on Your Invoice?",
+      body: "The ATO has strict requirements for invoices. Missing key details can create compliance issues and complicate your tax records. Here's what every invoice must include:",
+      list: [
+        "Your name (or business name) and ABN",
+        "Invoice number and date",
+        "Client's name and ABN (if they have one)",
+        "Clear description of the work or services provided",
+        "Quantity and price of items or hours worked and hourly rate",
+        "GST amount (shown separately)",
+        "Total amount due including GST",
+        "Payment terms and due date",
+        "Your contact details (email, phone, or address)"
+      ]
+    },
+    {
+      heading: "Calculating GST on Your Invoice",
+      body: "GST is currently 10% in Australia. Here's how to calculate it correctly:",
+      body: "If your charge-out rate is $100 per hour, you need to decide whether this is your GST-inclusive or GST-exclusive rate. Most contractors quote GST-exclusive rates and add GST on top.",
+      table: {
+        headers: ["Amount (excl. GST)", "GST at 10%", "Total (incl. GST)"],
+        rows: [
+          ["$100.00", "$10.00", "$110.00"],
+          ["$500.00", "$50.00", "$550.00"],
+          ["$1,000.00", "$100.00", "$1,100.00"],
+          ["$5,000.00", "$500.00", "$5,500.00"]
+        ]
+      }
+    },
+    {
+      heading: "Step-by-Step: Creating Your Invoice",
+      body: "Follow this process to create a compliant invoice every time:",
+      list: [
+        "Use a template or accounting software (MYOB, Xero, Wave, or similar) to maintain consistency",
+        "Number your invoices sequentially—the ATO expects to see gaps if invoices are missing",
+        "Enter the invoice date (the date you issue it, not the date work was completed)",
+        "List the client's details exactly as they appear on their ABN lookup",
+        "Describe the work clearly: instead of 'Services', write 'Web design consultation—5 hours at $150/hour'",
+        "Calculate and show GST separately on a line item",
+        "Include your ABN prominently at the top",
+        "Set a clear payment due date (typically 7–30 days)",
+        "Keep a copy for your records—you'll need this for tax time"
+      ]
+    },
+    {
+      heading: "Common Invoicing Mistakes to Avoid",
+      body: "Even experienced contractors can slip up. Watch out for these common errors:",
+      callout: {
+        type: "warning",
+        text: "Don't forget to issue invoices at all. Many contractors work on a handshake and invoice later—this creates record-keeping nightmares and ATO compliance risks. Invoice as soon as work is completed or at regular intervals for ongoing work."
+      },
+      list: [
+        "Forgetting to include your ABN or the client's ABN",
+        "Adding GST twice or calculating it incorrectly",
+        "Using vague descriptions that make it hard to justify the charge later",
+        "Inconsistent invoice numbering or dating",
+        "Not keeping copies for your records",
+        "Mixing personal and business expenses on invoices",
+        "Issuing invoices with missing payment terms"
+      ]
+    },
+    {
+      heading: "Recording Invoices for Tax Time",
+      body: "Your invoices are proof of income for your 2025-26 tax return. The ATO may ask to see them, especially if your turnover is high or if your records seem incomplete. Store invoices digitally (PDF backups are ideal) and keep them organized by date or client. If you use accounting software like Xero, it automatically tracks this for you.",
+      callout: {
+        type: "tip",
+        text: "If a client doesn't pay on time, you still need to declare the income in your tax return when the invoice was issued, not when payment arrives. This is called the accruals method and is required for GST purposes."
+      }
+    },
+    {
+      heading: "Final Thoughts",
+      body: "Getting your invoicing right as an ABN contractor takes a little upfront effort but pays dividends at tax time. Proper invoices protect you from ATO queries, make your bookkeeping easier, and ensure you're claiming every legitimate business expense. If you're unsure about your GST registration status or charge-out rates, SoleTraderTax.com.au's charge-out rate calculator can help you determine the right price to invoice at while accounting for tax and superannuation obligations."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
