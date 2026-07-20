@@ -2024,6 +2024,109 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "concessional-super-contributions-as-a-self-employed-contract",
+  title: "Concessional Super Contributions for Self-Employed Contractors: A Complete Guide",
+  excerpt: "Learn how to maximise your superannuation as a sole trader, claim tax deductions, and understand the 2025-26 contribution caps and rules.",
+  date: "July 20, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "self-employed", "contractor", "tax-deductions", "retirement-planning", "super-contributions"],
+  content: [
+    {
+      heading: "Why Superannuation Matters for Contractors",
+      body: "As a self-employed contractor or sole trader, you don't have an employer contributing to your superannuation. This means you're entirely responsible for building your retirement savings. The good news? You can make your own contributions and claim them as tax deductions, effectively getting the ATO to help fund your future."
+    },
+    {
+      heading: "Concessional vs Non-Concessional Contributions",
+      body: "Concessional contributions are those you make to super and claim as a tax deduction. These attract a 15% tax within the super fund, but you get the deduction at your marginal tax rate—potentially saving you thousands. Non-concessional contributions are made from after-tax money and don't attract the 15% tax inside super. For self-employed contractors, concessional contributions are usually the smarter choice.",
+      subheading: "The Tax Advantage",
+      list: [
+        "Concessional: You pay 15% tax in the fund, claim a deduction at your rate (37% for high earners = 22% net saving)",
+        "Non-concessional: No deduction, contributions made from after-tax dollars",
+        "Self-employed contractors can claim concessional contributions via tax return"
+      ]
+    },
+    {
+      heading: "2025-26 Contribution Caps and Limits",
+      body: "The ATO sets annual caps to prevent excessive tax minimisation. For the 2025-26 financial year, here's what you need to know:",
+      table: {
+        headers: ["Contribution Type", "2025-26 Cap", "Notes"],
+        rows: [
+          ["Concessional contributions", "$27,500", "Annual limit per person"],
+          ["Non-concessional contributions", "$110,000", "Annual limit per person"],
+          ["Total super balance (non-concessional eligibility)", "$1.75 million", "Once exceeded, can't make non-concessional contributions"]
+        ]
+      }
+    },
+    {
+      heading: "How to Claim Concessional Contributions",
+      body: "The process is straightforward for sole traders. You need to lodge a notice of intention to claim a tax deduction for personal super contributions with your super fund before you lodge your tax return (or by the tax return lodge date, whichever is earlier).",
+      list: [
+        "Contact your super fund and request a Notice of Intention to Claim form (or lodge online)",
+        "Specify the amount you want to contribute and claim as a deduction",
+        "Make the contribution to your super account",
+        "Keep the confirmation notice for your records",
+        "Claim the deduction on your tax return in the appropriate section",
+        "Ensure your timing aligns with ATO deadlines"
+      ]
+    },
+    {
+      heading: "Key Rules and Restrictions",
+      body: "Not every contribution qualifies for a deduction. Here are the essential rules:",
+      callout: {
+        type: "warning",
+        text: "You must have a net income from self-employment to claim a concessional contribution deduction. If you make a loss in your business, you cannot claim a super contribution. Also, contributions must be made by the super fund's cut-off date—typically around June 30, though funds may allow contributions after balance date if requested in time."
+      },
+      list: [
+        "You must have a notional taxable income (assessable income minus allowable deductions, excluding the super contribution itself)",
+        "Contributions can't exceed your net income from self-employment",
+        "The contribution must be received by your super fund by the declaration deadline",
+        "You can't claim a deduction for contributions your employer would normally make",
+        "Timing is critical—lodge your notice before your tax return"
+      ]
+    },
+    {
+      heading: "Maximising Your Contribution Strategy",
+      body: "Smart contractors use concessional contributions to reduce taxable income while building retirement savings. Here's a practical approach:",
+      callout: {
+        type: "tip",
+        text: "If you earned $100,000 in 2025-26, contributing the maximum $27,500 concessionally could save you around $8,800 in tax (at the 37% marginal rate). That's a 32% return on your contribution before investment growth."
+      },
+      list: [
+        "Calculate your expected net income early in the financial year",
+        "Contribute strategically to reduce taxable income into a lower bracket if possible",
+        "Spread contributions across financial years to stay within caps",
+        "Consider income spikes—bumper years are perfect for larger contributions",
+        "Combine with other deductions (home office, vehicle expenses, professional fees) for maximum tax efficiency",
+        "Review annually as your income and circumstances change"
+      ]
+    },
+    {
+      heading: "Common Pitfalls to Avoid",
+      callout: {
+        type: "info",
+        text: "The ATO audits super contributions closely, particularly for self-employed people. Keep meticulous records of notices of intention, contribution confirmations, and proof of payment. If your documentation doesn't match, the ATO may disallow the deduction."
+      },
+      list: [
+        "Failing to lodge a notice of intention with your super fund",
+        "Contributing more than your assessable income allows",
+        "Missing the super fund's cut-off date",
+        "Claiming contributions that weren't actually made",
+        "Not keeping records of all notices and confirmations",
+        "Confusing concessional with non-concessional contributions on your tax return"
+      ]
+    },
+    {
+      heading: "Getting Professional Advice",
+      body: "While this guide covers the essentials, every contractor's situation is unique. Your income level, business structure, and retirement goals all affect the optimal strategy. Consider speaking with a tax accountant or financial adviser before making large contributions—especially if you're close to contribution caps or have fluctuating income. The small cost of advice often pays for itself through better tax outcomes.",
+      callout: {
+        type: "info",
+        text: "SoleTraderTax.com.au can help you estimate your tax liability and understand how contributions affect your take-home income. Use our charge-out rate calculator to factor super contributions into your business pricing."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
