@@ -2127,6 +2127,90 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "income-protection-insurance-tax-deductibility-for-contractor",
+  title: "Income Protection Insurance Tax Deductibility for Contractors",
+  excerpt: "Can you claim income protection insurance as a tax deduction? Learn what's deductible, what isn't, and how to maximise your tax position as an Australian contractor in 2025-26.",
+  date: "July 27, 2026",
+  readTime: "5 min read",
+  category: "Tax Savings",
+  tags: ["income protection insurance", "tax deductions", "contractors", "sole traders", "2025-26", "ATO"],
+  content: [
+    {
+      heading: "Income Protection Insurance: What Can You Claim?",
+      body: "Income protection insurance is an important safety net for contractors and sole traders. But can you claim it as a tax deduction? The answer depends on how you structure the policy and what it covers. Understanding the rules can help you maximise your tax position while protecting your income."
+    },
+    {
+      heading: "The Good News: Some Policies Are Deductible",
+      body: "If you hold an income protection insurance policy in your own name and pay the premiums directly, you can claim the cost as a tax deduction in most cases. The ATO generally allows this because the premiums are considered a legitimate business expense—they're designed to replace lost income if you can't work due to illness or injury."
+    },
+    {
+      heading: "What Makes a Policy Deductible?",
+      list: [
+        "The policy must be in your name or business structure (sole trader, partnership, or company)",
+        "Premiums must be directly related to your income-earning activities",
+        "The benefit must be ordinary income (not a capital amount)",
+        "You must have a genuine income protection purpose",
+        "The policy covers loss of income during periods of disability or illness",
+        "You're actively using the policy as part of your business risk management"
+      ]
+    },
+    {
+      heading: "When Income Protection Insurance Is NOT Deductible",
+      body: "Not all income protection insurance premiums qualify for a tax deduction. Understanding these exceptions is crucial to avoid claiming incorrectly and triggering an ATO audit.",
+      list: [
+        "Policies held through superannuation funds (premiums are paid from pre-tax super contributions)",
+        "Group policies where your employer pays the premium on your behalf",
+        "Policies that provide lump-sum disability benefits rather than income replacement",
+        "Trauma or critical illness insurance (these are capital in nature)",
+        "Policies bundled with investment products or savings components",
+        "Personal accident or travel insurance"
+      ]
+    },
+    {
+      heading: "Superannuation vs Personal Policies",
+      body: "Many contractors have income protection insurance inside their superannuation fund. If this is the case, you cannot claim a separate tax deduction for the premiums because they're paid from your concessional contributions. However, the tax-friendly nature of super contributions means you're already getting a tax benefit at a lower rate (15% concessional contribution tax).",
+      callout: {
+        type: "tip",
+        text: "Check your super fund statement to see what insurance you hold. If premiums are being deducted from your super balance, you don't need to claim them as a tax deduction separately."
+      }
+    },
+    {
+      heading: "How to Claim Income Protection Insurance on Your Tax Return",
+      body: "If you have a standalone income protection policy, claiming is straightforward:",
+      list: [
+        "Gather receipts or statements showing annual premiums paid during the 2025-26 tax year",
+        "Calculate the total amount of deductible premiums",
+        "Include the amount in your tax return under 'Repairs, maintenance and other expenses' or 'Insurance' depending on your tax software",
+        "Keep documentation for at least 5 years in case of ATO enquiry",
+        "If you use accounting software, ensure premiums are coded to an appropriate expense account"
+      ]
+    },
+    {
+      heading: "Common Mistakes to Avoid",
+      callout: {
+        type: "warning",
+        text: "Don't claim income protection insurance premiums that are paid through your superannuation fund. This is a common mistake that can trigger ATO scrutiny and result in penalties."
+      },
+      body: "Other mistakes include claiming premiums for policies that also provide lump-sum benefits, claiming group policies you don't directly pay for, or mixing personal accident insurance with income protection. Always review your policy documents to confirm what type of coverage you have."
+    },
+    {
+      heading: "Keep Records and Stay Compliant",
+      body: "The ATO expects contractors to maintain detailed records of all business expenses, including insurance premiums. For the 2025-26 tax year, keep:",
+      list: [
+        "Annual premium statements or invoices from your insurer",
+        "Bank or credit card statements showing payments",
+        "Policy documents confirming the type and scope of coverage",
+        "Any correspondence with your insurance provider about claims or cover",
+        "Records of how the policy relates to your income-earning activities"
+      ],
+      callout: {
+        type: "info",
+        text: "The ATO has access to insurance company records, so it's important your claims match what insurers report. If in doubt, ask your accountant or the ATO directly before claiming."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
