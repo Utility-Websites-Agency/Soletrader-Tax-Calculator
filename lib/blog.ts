@@ -2211,6 +2211,90 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "As an Australian sole trader, understanding when you must pay super guarantee contributions is crucial. Learn the key differences between hiring contractors and employees, and avoid costly mistakes.",
+  date: "August 3, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["super guarantee", "contractors", "employees", "sole traders", "payroll obligations", "ATO compliance"],
+  content: [
+    {
+      heading: "The Super Guarantee Difference: A Quick Overview",
+      body: "When you're a sole trader hiring help, one of the biggest compliance questions is: do I need to pay superannuation? The answer depends entirely on whether you're engaging a contractor or an employee. This distinction can save you thousands of dollars—or cost you penalties if you get it wrong. Let's break down the key differences and what the ATO expects in 2025-26."
+    },
+    {
+      heading: "Do You Pay Super for Contractors?",
+      body: "The straightforward answer: no, you don't pay super guarantee contributions for independent contractors. Contractors are responsible for their own superannuation arrangements. They're typically self-employed individuals who invoice you for work completed, manage their own tax affairs, and aren't entitled to employee benefits like leave or superannuation contributions."
+    },
+    {
+      heading: "Super Guarantee Obligations for Employees",
+      subheading: "2025-26 ATO Rates",
+      body: "If you hire someone as an employee, you have a legal obligation to pay super guarantee contributions. For the 2025-26 financial year, the super guarantee rate is 11.5% of an employee's ordinary time earnings (OTE).",
+      table: {
+        headers: ["Obligation", "Details"],
+        rows: [
+          ["Super Guarantee Rate (2025-26)", "11.5% of ordinary time earnings"],
+          ["Minimum Annual Salary Threshold", "$11,800 (indexed)"],
+          ["Payment Frequency", "At least quarterly"],
+          ["Employer Responsibility", "Into employee's nominated fund or default MySuper account"]
+        ]
+      }
+    },
+    {
+      heading: "How to Tell If Someone Is a Contractor or Employee",
+      body: "The distinction isn't always obvious, especially if someone works regularly for you. The ATO uses several tests to determine employment status. Here's what matters:",
+      list: [
+        "Control: Can you direct how, when, and where the work is done? Employees have this direction; contractors typically don't.",
+        "Payment method: Employees receive regular wages; contractors invoice for completed work.",
+        "Equipment and tools: Does the person use their own equipment? Contractors usually do.",
+        "Risk and profit: Can the contractor make a profit or loss on the job? Employees can't.",
+        "Right to substitute: Can the contractor send someone else to do the work? If yes, likely a contractor.",
+        "Integration: Is the work integral to your business or separate from it?",
+        "Mutual obligation: Is there an ongoing expectation of work? Employees typically have this; contractors don't."
+      ]
+    },
+    {
+      heading: "Why Misclassification Is Risky",
+      body: "Some sole traders try to save money by treating employees as contractors to avoid super contributions. This is a serious compliance mistake that the ATO actively investigates.",
+      callout: {
+        type: "warning",
+        text: "If the ATO determines you've incorrectly classified an employee as a contractor, you'll face back-payment of super contributions with interest, plus penalties up to 200% of the unpaid amount. This can quickly turn into a significant debt."
+      }
+    },
+    {
+      heading: "Practical Steps for Sole Traders",
+      list: [
+        "Assess each engagement carefully using the employment tests above.",
+        "Document your decision-making process (ATO audits are easier to defend with evidence).",
+        "If hiring an employee, register for PAYG withholding and set up a superannuation fund.",
+        "Use the ATO's online tools and resources to verify your classification.",
+        "Consider professional advice if you're unsure—accountant fees are cheaper than penalties.",
+        "Keep records of hours, pay, invoices, and work arrangements for at least 5 years.",
+        "Update your charge-out rates to factor in super costs if you're employing staff."
+      ]
+    },
+    {
+      heading: "Budget for Super: What It Means for Your Business",
+      body: "If you're hiring employees, remember that the 11.5% super guarantee is an additional cost on top of their wages. A part-time employee earning $30,000 per year will cost you an extra $3,450 in super contributions. Plan this into your pricing, charge-out rates, and cash flow forecasts.",
+      callout: {
+        type: "tip",
+        text: "Use our SoleTraderTax charge-out rate calculator to factor in super costs and other employee expenses, so you price your services correctly and maintain profitability."
+      }
+    },
+    {
+      heading: "Key Takeaways",
+      list: [
+        "Contractors: No super contributions required. They're self-employed.",
+        "Employees: You must pay 11.5% super guarantee (2025-26) into their chosen fund.",
+        "Misclassification risks: Penalties, back-payment of super, and ATO interest.",
+        "Document your decisions to defend against ATO audits.",
+        "Budget super costs into your pricing and cash flow plans."
+      ]
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
