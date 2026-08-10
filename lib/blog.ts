@@ -2295,6 +2295,70 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "personal-services-income-psi-rules-explained-simply",
+  title: "Personal Services Income (PSI) Rules Explained Simply",
+  excerpt: "Confused about PSI rules? We break down what they are, who they affect, and how to stay compliant as an Australian sole trader or contractor.",
+  date: "August 10, 2026",
+  readTime: "6 min read",
+  category: "Tax",
+  tags: ["PSI", "sole trader", "contractor", "tax compliance", "ATO rules", "income splitting"],
+  content: [
+    {
+      heading: "What is Personal Services Income (PSI)?",
+      body: "Personal Services Income is a fancy term for income you earn from providing your personal services—basically, your labour. If you're a sole trader, contractor, or run your own business primarily selling your time and skills, you're likely earning PSI. The ATO has special rules around PSI because historically, some business owners tried to split income with family members or use trusts to avoid tax. The PSI rules are designed to prevent aggressive tax minimisation strategies while still allowing legitimate business structures."
+    },
+    {
+      heading: "Who Do the PSI Rules Affect?",
+      body: "The PSI rules apply if you earn income from providing personal services as a sole trader, partnership, or through certain trust arrangements. This typically includes consultants, tradies, IT professionals, accountants, lawyers, medical practitioners, and other service providers. However, not all businesses are caught by the PSI rules. If your business has significant assets or you employ staff who generate a substantial portion of your income, you may be exempt. The key test is whether your income primarily comes from your personal efforts or from business assets and employees."
+    },
+    {
+      heading: "The PSI Tests Explained",
+      body: "The ATO uses several tests to determine if the PSI rules apply to you. Understanding these can help you work out your tax position:",
+      list: [
+        "The Gainful Activity Test: Did you perform the work yourself or is it work that would normally be performed by an employee?",
+        "The Unrelated Party Test: Would an unrelated person in the same business charge a similar amount for the same work?",
+        "The Result Test: Are you primarily selling a result of your work, or are you selling your personal services (i.e., your time)?",
+        "The Employment Test: Could the work have been done as an employment relationship instead of a business arrangement?"
+      ]
+    },
+    {
+      heading: "Key Compliance Requirements",
+      body: "If the PSI rules apply to you, there are specific things you need to do:",
+      list: [
+        "Keep accurate records of how your income was derived and any arrangements with related parties",
+        "Ensure any payments to related parties (family members, spouses, etc.) are genuine and reflect the actual work performed",
+        "Declare your structure correctly on your tax return—trusts, partnerships, and sole trader arrangements are treated differently",
+        "Report income on your individual tax return, not at trust or partnership level (in certain circumstances)",
+        "Maintain documentation supporting the commercial basis of any arrangements with related parties"
+      ]
+    },
+    {
+      heading: "Common PSI Traps to Avoid",
+      callout: {
+        type: "warning",
+        text: "Paying family members salaries that don't reflect work actually performed is a red flag for the ATO. Even if you're a family business, income distributions must be commercially defensible. The ATO actively audits PSI arrangements, so document everything."
+      },
+      body: "Many sole traders and contractors unknowingly fall into PSI traps. The most common mistakes include: paying spouses or adult children excessive amounts for minimal work, using trusts primarily to split income rather than for legitimate business reasons, claiming business deductions that are really personal expenses, and not maintaining proper documentation of related party transactions. The ATO has increased PSI audits in recent years, particularly targeting income splitting arrangements that lack commercial substance."
+    },
+    {
+      heading: "How PSI Affects Your Tax Planning",
+      body: "If you're subject to the PSI rules, your tax planning options are more limited than for other businesses. You generally can't use trusts or partnerships to split income with family members in ways that would reduce the total tax bill. However, you can still minimise tax legitimately by claiming all available deductions, maximising superannuation contributions, and ensuring your business structure is appropriate for your circumstances. If the PSI rules don't apply to you (because you have significant assets or employees), you may have more flexibility in your structure. This is why getting proper tax advice early is crucial."
+    },
+    {
+      heading: "2025-26 Tax Year Key Dates and Rates",
+      callout: {
+        type: "info",
+        text: "For the 2025-26 tax year, the tax-free threshold remains at $18,200. The Medicare levy is 2% of taxable income. Make sure you're meeting your BAS and PAYG obligations if you're operating as a business."
+      },
+      body: "If you're a sole trader subject to PSI rules, remember that you'll need to lodge your tax return by 31 October 2026 (or 30 June 2027 if you use a tax agent). Keep records for five years. If you're paying tax instalments, check your latest notice of assessment to ensure the amount is correct."
+    },
+    {
+      heading: "Next Steps: Staying Compliant",
+      body: "If you think the PSI rules might apply to your business, it's worth spending time now to get your structure right. Consider working with a tax professional who understands PSI rules—the cost of advice is usually far less than the cost of getting it wrong with the ATO. Review your current arrangements, document how income is earned and distributed, and ensure any payments to related parties are commercially justified. Keep detailed records and be transparent with the ATO. Most importantly, understand that the PSI rules exist for a reason, but they don't mean you can't run an efficient, tax-effective business—you just need to do it within the rules."
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
