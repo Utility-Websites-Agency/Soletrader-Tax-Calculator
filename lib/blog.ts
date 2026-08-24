@@ -2439,6 +2439,82 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees - What You Need to Know",
+  excerpt: "As an Australian sole trader, understanding the difference between super guarantee obligations for contractors and employees is crucial. Learn when you must contribute, and when you don't.",
+  date: "August 24, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "contractors", "employees", "sole traders", "compliance", "super guarantee", "obligations"],
+  content: [
+    {
+      heading: "The Big Picture: Super and Who Gets It",
+      body: "As a sole trader, you might be hiring help. But there's a critical difference in how superannuation works depending on whether you bring someone on as an employee or contractor. Getting this wrong can cost you money—and potentially land you with penalties from the ATO. The good news? Once you understand the basics, it's straightforward."
+    },
+    {
+      heading: "Do Contractors Get Super?",
+      subheading: "The Short Answer: Usually No",
+      body: "If you hire a contractor, you generally don't have to pay superannuation contributions on their behalf. Contractors are self-employed—they're responsible for their own super and tax. You simply pay the agreed rate for the work done, and they handle their own financial obligations. This is one reason contractors often charge more than what you'd pay an employee for similar work—they're covering their own super, tax, and other business costs."
+    },
+    {
+      heading: "What About Employees?",
+      subheading: "Super Guarantee is Non-Negotiable",
+      body: "Employees are different. If you hire an employee, you must pay the superannuation guarantee contribution. For the 2025-26 tax year, the superannuation guarantee rate is 11.5% of their ordinary time earnings (OTE). This is a legal obligation—not optional. If you don't pay it, the ATO will chase you up, and you can face penalties and interest."
+    },
+    {
+      heading: "Key Differences at a Glance",
+      table: {
+        headers: ["Aspect", "Contractors", "Employees"],
+        rows: [
+          ["Super Guarantee Obligation", "No—contractor's responsibility", "Yes—11.5% of OTE (2025-26)"],
+          ["Tax Withholding", "No PAYG withholding required", "Yes—PAYG withholding required"],
+          ["Award or Agreement", "Negotiated contract", "Modern award or enterprise agreement"],
+          ["Annual Leave/Sick Leave", "Not entitled", "Entitled (varies by award)"],
+          ["Workers' Compensation", "Own responsibility", "You must cover them"],
+          ["Flexibility", "High—work arrangement is flexible", "Lower—defined employment relationship"]
+        ]
+      }
+    },
+    {
+      heading: "When Might Someone Be Misclassified?",
+      body: "The ATO takes super guarantee compliance seriously. Sometimes sole traders try to classify employees as contractors to avoid super obligations—this is illegal and risky. The ATO looks at the nature of the working relationship, not just what you call it. If someone works regularly for you, follows your instructions, and uses your tools and systems, they're likely an employee, regardless of what you've agreed to call them.",
+      list: [
+        "They work set hours or patterns you've determined",
+        "You directly supervise or control how the work is done",
+        "They can't easily substitute someone else to do the work",
+        "They're integrated into your business operations",
+        "You provide tools, equipment, or training"
+      ],
+      callout: {
+        type: "warning",
+        text: "Misclassifying an employee as a contractor can result in substantial penalties, back-payment of super contributions, and ATO interest. If you're unsure about someone's status, it's worth getting advice from an accountant."
+      }
+    },
+    {
+      heading: "Sole Traders: Don't Forget Your Own Super",
+      body: "As a sole trader, you're self-employed. You don't get super guarantee contributions from anyone else—you need to make your own contributions if you want to build retirement savings. Many sole traders use part of their business profits to contribute to their own super fund. This can be tax-effective, as personal super contributions may be deductible (up to certain limits) and your money grows tax-free inside super."
+    },
+    {
+      heading: "Practical Tips for Getting It Right",
+      list: [
+        "Use a clear contract: Define whether someone is a contractor or employee, and ensure the arrangement matches their actual working conditions.",
+        "Keep records: Document how much you've paid in super contributions. The ATO may ask for proof.",
+        "Use payroll software: If you hire employees, payroll software can help you calculate and track super contributions accurately.",
+        "Get professional help: An accountant can advise on your specific situation and help you stay compliant.",
+        "Review annually: As your business grows, check that your contractor/employee mix still makes sense and is compliant."
+      ]
+    },
+    {
+      heading: "The Bottom Line",
+      body: "Contractors don't get super from you—they're self-employed. Employees must receive the superannuation guarantee (11.5% for 2025-26), and this is a legal obligation. Misclassifying workers can be costly. If you're unsure whether someone should be an employee or contractor, it's worth getting advice to keep your business compliant and avoid penalties.",
+      callout: {
+        type: "tip",
+        text: "Track your super obligations with the same care you track your income and expenses. Staying on top of superannuation compliance now saves headaches (and money) later."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
