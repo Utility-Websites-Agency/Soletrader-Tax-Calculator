@@ -2515,6 +2515,89 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "how-the-low-income-tax-offset-lito-applies-to-contractors",
+  title: "How the Low Income Tax Offset (LITO) Applies to Contractors",
+  excerpt: "Understanding whether you're eligible for the Low Income Tax Offset as a contractor can help you maximise your tax refund. Here's what you need to know for the 2025-26 tax year.",
+  date: "August 31, 2026",
+  readTime: "6 min read",
+  category: "Tax Savings",
+  tags: ["LITO", "tax offset", "contractors", "sole traders", "tax refund", "2025-26"],
+  content: [
+    {
+      heading: "What is the Low Income Tax Offset?",
+      body: "The Low Income Tax Offset (LITO) is a tax offset designed to help lower-income earners keep more of their money. It reduces the amount of tax you pay, which can result in a larger tax refund or lower tax bill. For the 2025-26 tax year, LITO provides a maximum offset of $585 for eligible taxpayers."
+    },
+    {
+      heading: "Who Qualifies for LITO?",
+      body: "As a contractor or sole trader, you can claim LITO if your taxable income falls within the eligibility range. For 2025-26, LITO applies to individuals with taxable income up to $180,000. However, the full benefit phases out gradually as your income increases, meaning higher earners receive less benefit.",
+      callout: {
+        type: "info",
+        text: "Your taxable income includes all income from your contracting work, minus allowable deductions. This is different from your gross revenue."
+      }
+    },
+    {
+      heading: "How LITO Works for Contractors",
+      body: "LITO is calculated based on your taxable income for the financial year. The offset is applied when you complete your tax return, effectively reducing your tax liability dollar-for-dollar. Unlike some other offsets, LITO is not refundable, meaning you can't receive money back if the offset exceeds your tax payable.",
+      list: [
+        "Maximum offset: $585 (for those earning under $66,667)",
+        "Phase-out threshold: Begins at $66,667 of taxable income",
+        "Phase-out rate: Reduces by $0.75 for every dollar earned above the threshold",
+        "Eligibility limit: Ceases at $180,000 of taxable income"
+      ]
+    },
+    {
+      heading: "2025-26 LITO Rates at a Glance",
+      table: {
+        headers: ["Taxable Income Range", "LITO Amount"],
+        rows: [
+          ["Up to $66,667", "$585"],
+          ["$66,667 to $80,000", "$585 to $395"],
+          ["$80,000 to $180,000", "Gradual phase-out"],
+          ["Over $180,000", "No offset"]
+        ]
+      }
+    },
+    {
+      heading: "Tips for Maximising Your LITO as a Contractor",
+      callout: {
+        type: "tip",
+        text: "Keep detailed records of all allowable deductions. The more deductions you claim, the lower your taxable income, which could mean more LITO benefit."
+      },
+      list: [
+        "Claim all legitimate work-related expenses: home office, equipment, software, vehicle expenses, and professional development",
+        "Keep receipts and invoices organised throughout the year",
+        "Consider timing significant expenses to maximise deductions in the right financial year",
+        "Review your income regularly to understand how LITO applies to your situation",
+        "Use a charge-out rate calculator to plan your income and tax obligations"
+      ]
+    },
+    {
+      heading: "Common Questions About LITO for Contractors",
+      body: "Many contractors ask whether LITO applies differently to them than employees. The answer is no—LITO is calculated the same way regardless of how you earn your income. However, contractors have more opportunities to reduce their taxable income through deductions, which can help retain more LITO benefit.",
+      callout: {
+        type: "warning",
+        text: "If you have multiple income sources or claim significant deductions, consider getting professional tax advice to ensure you're calculating LITO correctly."
+      }
+    },
+    {
+      heading: "Planning Your Tax With LITO in Mind",
+      body: "Understanding LITO can help you plan your contracting income more effectively. If you're close to the phase-out threshold ($66,667), you might structure your year to stay within the full benefit range. Conversely, if your income significantly exceeds $180,000, LITO won't apply, so focus your planning on other tax-saving strategies like superannuation contributions or negative gearing if applicable.",
+      body: "Using a charge-out rate calculator can help you model different income scenarios and understand how LITO will affect your take-home pay. This is particularly useful when bidding for contracts or planning your business growth."
+    },
+    {
+      heading: "Key Takeaways",
+      list: [
+        "LITO provides up to $585 tax relief for lower-income earners in 2025-26",
+        "Contractors qualify if their taxable income is under $180,000",
+        "The offset reduces your tax bill dollar-for-dollar",
+        "Maximise LITO by claiming all allowable deductions",
+        "Plan your contracting income with LITO thresholds in mind",
+        "If you're unsure about your eligibility, consult the ATO website or a tax professional"
+      ]
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
