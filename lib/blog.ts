@@ -2598,6 +2598,101 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "gst-registration-for-australian-sole-traders-and-abn-holders",
+  title: "GST Registration for Australian Sole Traders and ABN Holders: A Complete Guide",
+  excerpt: "Do you need to register for GST? Learn the current thresholds, requirements, and benefits for Australian sole traders and contractors in 2025-26.",
+  date: "September 7, 2026",
+  readTime: "6 min read",
+  category: "Tax",
+  tags: ["GST", "ABN", "sole trader", "tax registration", "2025-26"],
+  content: [
+    {
+      heading: "GST Registration: Do You Need It?",
+      body: "If you're running a business as an Australian sole trader or contractor, GST registration is one of the first tax questions you'll face. Whether you need to register—or whether it's beneficial to do so—depends on your annual turnover and your business circumstances. This guide walks you through the current rules, thresholds, and key considerations for the 2025-26 tax year."
+    },
+    {
+      heading: "The GST Registration Threshold for 2025-26",
+      body: "The most important figure to know is the GST registration threshold. As of 1 July 2025, the threshold remains at $75,000 per financial year.",
+      list: [
+        "If your annual turnover is $75,000 or more, you must register for GST",
+        "If your annual turnover is below $75,000, GST registration is optional (but may still be beneficial)",
+        "Turnover is calculated on an annual basis and includes GST",
+        "The threshold applies to the financial year (1 July to 30 June)"
+      ]
+    },
+    {
+      heading: "Mandatory vs. Voluntary Registration",
+      subheading: "When you must register",
+      body: "Once your annual turnover reaches $75,000 or more, you are legally required to register for GST. You must do this within 21 days of reaching the threshold. Failure to register on time can result in penalties and back-dated GST obligations.",
+      callout: {
+        type: "warning",
+        text: "If you expect to reach $75,000 in turnover, don't wait until you hit the threshold. Register early to avoid compliance issues and ensure you're collecting GST from the correct date."
+      }
+    },
+    {
+      heading: "Should You Register Voluntarily?",
+      body: "Even if your turnover is below $75,000, voluntary GST registration can offer significant advantages for many sole traders and contractors.",
+      list: [
+        "Claim GST credits on business expenses—you can recover the GST you pay on supplies",
+        "Invoice larger clients who are GST-registered; many prefer to deal with GST-registered suppliers",
+        "Present a more professional business image",
+        "Prepare your business for growth without needing to re-register later",
+        "Better manage cash flow by understanding the full tax implications"
+      ],
+      callout: {
+        type: "tip",
+        text: "Calculate whether you'll benefit from GST registration by comparing the GST you'd collect on invoices versus the GST you'd recover on expenses. If you recover more than you collect, voluntary registration could save you money."
+      }
+    },
+    {
+      heading: "Key GST Responsibilities Once Registered",
+      body: "Once you're registered for GST, you'll have regular reporting and payment obligations:",
+      list: [
+        "File GST returns (typically quarterly, but can be monthly or annually depending on your circumstances)",
+        "Keep detailed records of all GST collected and GST paid",
+        "Pay GST to the ATO by the due date (usually 21 days after the end of the reporting period)",
+        "Issue valid tax invoices that include your ABN and GST registration details",
+        "Maintain records for at least 5 years"
+      ]
+    },
+    {
+      heading: "How GST Affects Your Pricing and Charge-Out Rates",
+      body: "If you're registered for GST, you'll need to decide whether to include or exclude GST in your quoted rates to clients. This directly impacts your effective income and pricing strategy.",
+      table: {
+        headers: ["Pricing Method", "What the Client Pays", "What You Keep (After Remitting GST)", "Best For"],
+        rows: [
+          ["GST-exclusive", "$1,100 for a $1,000 service", "$1,000 (you remit $100 GST)", "B2B clients, larger contracts"],
+          ["GST-inclusive", "$1,000 for a $1,000 service", "$909.09 (you remit $90.91 GST)", "Retail, small clients, simplicity"]
+        ]
+      },
+      callout: {
+        type: "info",
+        text: "Most B2B contractors quote GST-exclusive and add 10% GST at invoice. This makes it clearer for business clients to understand their costs and claim input tax credits."
+      }
+    },
+    {
+      heading: "Calculating Your Effective Rate as a GST-Registered Sole Trader",
+      body: "When you're registered for GST, your actual income changes depending on whether you quote inclusive or exclusive rates. Use SoleTraderTax.com.au's charge-out rate calculator to factor in GST, income tax, superannuation, and other costs to determine the rates you need to charge to hit your income goals for 2025-26."
+    },
+    {
+      heading: "Next Steps: Register with the ATO",
+      body: "Ready to register for GST? Here's how:",
+      list: [
+        "Visit the ATO website (ato.gov.au) or call 13 28 66",
+        "Have your ABN, TFN, and business details ready",
+        "Complete the GST registration form (if not already registered)",
+        "Decide on your GST reporting period (quarterly is most common)",
+        "Set up your accounting system to track GST on invoices and expenses",
+        "Inform your clients of your new GST registration and any changes to pricing"
+      ],
+      callout: {
+        type: "tip",
+        text: "If you're unsure whether to register, consider speaking with an accountant or using the ATO's resources. The decision can significantly affect your business finances."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
