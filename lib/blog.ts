@@ -2693,6 +2693,90 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "As a sole trader, understanding your super guarantee obligations is crucial. Learn the key differences between hiring contractors and employees, and avoid costly mistakes.",
+  date: "September 14, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "contractors", "employees", "super guarantee", "sole traders", "tax obligations"],
+  content: [
+    {
+      heading: "Understanding Your Super Guarantee Obligations",
+      body: "As an Australian sole trader or small business owner, you may be confused about when you need to pay superannuation guarantee contributions. The rules differ significantly depending on whether you hire contractors or employees, and getting it wrong can result in penalties, back-pay obligations, and administrative headaches. This guide will help you understand your obligations in plain English, so you can make informed decisions about hiring."
+    },
+    {
+      heading: "Employees: Your Super Guarantee Obligation",
+      body: "If you hire someone as an employee, you have a legal obligation to pay superannuation guarantee contributions on their behalf. For the 2025-26 financial year, the super guarantee rate is 11.5% of ordinary time earnings (OTE). This rate increases to 12% from 1 July 2026.",
+      list: [
+        "Super guarantee applies to employees earning $11,500 or more per financial year",
+        "You must contribute to the employee's nominated superannuation fund",
+        "Contributions are due by the end of the quarter following the quarter in which wages were paid",
+        "Failure to pay can result in penalties of up to 200% of the unpaid amount",
+        "You cannot force employees to accept contributions as wages instead"
+      ]
+    },
+    {
+      heading: "Contractors: You Have No Super Obligation",
+      body: "Here's the key difference: you do NOT have a legal obligation to pay superannuation contributions for contractors. Contractors are responsible for managing their own superannuation, paying their own taxes, and handling their own business expenses. This is one of the main reasons contractors often charge higher rates than employees – they must account for their own super and tax obligations.",
+      callout: {
+        type: "info",
+        text: "While you're not legally required to pay super for contractors, some contractors may negotiate higher rates or request you contribute to their super as part of their agreement. This is entirely optional and negotiable."
+      }
+    },
+    {
+      heading: "Key Differences Between Contractors and Employees",
+      table: {
+        headers: ["Aspect", "Employee", "Contractor"],
+        rows: [
+          ["Super Guarantee", "Mandatory (11.5% in 2025-26)", "Not required"],
+          ["Tax Withholding", "PAYG withholding applies", "No withholding (they handle their own tax)"],
+          ["Charge-Out Rate", "Generally lower base rate", "Higher rate (includes their own super, tax, expenses)"],
+          ["Employment Status", "You control how/when they work", "They control their work arrangements"],
+          ["Insurance & Liabilities", "You may have liability", "They typically carry their own insurance"],
+          ["Penalty Risk", "ATO audits super contributions", "Lower compliance risk for you"]
+        ]
+      }
+    },
+    {
+      heading: "The True Cost of Hiring Employees",
+      body: "Many sole traders underestimate the true cost of hiring employees because they forget to factor in super guarantee contributions. If you pay an employee $60,000 per year, your actual cost is $60,000 + 11.5% super = $66,900 for the 2025-26 financial year. This is why it's essential to use a charge-out rate calculator that accounts for your super obligations when budgeting for employee costs.",
+      callout: {
+        type: "warning",
+        text: "Remember: super guarantee contributions are on top of wages, not part of them. You cannot reduce an employee's salary to 'make room' for super contributions."
+      }
+    },
+    {
+      heading: "Avoiding Common Mistakes",
+      list: [
+        "Don't misclassify employees as contractors to avoid super – the ATO actively audits this",
+        "Don't assume contractors will claim super contributions as business deductions – they won't",
+        "Don't forget to factor super into your pricing when calculating charge-out rates for employee time",
+        "Don't miss super contribution deadlines – pay them promptly and on time",
+        "Don't use cash payments to 'hide' employees from super obligations – this is illegal"
+      ]
+    },
+    {
+      heading: "What Should You Do?",
+      body: "When deciding whether to hire contractors or employees, consider both the financial and practical aspects:",
+      list: [
+        "Calculate your true labour costs using a tool like SoleTraderTax.com.au's charge-out rate calculator, which factors in super obligations",
+        "Ensure your invoicing and pricing reflects the actual cost of labour, including super for employees",
+        "Keep detailed records of all contractors and employees, including super contributions paid",
+        "Review your super fund's performance annually to ensure you're contributing to a quality fund",
+        "Consult an accountant if you're unsure about employment status or have mixed teams of contractors and employees"
+      ]
+    },
+    {
+      heading: "Key Takeaways",
+      callout: {
+        type: "tip",
+        text: "Super guarantee is non-negotiable for employees but optional for contractors. Factor the 11.5% super cost (2025-26) into your pricing when hiring employees, and ensure your charge-out rates cover this obligation. When in doubt, seek professional advice to avoid costly mistakes."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
