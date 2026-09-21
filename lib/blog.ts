@@ -2777,6 +2777,116 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "comparing-contractor-daily-rate-to-equivalent-employee-salar",
+  title: "Contractor Daily Rate vs Employee Salary: What's the Real Difference?",
+  excerpt: "Working out what daily rate you need as a contractor to match an employee salary isn't straightforward. Learn how to calculate your true equivalent income and factor in tax, super, and business expenses.",
+  date: "September 21, 2026",
+  readTime: "6 min read",
+  category: "Contractor Pay",
+  tags: ["contractor rates", "daily rates", "sole trader", "salary comparison", "tax", "2025-26"],
+  content: [
+    {
+      heading: "Why You Can't Just Divide Annual Salary by Working Days",
+      body: "Many contractors make the mistake of thinking a $100,000 annual salary means they need to charge $100,000 ÷ 260 working days = $385 per day. This ignores the crucial reality: employees receive benefits and protections that contractors must fund themselves, and contractors don't work a full 260 days per year. As a sole trader, you need to account for unpaid leave, sick days, business expenses, tax obligations, and superannuation contributions."
+    },
+    {
+      heading: "Key Costs Employees Don't Bear",
+      list: [
+        "Income tax at your marginal rate (up to 47% including Medicare Levy in 2025-26)",
+        "Superannuation contributions (you fund the full 11.5% for 2025-26)",
+        "Business expenses (software, equipment, insurance, accountancy fees)",
+        "Unpaid time (sick leave, annual leave, professional development)",
+        "GST, ABN registration, and compliance costs",
+        "Income protection and public liability insurance",
+        "No entitlements to long service leave or redundancy payments"
+      ]
+    },
+    {
+      heading: "The Basic Calculation Formula",
+      body: "Here's a practical approach to work backwards from a target take-home income:",
+      list: [
+        "Start with the annual employee salary you're comparing against",
+        "Add 11.5% for superannuation (employer contribution equivalent)",
+        "Divide by the number of billable days you actually work (typically 200-220 days)",
+        "Apply a factor for tax at your expected marginal rate",
+        "Add 15-25% buffer for business expenses and non-billable time",
+        "Divide by 8 to get your daily rate (or divide annual by 230 billable days)"
+      ]
+    },
+    {
+      heading: "Worked Example: Converting a $80,000 Salary",
+      body: "Let's work through a realistic example for the 2025-26 tax year:",
+      table: {
+        headers: ["Item", "Amount"],
+        rows: [
+          ["Target employee salary", "$80,000"],
+          ["Plus employer super (11.5%)", "$9,200"],
+          ["Subtotal", "$89,200"],
+          ["Divided by billable days (220)", "$405.45"],
+          ["Daily rate before tax", "$405.45"],
+          ["Tax factor (39% marginal + 2% Medicare)", "÷ 0.59"],
+          ["Daily rate needed", "$687"],
+          ["Plus 20% for expenses & non-billable time", "$824"]
+        ]
+      }
+    },
+    {
+      heading: "Don't Forget the Tax Implications",
+      body: "As a sole trader in 2025-26, if you earn over $45,000 you'll be taxed at 37% plus the 2% Medicare Levy. This means every dollar you earn needs to work harder. If an employee earning $80,000 receives that after tax, you need to earn significantly more to have the same take-home amount. That's why the daily rate calculation must account for your full tax obligation upfront.",
+      callout: {
+        type: "warning",
+        text: "Remember: contractors don't receive a tax-free threshold like employees do. If you earn $1 from contracting, it's all assessable income. Plan for quarterly tax instalments or set aside 45-50% of invoiced amounts for tax."
+      }
+    },
+    {
+      heading: "Accounting for Realistic Working Patterns",
+      body: "Most contractors don't work 260 days per year. Factor in:",
+      list: [
+        "Public holidays (10-11 days)",
+        "Annual leave you'll actually take (15-20 days)",
+        "Sick days (5-10 days)",
+        "Time spent on invoicing, accounting, and admin (5-10 days)",
+        "Business development and networking (3-5 days)",
+        "Realistic project gaps between contracts (10-20 days)"
+      ],
+      callout: {
+        type: "tip",
+        text: "Most experienced contractors aim for 200-220 billable days per year. Using 220 days is realistic and conservative—it leaves buffer for downtime without destroying your financial plans."
+      }
+    },
+    {
+      heading: "Quick Reference: Daily Rates for Common Salaries (2025-26)",
+      body: "Here are approximate daily rates needed to match employee salaries, assuming 220 billable days and covering tax, super, and 20% business expenses:",
+      table: {
+        headers: ["Employee Salary", "Approximate Daily Rate", "Annual Revenue Needed"],
+        rows: [
+          ["$60,000", "$470", "$103,400"],
+          ["$80,000", "$620", "$136,400"],
+          ["$100,000", "$780", "$171,600"],
+          ["$120,000", "$935", "$205,700"],
+          ["$150,000", "$1,165", "$256,300"]
+        ]
+      }
+    },
+    {
+      heading: "Use This as Your Starting Point, Not Your Destination",
+      body: "These calculations give you a baseline—the minimum rate you need to match an employee salary. But remember:",
+      list: [
+        "Your daily rate should reflect your experience and market demand",
+        "Senior contractors often command 30-50% premiums",
+        "Specialised skills warrant higher rates",
+        "Building in profit above break-even is healthy business practice",
+        "Consider seasonal variations in your industry",
+        "Regular rate reviews (annually) are essential"
+      ],
+      callout: {
+        type: "info",
+        text: "Use SoleTraderTax.com.au's charge-out rate calculator to model different scenarios and see how changes in tax, working days, and expenses impact your required daily rate."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
