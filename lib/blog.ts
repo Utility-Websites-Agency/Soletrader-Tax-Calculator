@@ -2887,6 +2887,112 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "super-guarantee-obligations-when-hiring-contractors-vs-emplo",
+  title: "Super Guarantee Obligations: Contractors vs Employees – What You Need to Know",
+  excerpt: "Understanding your super guarantee obligations is crucial when hiring workers. Learn the key differences between contractor and employee arrangements and avoid costly mistakes.",
+  date: "September 28, 2026",
+  readTime: "6 min read",
+  category: "Superannuation",
+  tags: ["superannuation", "contractors", "employees", "super guarantee", "hiring workers", "sole traders"],
+  content: [
+    {
+      heading: "Super Guarantee: A Quick Overview",
+      body: "As an Australian sole trader or contractor, when you hire workers, you need to understand your superannuation obligations. The rules differ significantly depending on whether you're engaging employees or contractors, and getting it wrong can result in hefty penalties from the ATO. For the 2025-26 financial year, the super guarantee rate is 11.5% of ordinary time earnings (OTE). Let's break down what you need to know."
+    },
+    {
+      heading: "Employees vs Contractors: The Critical Difference",
+      body: "The first step is determining whether the person you're hiring is actually an employee or a contractor. This isn't just about what you call them – the ATO has specific tests to determine the true nature of the working relationship. If you classify someone as a contractor when they're legally an employee, you could face back-payment claims plus penalties.",
+      subheading: "Key factors the ATO considers:",
+      list: [
+        "Control: Can you tell the person how, when, and where to do the work?",
+        "Financial risk: Does the worker have financial risk in the arrangement?",
+        "Tools and equipment: Who provides them?",
+        "Ability to hire substitutes: Can they send someone else to do the work?",
+        "Tax and super obligations: Does the worker handle their own tax and super?",
+        "Exclusivity: Are they required to work only for you?"
+      ]
+    },
+    {
+      heading: "Your Super Obligations with Employees",
+      body: "If someone is classified as an employee, you have a legal obligation to contribute to their superannuation account. This is a non-negotiable requirement under the Superannuation Guarantee (Administration) Act 1992.",
+      subheading: "What you must do:",
+      list: [
+        "Pay 11.5% of their ordinary time earnings into their chosen super fund (or a default fund if they don't choose one)",
+        "Contribute at least quarterly (though most businesses do it monthly)",
+        "Pay super contributions even if the employee hasn't started a super account yet",
+        "Keep records of all super contributions for at least 5 years",
+        "Ensure the contributions are made on time to avoid the super guarantee charge"
+      ],
+      callout: {
+        type: "warning",
+        text: "If you fail to pay super guarantee contributions, the ATO charges you interest and penalties on top of the unpaid amount. This is called the super guarantee charge and includes a 10% administration charge plus interest."
+      }
+    },
+    {
+      heading: "Contractor Arrangements: No Super Guarantee Required",
+      body: "When you engage a contractor, you generally don't have to pay super guarantee contributions. This is because contractors are considered self-employed and are responsible for managing their own superannuation. However, this doesn't mean you have no obligations – you need to ensure proper invoicing and tax treatment.",
+      subheading: "Important points about contractors:",
+      list: [
+        "No super guarantee contribution required from you",
+        "They should issue you with invoices",
+        "You must have a written contract outlining the arrangement",
+        "You still need to report their payments correctly for tax purposes",
+        "Be careful not to misclassify employees as contractors – the ATO actively investigates this"
+      ]
+    },
+    {
+      heading: "2025-26 Super Guarantee Rates and Thresholds",
+      body: "Here's what you need to know for the current financial year:",
+      table: {
+        headers: ["Item", "2025-26 Rate/Threshold"],
+        rows: [
+          ["Super guarantee contribution rate", "11.5%"],
+          ["Maximum super contribution base", "No cap"],
+          ["Minimum employee age for super", "18 years old"],
+          ["Casual employee super eligibility", "After 12 months, 10% of hours paid"],
+          ["Annual leave payout (super included)", "Yes – from day one"]
+        ]
+      }
+    },
+    {
+      heading: "Common Mistakes Sole Traders Make",
+      body: "Based on ATO data, here are the pitfalls to avoid:",
+      list: [
+        "Misclassifying employees as contractors to avoid super costs",
+        "Not paying super for part-time or casual employees",
+        "Forgetting to pay super for apprentices and trainees",
+        "Not contributing to an employee's super account until they ask for it",
+        "Missing the quarterly super guarantee deadlines",
+        "Not keeping proper records of super contributions"
+      ],
+      callout: {
+        type: "tip",
+        text: "Use the ATO's Employee/Contractor decision tool on their website to help determine the true nature of any working arrangement. Document your decision and keep it with your business records."
+      }
+    },
+    {
+      heading: "Setting Up Your Super Systems",
+      body: "To stay compliant and stress-free, set up proper systems from day one:",
+      list: [
+        "Use payroll software that calculates and tracks super automatically",
+        "Set up a separate bank account or reserve for super contributions if you're paying them yourself",
+        "Create a super payment schedule in your calendar (quarterly at minimum)",
+        "Ask new employees which super fund they'd like to contribute to",
+        "Keep a spreadsheet tracking all contributions by employee",
+        "Review super obligations annually or when your business structure changes"
+      ]
+    },
+    {
+      heading: "Key Takeaways",
+      body: "Getting your super obligations right protects both your workers and your business. Remember: employees get super contributions at 11.5% of OTE, contractors manage their own super, and misclassifying workers can be expensive. If you're unsure about any worker's status, consult with an accountant or use the ATO's guidance tools. Your future self (and your workers) will thank you.",
+      callout: {
+        type: "info",
+        text: "For personalised advice about your specific situation, consider speaking with a tax professional. SoleTraderTax.com.au can help you calculate your true charge-out rate taking super and other obligations into account."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
