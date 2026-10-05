@@ -2993,6 +2993,112 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "vehicle-and-travel-deductions-for-australian-contractors",
+  title: "Vehicle and Travel Deductions for Australian Contractors: Maximise Your Tax Refund",
+  excerpt: "Learn how to claim vehicle and travel expenses as an Australian contractor or sole trader. We break down the ATO rules, rates, and strategies to maximise your deductions for the 2025-26 tax year.",
+  date: "October 5, 2026",
+  readTime: "8 min read",
+  category: "Tax Savings",
+  tags: ["vehicle deductions", "travel expenses", "sole traders", "contractors", "tax refund", "ATO rates", "2025-26"],
+  content: [
+    {
+      heading: "Vehicle and Travel Deductions: What Contractors Need to Know",
+      body: "As an Australian contractor or sole trader, vehicle and travel expenses can represent a significant portion of your tax deductions. Whether you're driving to client sites, attending training, or managing business travel, understanding the ATO rules is crucial to maximising your refund and staying compliant."
+    },
+    {
+      heading: "The Two Methods for Claiming Vehicle Expenses",
+      body: "The Australian Taxation Office (ATO) allows contractors to claim vehicle expenses using one of two methods: the cents-per-kilometre method or the logbook method. Each approach has advantages and limitations, and your choice can significantly impact your tax outcome.",
+      subheading: "Method 1: Cents-Per-Kilometre Rate",
+      list: [
+        "For 2025-26, the ATO rate is 72 cents per business kilometre (down from previous years)",
+        "You don't need to keep a logbook—just track total business kilometres",
+        "You can claim a maximum of 5,000 business kilometres per year using this method",
+        "This method is simpler but typically produces lower deductions for high-mileage contractors",
+        "Best for contractors with occasional business travel",
+        "No need to apportion personal and business use"
+      ]
+    },
+    {
+      heading: "Method 2: Logbook Method",
+      body: "The logbook method allows you to claim a percentage of your actual vehicle expenses based on business use. This method is more complex but often results in larger deductions for contractors with significant work-related travel.",
+      list: [
+        "You must keep a logbook for at least 12 weeks to establish your business-use percentage",
+        "Record the date, distance, and purpose of every trip during the logbook period",
+        "You can then claim the same percentage of all vehicle expenses for the full year (or up to 5 years with evidence)",
+        "Claimable expenses include fuel, maintenance, insurance, registration, and depreciation",
+        "The ATO accepts logbooks kept electronically or on paper",
+        "This method is ideal for contractors with consistent business use patterns",
+        "You must have evidence (fuel receipts, service invoices, etc.) to support your claims"
+      ]
+    },
+    {
+      heading: "Travel Expenses Beyond Vehicle Costs",
+      body: "Vehicle deductions are just one part of travel expense claims. Contractors can also claim a range of other work-related travel costs:",
+      list: [
+        "Accommodation (hotel, motel, or short-term rental) for overnight work-related travel",
+        "Meals and refreshments (only when travelling overnight for work)",
+        "Flights, trains, buses, and taxi fares for work-related travel",
+        "Parking fees and tolls incurred during business travel",
+        "Travel insurance for work-related trips",
+        "Hire car costs when your own vehicle isn't suitable",
+        "Public transport passes used for work commuting (except home-to-work travel)"
+      ]
+    },
+    {
+      heading: "What the ATO Won't Let You Claim",
+      body: "Understanding what you can't deduct is just as important as knowing what you can. The ATO has clear rules about non-deductible travel:",
+      callout: {
+        type: "warning",
+        text: "You cannot claim travel expenses between your home and place of work, even if you work from multiple locations. This is considered private, domestic travel. Similarly, you can't claim travel to or from a permanent workplace, even if you sometimes work elsewhere."
+      },
+      list: [
+        "Commuting expenses to a regular place of work",
+        "Travel between home and your office or workshop",
+        "Meals and accommodation during home-to-work travel",
+        "Vehicle expenses for private or personal use",
+        "Speeding fines or traffic penalties",
+        "Vehicle repairs caused by negligence or misuse",
+        "Personal grooming or entertainment expenses while travelling"
+      ]
+    },
+    {
+      heading: "Practical Tips for Maximising Your Deductions",
+      callout: {
+        type: "tip",
+        text: "If you travelled for work more than 50% of the year, the logbook method will almost always give you a better deduction than the cents-per-kilometre method. Take time to calculate both scenarios before choosing your approach."
+      },
+      list: [
+        "Keep detailed records: Save all receipts, invoices, and logbook entries for at least 5 years",
+        "Use a dedicated app: Consider using a logbook app that automatically tracks kilometres using GPS",
+        "Track business kilometres separately: If using the cents method, maintain a simple record of business vs. personal kilometres",
+        "Claim all eligible expenses: Don't forget meals, accommodation, flights, and parking when travelling for work",
+        "Review your method annually: Your circumstances may change—review whether your current method still suits your business",
+        "Document the business purpose: Always record why each trip was business-related, not just the distance",
+        "Include depreciation: If using the logbook method, don't forget to claim vehicle depreciation as part of your costs"
+      ]
+    },
+    {
+      heading: "How Vehicle Deductions Affect Your Charge-Out Rate",
+      body: "For contractors managing their own pricing, understanding vehicle deductions impacts your charge-out rate calculations. If you're claiming significant vehicle expenses, you may be able to charge clients slightly less because some of your overheads are covered by tax deductions. Conversely, if you're using the cents-per-kilometre method and hitting the 5,000 km cap, ensure your charge-out rates account for undeducted vehicle costs. Using a contractor calculator that factors in tax deductions helps you set competitive rates while maintaining profitability."
+    },
+    {
+      heading: "Key Takeaways for Your 2025-26 Tax Return",
+      callout: {
+        type: "info",
+        text: "Lodge your tax return by 31 October 2026 to avoid penalties. If you're using an accountant, allow extra time for them to review your deduction claims and ensure everything aligns with ATO guidelines."
+      },
+      list: [
+        "Choose your vehicle expense method (cents-per-kilometre or logbook) based on your actual business use",
+        "Keep comprehensive records of all work-related travel and vehicle expenses",
+        "Don't forget to claim accommodation, meals, and other travel costs beyond vehicle expenses",
+        "Avoid claiming private, domestic, or commuting expenses",
+        "Review your method annually to ensure it still suits your contracting business",
+        "Consider using a contractor tax calculator to understand the full impact of your deductions"
+      ]
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
