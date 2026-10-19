@@ -3158,6 +3158,87 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "personal-services-income-psi-rules-explained-simply",
+  title: "Personal Services Income (PSI) Rules Explained Simply",
+  excerpt: "Confused about PSI rules? We break down the ATO's Personal Services Income rules in plain English so you understand when they apply to your business and how to stay compliant.",
+  date: "October 19, 2026",
+  readTime: "7 min read",
+  category: "Tax",
+  tags: ["PSI", "personal services income", "sole trader", "contractor", "ATO rules", "tax compliance"],
+  content: [
+    {
+      heading: "What is Personal Services Income (PSI)?",
+      body: "Personal Services Income (PSI) is income you earn from providing personal services—essentially, selling your time and labour. If you're a sole trader or contractor working as a consultant, tradesperson, IT specialist, accountant, or similar professional, the ATO may classify your income as PSI. The reason the ATO cares about PSI is to ensure it's taxed fairly and that people aren't using contracting arrangements to avoid tax or superannuation contributions."
+    },
+    {
+      heading: "Why Does the ATO Have PSI Rules?",
+      body: "The PSI rules exist to level the playing field between employees and contractors. If you're earning income from personal services, the ATO wants to make sure you're not gaining unfair tax advantages through a contracting arrangement when you're essentially working like an employee. The rules also ensure you're contributing to superannuation appropriately and that your business is genuinely a business, not just a disguised employment arrangement."
+    },
+    {
+      heading: "When Do PSI Rules Apply to You?",
+      body: "Not all sole traders and contractors are caught by PSI rules. The ATO applies a practical test to determine whether PSI rules apply to your specific situation. Generally, if you meet certain conditions, you can be classified as not subject to PSI rules.",
+      list: [
+        "You have a genuine business enterprise (not just selling your labour)",
+        "You provide services using significant business assets or processes",
+        "Your income comes from a variety of sources or clients",
+        "You employ others or subcontract significant portions of work",
+        "Your business is genuinely independent from any dominant client"
+      ]
+    },
+    {
+      heading: "The Four-Part PSI Test",
+      body: "The ATO uses four main factors to determine if PSI rules apply to your income:",
+      table: {
+        headers: ["Factor", "What It Means"],
+        rows: [
+          ["Predominant Earner Test", "More than 80% of your assessable income comes from personal services (your own labour)"],
+          ["Unrelated Client Test", "You don't have a dominant client taking up most of your work time"],
+          ["Business Premises Test", "You have genuine business premises separate from where clients operate"],
+          ["Equity Test", "You hold business assets that contribute meaningfully to your service delivery"]
+        ]
+      }
+    },
+    {
+      heading: "What Happens If PSI Rules Apply to You?",
+      body: "If the ATO determines that PSI rules apply to your income, it doesn't mean you're breaking the law. However, it does mean additional obligations:",
+      list: [
+        "You must maintain detailed records of your work, time, and clients",
+        "You cannot claim certain deductions that employees cannot claim",
+        "Income cannot be split among family members through the business",
+        "You must have proper business structures in place",
+        "Superannuation contributions may be subject to different rules"
+      ]
+    },
+    {
+      callout: {
+        type: "warning",
+        text: "If you're caught by PSI rules and try to claim deductions you're not entitled to, or split income improperly, you could face penalties, interest, and even prosecution. It's worth getting professional advice if you're unsure whether PSI rules apply to your situation."
+      }
+    },
+    {
+      heading: "How to Protect Yourself from PSI Issues",
+      body: "Here's what you should do to stay on the right side of the ATO:",
+      list: [
+        "Diversify your client base—don't rely on one dominant client for income",
+        "Invest in genuine business assets (equipment, software, premises) that support your services",
+        "Keep detailed time and work records showing what you've done for each client",
+        "Document your genuine business expenses properly",
+        "Consider whether you should employ staff or use subcontractors",
+        "Get professional tax advice if you're unsure about your situation",
+        "Review your arrangement regularly as your business changes"
+      ]
+    },
+    {
+      heading: "Key Takeaways for 2025-26",
+      body: "Understanding PSI rules is crucial for Australian sole traders and contractors. While the rules can seem complex, the core principle is simple: if you're genuinely running a business (not just hiring yourself out), you should be fine. However, if you're essentially working as a self-employed person without meaningful business assets or client diversity, PSI rules will apply, and you need to understand your obligations.",
+      callout: {
+        type: "tip",
+        text: "Use SoleTraderTax.com.au to calculate your charge-out rate and understand your true business costs. Knowing your real profitability helps you make better decisions about business structure and whether to diversify your client base."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
