@@ -3239,6 +3239,93 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "personal-services-income-psi-rules-explained-simply",
+  title: "Personal Services Income (PSI) Rules Explained Simply",
+  excerpt: "Understanding PSI rules is crucial for Australian contractors and sole traders. Learn what PSI is, how it affects your tax, and whether the rules apply to you.",
+  date: "October 26, 2026",
+  readTime: "6 min read",
+  category: "Tax",
+  tags: ["PSI", "contractors", "sole traders", "tax rules", "ATO", "2025-26"],
+  content: [
+    {
+      heading: "What is Personal Services Income (PSI)?",
+      body: "Personal Services Income is income you earn from providing your personal labour or services. For most Australian contractors and sole traders, this is simply the money you earn from doing your work. The ATO has specific rules around PSI because they want to prevent people from artificially reducing their tax through certain structuring arrangements. Understanding whether PSI rules apply to you is essential for getting your tax right."
+    },
+    {
+      heading: "When Do PSI Rules Apply?",
+      body: "Not all sole traders are affected by PSI rules. The rules generally apply when you're earning income from your personal efforts, rather than from a genuine business with employees, assets, or investments. If you work as a contractor, consultant, or service provider and earn most of your income from your own work, PSI rules likely apply to you.",
+      list: [
+        "You work as an independent contractor or consultant",
+        "You're self-employed and provide services personally",
+        "Your income comes mainly from your labour, not assets or employees",
+        "You charge clients on an hourly or daily basis",
+        "You operate a one-person business"
+      ]
+    },
+    {
+      heading: "The PSI Safe Harbour Rules",
+      body: "The ATO provides 'safe harbour' rules that help contractors know if PSI rules actually apply to them. If you meet any of these conditions, you're generally safe from the PSI rules and can structure your business however you like.",
+      table: {
+        headers: ["Safe Harbour Condition", "What It Means"],
+        rows: [
+          ["More than 80% from one client", "You don't get all your income from a single source"],
+          ["Work related expenses over 5% of income", "Your genuine business costs are substantial"],
+          ["Genuine business structure", "You have multiple clients, employees, or significant assets"],
+          ["Income level threshold", "Your annual income exceeds the threshold amount"],
+          ["Incorporated company structure", "Your business is properly structured as a company with substance"]
+        ]
+      }
+    },
+    {
+      heading: "How PSI Rules Affect Your Tax",
+      body: "If PSI rules do apply to you, the main impact is on your tax deductions. Generally, you can still claim legitimate business expenses like office supplies, professional development, and equipment. However, the rules exist to prevent excessive deductions or income splitting arrangements that artificially reduce tax. The key is ensuring your deductions are genuine and reasonable for your business.",
+      callout: {
+        type: "warning",
+        text: "If PSI rules apply and you've been using aggressive tax strategies, you may face compliance issues. It's worth reviewing your tax position with a professional accountant if you're unsure."
+      }
+    },
+    {
+      heading: "Common Misconceptions About PSI",
+      body: "Many contractors misunderstand PSI rules. Here's what they actually don't do:",
+      list: [
+        "PSI rules don't prevent you from claiming legitimate business expenses",
+        "PSI rules don't mean you must operate as a company or trust",
+        "PSI rules don't stop you from being self-employed or a sole trader",
+        "PSI rules don't require you to have employees or multiple clients",
+        "PSI rules don't automatically trigger an audit if you operate simply"
+      ]
+    },
+    {
+      heading: "Protecting Yourself: What to Do Now",
+      body: "If you're concerned about PSI rules, take these practical steps:",
+      list: [
+        "Keep detailed records of all your clients and income sources",
+        "Document your genuine business expenses with receipts",
+        "Review your business structure to ensure it reflects reality",
+        "Maintain separate business and personal bank accounts",
+        "Consider having a qualified accountant review your tax position",
+        "Keep evidence of your business activities and client relationships"
+      ],
+      callout: {
+        type: "tip",
+        text: "Using a charge-out rate calculator can help you understand your true business costs and ensure your pricing is defensible and reasonable for your industry."
+      }
+    },
+    {
+      heading: "Getting Professional Help",
+      body: "PSI rules can be complex, and everyone's situation is different. If you earn income from providing personal services and you're unsure whether PSI rules apply to you, it's worth discussing with a tax professional. They can review your specific circumstances and ensure you're compliant with ATO requirements while maximising your legitimate tax position. The cost of professional advice is usually far less than the risk of getting it wrong."
+    },
+    {
+      heading: "Key Takeaway",
+      body: "Personal Services Income rules aren't designed to prevent contractors from running legitimate businesses. They're designed to ensure that income from personal labour is taxed appropriately and that tax structures reflect genuine commercial reality. As long as you're operating a real business with proper records, reasonable deductions, and genuine client relationships, you should be fine. If you're in doubt, get professional advice.",
+      callout: {
+        type: "info",
+        text: "The ATO's PSI rules are part of Division 84 of the Income Tax Assessment Act 1997. You can find detailed guidance on the ATO website, or consult with a registered tax agent for advice specific to your situation."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
