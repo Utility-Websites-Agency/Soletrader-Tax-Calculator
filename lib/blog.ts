@@ -3326,6 +3326,93 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "personal-services-income-psi-rules-explained-simply",
+  title: "Personal Services Income (PSI) Rules Explained Simply",
+  excerpt: "Confused about PSI rules? We break down the ATO's Personal Services Income legislation in plain English, so you can understand if you're affected and what it means for your tax.",
+  date: "November 2, 2026",
+  readTime: "6 min read",
+  category: "Tax",
+  tags: ["PSI", "Personal Services Income", "ATO", "Tax Rules", "Contractors", "Sole Traders", "2025-26"],
+  content: [
+    {
+      heading: "What Is Personal Services Income (PSI)?",
+      body: "Personal Services Income is a term used by the Australian Taxation Office (ATO) to describe income you earn from providing personal services—essentially, your own labour and expertise. If you're a sole trader or contractor who gets paid for the work you personally do (rather than selling products or owning assets), your income is likely to be classified as PSI.\n\nExamples include plumbers, electricians, consultants, writers, trainers, accountants, and IT contractors. If the money flows in because of your personal effort and skill, it's probably PSI."
+    },
+    {
+      heading: "Why Does the ATO Care About PSI?",
+      body: "The ATO has specific rules around PSI because they want to prevent income splitting and aggressive tax planning. Without PSI rules, someone could structure their business in ways that don't reflect the economic reality—for example, paying themselves a low salary while distributing profits to family members on low incomes.\n\nThe PSI rules ensure that when income genuinely comes from your personal services, it's taxed appropriately and can't be artificially split among other entities or people to reduce the overall tax bill."
+    },
+    {
+      heading: "The Key PSI Tests",
+      subheading: "Does the PSI Legislation Actually Apply to You?",
+      body: "Not every sole trader is caught by PSI rules. The ATO applies a series of tests to determine whether you're a 'relevant provider' of personal services income. You only need to fail one test to be caught by the rules.\n\nThe main tests are:",
+      list: [
+        "The personal exertion test: Do you personally perform the services (rather than relying on employees or subcontractors)?",
+        "The results test: Is the income based on the results of your personal exertion, not just a fixed amount or capital investment?",
+        "The unrelated clients test: Do you provide services to a range of clients, or mostly to one entity?",
+        "The genuinely independent test: Are you operating as an independent business, or more like an employee in disguise?"
+      ]
+    },
+    {
+      heading: "What Happens If PSI Rules Apply to You?",
+      body: "If the ATO determines you're a relevant provider of PSI, you can't distribute profits to associates (like family members) unless specific exceptions apply. Instead, PSI must be included in your assessable income at your personal tax rate.\n\nThis doesn't mean you pay extra tax—it simply means the income is taxed in your hands as an individual, not split around to lower-income family members or other entities. It's about ensuring the tax reflects the economic reality of where the income was actually generated."
+    },
+    {
+      heading: "Common Exemptions and Exceptions",
+      body: "The good news is that several categories of businesses are exempt from PSI rules entirely:",
+      list: [
+        "Passive income businesses (rental properties, dividends, interest)",
+        "Businesses relying substantially on employees (more than 50% of income from employee work)",
+        "Genuine partnerships where all partners are actively involved",
+        "Specific professions like doctors, accountants, and lawyers in certain structures",
+        "Businesses generating income primarily from intellectual property or goodwill you've built",
+        "Companies where you and associates don't control more than 50% of the voting power"
+      ],
+      callout: {
+        type: "info",
+        text: "If you employ staff and they genuinely perform a substantial portion of your service delivery, you may fall outside PSI rules. The threshold is typically around 50% of your gross income coming from employee work."
+      }
+    },
+    {
+      heading: "PSI in the 2025-26 Tax Year",
+      body: "For the 2025-26 financial year, PSI rules remain largely unchanged, but it's crucial to understand them if you're a contractor or sole trader. The ATO continues to scrutinise income structures, particularly where sole traders structure their affairs to split income among family members.\n\nYour top marginal tax rate for 2025-26 remains the same as previous years, but ensuring your income is classified correctly is essential for compliance and planning.",
+      table: {
+        headers: ["Income Bracket", "Tax Rate (excluding Medicare levy)"],
+        rows: [
+          ["$0 – $18,200", "Tax-free threshold"],
+          ["$18,201 – $45,000", "21%"],
+          ["$45,001 – $120,000", "37%"],
+          ["$120,001 – $180,000", "45%"],
+          ["$180,001+", "47%"]
+        ]
+      }
+    },
+    {
+      heading: "What Should You Do?",
+      body: "If you're a sole trader or contractor earning PSI:",
+      list: [
+        "Review your business structure with a tax accountant to confirm whether PSI rules apply to you",
+        "Keep detailed records of your personal involvement in service delivery",
+        "Document any employee costs and subcontractor arrangements",
+        "If you're structured as a company or trust, ensure distributions align with the work actually performed by each person",
+        "Don't artificially split income to family members on lower tax rates if you're caught by PSI rules—the ATO will challenge this"
+      ],
+      callout: {
+        type: "warning",
+        text: "Getting PSI wrong can lead to amended assessments, penalties, and interest charges. If you're uncertain whether you're affected, it's worth spending $300-500 on professional advice now rather than facing a $5,000+ bill from the ATO later."
+      }
+    },
+    {
+      heading: "The Bottom Line",
+      body: "Personal Services Income rules exist to ensure income from your personal effort is taxed fairly and can't be artificially split to reduce tax. For most sole traders and contractors, understanding whether PSI applies is about ensuring compliance and structuring your business appropriately.\n\nIf you're in doubt, chat with a tax accountant or use our charge-out rate calculator to help you understand your income and expenses. Getting the structure right from the start saves stress and money down the line.",
+      callout: {
+        type: "tip",
+        text: "Use SoleTraderTax.com.au's calculator to model different income scenarios and understand how PSI rules might affect your tax position in 2025-26."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
