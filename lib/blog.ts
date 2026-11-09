@@ -3413,6 +3413,84 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   ]
 },
+  {
+  slug: "personal-services-income-psi-rules-explained-simply",
+  title: "Personal Services Income (PSI) Rules Explained Simply",
+  excerpt: "Confused about PSI rules? We break down when they apply, how they affect your tax, and what you need to know as an Australian contractor or sole trader.",
+  date: "November 9, 2026",
+  readTime: "6 min read",
+  category: "Tax",
+  tags: ["PSI", "Personal Services Income", "Tax Rules", "Contractors", "ATO", "Sole Traders"],
+  content: [
+    {
+      heading: "What Are Personal Services Income (PSI) Rules?",
+      body: "Personal Services Income (PSI) rules are ATO regulations that apply when you provide personal services—essentially, when you sell your time, expertise, or labour. These rules exist to prevent tax avoidance and ensure fair taxation of income derived primarily from personal effort. If the PSI rules apply to you, they can affect how you claim deductions, calculate your taxable income, and manage your tax obligations. Understanding whether these rules impact your business is essential for accurate tax planning."
+    },
+    {
+      heading: "Do the PSI Rules Apply to You?",
+      body: "The PSI rules apply if you're carrying on a business and your assessable income is mainly derived from personal services. The ATO uses a practical test to determine this. Generally, if more than 50% of your income comes from providing personal services (your time, skills, or labour), rather than from capital investment or assets, you're likely caught by the PSI rules.",
+      list: [
+        "You work primarily on your own (not employing significant staff)",
+        "Your business relies heavily on your personal involvement",
+        "You don't have substantial assets generating income",
+        "You receive income mainly for your labour or expertise",
+        "You work in areas like consulting, tradework, coaching, or freelancing"
+      ]
+    },
+    {
+      heading: "The 80/20 Rule Explained",
+      body: "A key threshold in PSI rules is the '80/20' principle. This doesn't mean exactly 80%, but rather that if you're genuinely running a commercial business where personal services are only part of the picture—because you have significant capital investment, employ staff, or generate income from assets—you may fall outside the PSI net. However, if your business is primarily you selling your time, the rules typically apply. The ATO assesses each case individually, looking at the overall nature of your business operations."
+    },
+    {
+      heading: "How PSI Rules Affect Your Deductions",
+      body: "When PSI rules apply, they restrict certain deductions you might otherwise claim. The main limitation is that you cannot claim a deduction for work-related expenses unless the expense is directly related to earning your assessable income. This sounds straightforward, but it's stricter than the general deduction rules.",
+      list: [
+        "Home office expenses become harder to justify as direct deductions",
+        "Work-related travel must be directly connected to your income-earning activities",
+        "Car expenses need clear nexus to your PSI work",
+        "Clothing costs (including work uniforms) have stricter requirements",
+        "Meal and entertainment expenses face tighter restrictions",
+        "Education and training expenses must directly support your current income-earning activities"
+      ]
+    },
+    {
+      heading: "The $250 Apportionment Rule",
+      body: "Under PSI rules, if you incur expenses for a mix of work and private purposes, the ATO allows you to apportion them. However, there's a practical rule: if an expense is less than $250, you generally don't need to apportion it precisely—but you must still ensure it's genuinely work-related. For expenses over $250, you need to work out a reasonable apportionment between work and private use. Keep clear records showing how you've calculated the work-related portion.",
+      callout: {
+        type: "tip",
+        text: "Document everything. Even if an expense is under $250, the ATO expects you to have records proving it's work-related. A diary, receipt, and brief note about the business purpose are ideal."
+      }
+    },
+    {
+      heading: "Why the PSI Rules Matter for Your Tax",
+      body: "The PSI rules can significantly impact your tax position. Because they restrict deductions, your assessable income may be higher than if you weren't subject to these rules. This means a higher tax bill. Additionally, if you claim deductions the ATO considers invalid under PSI rules, you risk penalties and interest. Many sole traders don't realise they're caught by PSI rules and inadvertently over-claim deductions, leading to tax audit issues. Understanding and correctly applying these rules protects you from compliance problems.",
+      callout: {
+        type: "warning",
+        text: "Not all deductions are restricted under PSI rules. Expenses directly producing assessable income are still claimable—for example, materials for a tradesperson or software subscriptions for a consultant. The key is demonstrating the direct connection to earning your income."
+      }
+    },
+    {
+      heading: "Strategies to Manage PSI Rules",
+      body: "If PSI rules apply to you, here are practical approaches to manage your tax effectively:",
+      list: [
+        "Keep meticulous records linking every expense to specific income-earning activities",
+        "Apportionate mixed-use expenses carefully using reasonable methods (time logs, usage percentages)",
+        "Focus on claiming expenses with clear, direct nexus to your assessable income",
+        "Consider whether investing in assets or employees could change your business structure",
+        "Review your business model annually to see if you've moved away from pure personal services income",
+        "Consult a tax professional about your specific situation—PSI rules are complex and context-dependent"
+      ]
+    },
+    {
+      heading: "Key Takeaways",
+      body: "Personal Services Income rules apply to most contractors and sole traders who sell primarily their time and expertise. These rules restrict certain deductions, particularly for mixed-use or indirect expenses. The main impact is a higher taxable income and a stricter approach to claiming work-related expenses. By understanding whether PSI rules apply to you and keeping detailed records of work-related costs, you can manage your tax obligations accurately and avoid compliance issues. If you're unsure, discuss your situation with a tax advisor—getting it right from the start saves headaches and money.",
+      callout: {
+        type: "info",
+        text: "For the 2025-26 tax year, remember that tax rates and thresholds change annually. Check the ATO website or our calculator at SoleTraderTax.com.au to ensure you're using current rates for your tax planning."
+      }
+    }
+  ]
+},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
